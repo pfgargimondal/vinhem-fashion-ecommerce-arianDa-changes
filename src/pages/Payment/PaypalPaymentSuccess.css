@@ -1,0 +1,29 @@
+
+    .payment-success-wrapper {
+        width: 100%;
+        height: 70vh;           /* Adjust height if needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .payment-success-box {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
+
+    .payment-success-box .icon {
+        width: 80px;
+        height: 80px;
+        background: #4CAF50;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        margin: 0 auto 20px;
+    }

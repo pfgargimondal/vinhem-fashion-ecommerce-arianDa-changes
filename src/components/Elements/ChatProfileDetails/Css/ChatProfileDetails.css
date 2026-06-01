@@ -1,0 +1,140 @@
+.chat-profile-details-wrapper{
+    right: 1%;
+    bottom: 3%;
+    width: 350px;
+    z-index: 99999999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid var(--light-background-color);
+}
+
+.dcsdfnhrtdfsv{
+    background: var(--pink-main-color);
+    border-radius: 5px 5px 0 0;    
+}
+
+.dcsdfnhrtdfsv img{
+    width: 10rem;
+}
+
+.dcsdfnhrtdfsv p{
+    font-size: 0.8rem;
+}
+
+.doiewnjrwerwer{
+    margin-top: -1.2rem;
+    border-radius: 5px 5px 0 0;
+    min-height: 350px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.imjdeqr{
+    width: 1.8rem;
+    height: 1.8rem;
+    background: #262626;
+    flex: 0 0 auto;
+    line-height: 2;
+}
+
+.doejwrkmwer p{
+    font-size: 0.8rem;
+    color: var(--text-lighter-gray-color);
+}
+
+.dowerwerr{
+    background: var(--light-background-color);
+}
+
+.dowerwerr h6{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.depjorierer textarea{
+    border-top-color: var(--light-background-color) !important;
+    border-bottom: none !important;
+    border-inline: none !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    max-height: 55px !important;
+    overflow-y: auto;
+    padding-right: 4.3rem;
+}
+
+.depjorierer textarea:focus{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.depjorierer textarea::placeholder{
+    line-height: 2.3;
+}
+
+.doiewjrmwerwer i{
+   cursor: pointer;
+   transition: 0.2s ease-in-out;
+}
+
+.doiewjrmwerwer i:first-child{
+    transform: rotate(45deg);
+}
+
+.user-msge .imjdeqr{
+    background: var(--pink-main-color);
+}
+
+.chat-profile-details-wrapper > i{
+    top: -1.8rem;
+    right: 0;
+    width: 2.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    background: #b9c3cb;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.2;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.chat-profile-details-wrapper > i:hover{
+    background: #9aa3a9;
+    transition: 0.2s ease-in-out;
+    color: #fff !important;
+}
+
+.chat-profile-details-wrapper .coisdejnkfrhewir i:hover{
+    transform: translateY(-2px);
+    transition: 0.2s ease-in-out;
+}
+
+.chat-profile-details-wrapper i:first-child:hover{
+    color: var(--pink-main-color);
+    transition: 0.2s ease-in-out;
+}
+
+.chat-profile-details-wrapper i:last-child:hover{
+    color: goldenrod;
+    transition: 0.2s ease-in-out;
+}
+
+.diekjroijwerwe{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+}
+
+.diekjroijwerwe label.form-label{
+    font-weight: 600;
+}
+
+.dsfewfrettee input.form-control{
+    border-radius: 0.375rem;
+    border-color: var(--text-lighter-gray-color);
+}
+
+.dsfewfrettee button{
+    right: 0;
+    top: 0;
+    background: var(--pink-main-color) !important;
+    border-color: var(--pink-main-color) !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

@@ -1,0 +1,113 @@
+@media only screen and (max-width: 991px){
+    .user-res-nav-menu-btn.d-none{
+        display: inline-flex !important;
+        align-items: center;
+    }
+
+    .hdkgdfg.sticky-top{
+        z-index: 9999999;
+    }
+
+    .hdkgdfg{
+        position: fixed !important;
+        width: 75%;
+        height: 100%;
+        left: 0;
+        background: #fff;
+        border-right: 0;
+        transition: 0.2s ease-in-out;
+    }
+
+    .ansjidnkuiweer.px-0{
+        padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+        padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+    }
+
+    .nmkewjirwerr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 0.9rem;
+    }
+
+    .dokejrlwerwer.d-none{
+        display: block !important;
+    }
+
+    .dokejrlwerwer{
+        font-weight: 500;
+    }    
+    
+    .dokejrlwerwer i.fa-house{
+        color: var(--pink-main-color);
+    }
+
+    .user-dashboard-nav-backdrop{
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 9999999;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .user-dashboard-nav-backdrop-hide{
+        z-index: -9999999;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .user-dashboard-nav-backdrop.d-none{
+        display: block !important;
+    }
+
+    .user-dashboard-nav-hide{
+        left: -80rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    .dfbdf{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dfbdf i{
+        color: #fff;
+        font-size: 1.6rem;
+    }
+
+    .dfbdf i.d-none{
+        display: block !important;
+    }
+
+    .njkcfnuwffsdfsf{
+        display: none;
+    }
+
+    .user-res-nav-menu-btn i{
+        font-size: 1.8rem;
+    }
+
+    .sdfjhsdfs{
+        width: 50px;
+        height: 50px;
+        margin-left: auto;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        border: 2px solid var(--pink-main-color);   
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .sdfjhsdfs img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;             
+    }
+
+    .ndiwhermweoewrr{
+        display: none;
+    }
+}

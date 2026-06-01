@@ -1,0 +1,123 @@
+.dropdown-loggedin {
+  border-radius: 5px;
+  top: 80%;
+  right: 0;
+  width: 15rem;
+  border: 1px solid var(--light-background-color);
+  z-index: 99999;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.dropdown-loggedin ul li {
+  color: var(--text-main-color) !important;
+  border-bottom: 1px solid var(--light-background-color);
+  display: block !important;
+  padding: 0.5rem !important;
+}
+.dropdown-loggedin ul li:last-child {
+  border-bottom: 0;
+}
+
+.dropdown-loggedin li i{
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1rem !important;
+  border-radius: 50%;
+  background: rgba(133, 13, 85, 1);
+  color: #fff;
+  text-align: center;
+  line-height: 1.7 !important;
+  border: 1px dashed #fff;
+  transition: 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 25px 4px;
+}
+
+.dropdown-loggedin li:hover i{
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+
+
+
+.diewirjwejrwer{
+  border: none;
+  cursor: default;
+  transform: translateX(-9px);
+}
+
+.diewirjwejrwer img{
+  width: 1.4rem;
+}
+
+.diewirjwejrwer span{
+  position: relative !important;
+  background: #fff !important;
+  color: #000 !important;
+  text-align: initial !important;
+  border-radius: 0 !important;
+  line-height: initial !important;
+  left: 0 !important;
+  top: 0 !important;
+  font-size: 1rem !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.bfhtyrae:hover .diewirjwejrwer img{
+  animation: prfllvl 3s;
+}
+
+@keyframes prfllvl{
+  0%{
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(1.1);
+  }
+
+  66%{
+    transform: scale(1) rotateY(360deg);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+span.prfl-optns-divider{
+  width: initial !important;
+  background: var(--light-background-color) !important;
+  height: 5px !important;
+  position: revert !important;
+  border-radius: 0 !important;
+  text-align: initial !important;
+  line-height: revert !important;
+  left: 0 !important;
+  top: 0 !important;
+  font-size: revert !important;
+  color: var(--text-lighter-gray-color) !important;
+  cursor: default;
+}
+
+header .header-top .doewhruiwerwer_right ul li .dropdown-loggedin ul li{
+  border-radius: 8px;
+}
+header .header-top .doewhruiwerwer_right ul li .dropdown-loggedin ul li:hover,
+header .header-top .doewhruiwerwer_right ul li .dropdown-loggedin ul li:hover a{
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+header .header-top .doewhruiwerwer_right ul li .dropdown-loggedin ul li span.prfl-optns-divider{
+  background: transparent !important;
+}
+
+
+
+
+@media only screen and (max-width: 991px) {
+  .dropdown-loggedin{
+    left: 0;
+    right: initial;
+  }
+}

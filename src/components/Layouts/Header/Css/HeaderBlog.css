@@ -1,0 +1,102 @@
+#header-blog{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
+}
+
+.deowjrkjweirew img{
+    width: 14vw;
+}
+
+.dasfsreer{
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.dasfsreer i{
+    font-size: 1.4rem;
+    transform: scaleX(-1);
+    margin-top: -3rem;
+    margin-right: 6rem;
+    color: var(--grey-border-color);
+    cursor: pointer;
+}
+
+.dwejnrkhweijrwer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dwejnrkhweijrwer ul li{
+    list-style: none;
+    font-weight: 500;
+}
+
+.dwejnrkhweijrwer ul li a{
+    transition: 0.2s ease-in-out;
+}
+
+.dwejnrkhweijrwer ul li a:hover{
+    color: var(--pink-main-color);
+    transition: 0.2s ease-in-out;
+}
+
+.hb-modal{
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease-in-out;
+}
+
+.hb-modal-hide{
+    width: 0;
+    transform: translate(-50%, -50%);
+    z-index: -99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.hb-modal-backdrop{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hb-modal-backdrop-hide{
+    z-index: -9999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.diewhirjwer input{
+    border-radius: 0.6rem 0.6rem !important;
+}
+
+.diewhirjwer button{
+    right: 0;
+    top: 0;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: var(--pink-main-color);
+}
+
+.diewhirjwer button:hover{
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: var(--pink-main-color) !important;
+    color: #fff;
+}

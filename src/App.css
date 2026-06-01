@@ -1,0 +1,83 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root{
+    --black-background-color: #000000;
+    --black-hover-background-color: #242222;
+    --light-background-color: #e8e8e8;
+    --pink-main-color: #840D56;
+    --pink-hover-main-color: #64043f;
+    --jost-font-family: "Jost", sans-serif;
+    --grey-border-color: #4d4d4d;
+    --text-gray-color: #a3a3a3;
+    --text-lighter-gray-color: #919191;
+    --text-main-color: rgb(36, 36, 36);
+}
+
+.btn-main{
+    background: var(--black-background-color);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.6rem 0.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--black-background-color) !important;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-main:hover{
+    background: var(--black-hover-background-color) !important;
+    color: #fff !important;
+    font-weight: 600;
+    padding: 0.6rem 0.6rem;
+    border: 1px solid var(--black-hover-background-color) !important;
+    transition: 0.2s ease-in-out;
+}
+
+input.form-control{
+    padding: 0.6rem 0.6rem;
+    border-radius: 0;
+    border: 1px solid var(--black-background-color);
+}
+
+input.form-control:focus,
+.form-select:focus{
+    box-shadow: none !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--black-background-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-background-color);
+}
+
+.container-fluid{
+    width: 85%;
+    max-width: 1920px;
+}
+
+@media only screen and (max-width: 1307px){
+    .container-fluid{
+        width: 90% !important;
+    }
+}
+
+
+@media only screen and (max-width: 991px){
+    .container-fluid{
+        width: 100% !important;
+    }
+}
+
+
+#zsiq_float {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#zsiq_float.active {
+  opacity: 1;
+  pointer-events: auto;
+}
