@@ -209,6 +209,7 @@ export const Cart = () => {
       } else {
         toast.error(response.data.message);
       }
+      fetchCartlist();
     } catch (error) {
       toast.error("Failed to update cart");
     } finally {
