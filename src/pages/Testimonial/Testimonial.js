@@ -655,7 +655,7 @@ export const Testimonial = () => {
 
                                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                                     <Link to={contentVal.link_url}>
-                                        <div className="oeijmewrwer d-flex p-2">
+                                        <div className="oeijmewrwer sgdrgwe d-flex p-2">
                                             <div className="col-lg-3">
                                                 <div className="djewojewr_left">
                                                     <img src={optimizeImage(`${TestimonialDetails?.testimonial_url}/${contentVal?.image}`)} alt="" />

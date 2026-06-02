@@ -278,12 +278,8 @@
     .dweihruiwehrjnwer.d-none{
         display: flex !important;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
         overflow-x: hidden;
-    }
-
-    .idjweihewr{
-        flex: 1;
     }
 
     .dfgefsertttt .nav-item {
@@ -419,13 +415,25 @@
     }
 
     .doihweuijewrr{
+        flex-shrink: 0;
         position: relative;
         z-index: 9999;
+        height: 4.313rem;
+        overflow: hidden;
+    }
+
+    .hgbdfbgbeedcfbrr{
+        flex-shrink: 0;
     }
 
     .hgbdfbgbeedcfbrr i{
         font-size: 1.6rem;
-    }    
+    }   
+    
+    .idjweihewr{
+        flex: 1;
+        overflow: hidden;
+    }
 
     .iakdpleejwrwerer {
         gap: 2.6vw;

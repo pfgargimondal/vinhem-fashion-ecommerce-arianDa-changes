@@ -1878,7 +1878,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                               
                             </span>
 
-                            <span className="fghfgg114 d-flex align-items-center ms-2">
+                            <span className="fghfgg114 safghewerwer d-flex align-items-center ms-2">
                               {productDetails?.data?.discount}%OFF
                             </span>
                           </h4>
@@ -2295,7 +2295,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                               </div>
                             </div>
                           )}
-                        </div>
+                        </div> 
 
                         <div className="fvgndfjgf">
                           <label htmlFor="" className="form-label me-1 mb-2">

@@ -60,10 +60,10 @@ export const Cart = () => {
   const [isGift, setIsGift] = useState(false);
   const [pymntSmmryDrpdwn, setPymntSmmryDrpdwn] = useState(true);
   const [pageMetaData, setPageMetaData] = useState([]);
+
                         
   const pathName = useLocation().pathname;
 
-  console.log(selectedDiscount, 'selectedDiscount');
   // console.log(localStorage.getItem("selectedCurrency"), 'selectedCurrency');
 
   const fetchCartlist = useCallback(async () => {
@@ -1205,6 +1205,12 @@ export const Cart = () => {
                           discountPercent > 0
                             ? Math.round(price / (1 - discountPercent / 100))
                             : price;
+
+                        const availableQty =
+                              Number(cartItemsVal?.productRTSQuantity) > 0
+                                ? Number(cartItemsVal?.productRTSQuantity)
+                                : Number(cartItemsVal?.productMtoQuantity);
+
                         return (
                         <div className="dfgjhbdfg position-relative p-3 mb-4">
                           <div className="row freweerqeweqwe">
@@ -1333,7 +1339,30 @@ export const Cart = () => {
                                   {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
                                     <p className="mb-1">
                                       Stitching Option : {cartItemsVal.actual_stitch_option}
-                                      {cartItemsVal.size === null && ` | Qty : ${cartItemsVal.quantity}`}
+                                      {cartItemsVal.size === null && ` | Qty : 
+                                      <div className="dgdsgee d-inline-flex ms-2">
+                                        <select
+                                            name="product_quantity"
+                                            id="product_quantity"
+                                            value={cartItemsVal.quantity}
+                                            className="form-select weqwthyuytredfgw cbgdrfsfewerrr select-form-drpdwn"
+                                          >
+                                            {cartItemsVal.quantity}
+                                            {availableQty > 0 ? (
+                                                Array.from(
+                                                  { length: Math.min(availableQty, 5) },
+                                                  (_, i) => i + 1
+                                                ).map((qty) => (
+                                                  <option key={qty} value={qty}>
+                                                    {qty}
+                                                  </option>
+                                                ))
+                                              ) : (
+                                                <option value="0">0</option>
+                                              )}
+                                          </select>
+                                        </div>
+                                      `}
                                     </p>
                                   )} 
                                   {cartItemsVal.size !== null && (
@@ -1343,18 +1372,22 @@ export const Cart = () => {
                                       <select
                                         name="product_quantity"
                                         id="product_quantity"
-                                        disabled=""
+                                        value={cartItemsVal.quantity}
                                         className="form-select weqwthyuytredfgw cbgdrfsfewerrr select-form-drpdwn"
                                       >
-                                        <option value="">1</option>
-
-                                        <option value="">2</option>
-
-                                        <option value="">3</option>
-
-                                        <option value="">4</option>
-
-                                        <option value="">5</option>
+                                        {cartItemsVal.quantity}
+                                        {availableQty > 0 ? (
+                                            Array.from(
+                                              { length: Math.min(availableQty, 5) },
+                                              (_, i) => i + 1
+                                            ).map((qty) => (
+                                              <option key={qty} value={qty}>
+                                                {qty}
+                                              </option>
+                                            ))
+                                          ) : (
+                                            <option value="0">0</option>
+                                          )}
                                       </select>
                                     </div>
                                     {/* {cartItemsVal.quantity} */}
