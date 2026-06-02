@@ -3129,7 +3129,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                       <h4 className="pb-2">Similar Items</h4>
                     </div>
 
-                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg py-4">
+                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg dghdjkgmskrt py-4">
                       <Swiper {...swiperConfig}>
                         {productDetails?.data?.similar_product.map(
                           (featuredProduct) => (

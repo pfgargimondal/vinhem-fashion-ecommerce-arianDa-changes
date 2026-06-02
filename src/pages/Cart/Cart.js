@@ -189,6 +189,35 @@ export const Cart = () => {
     return ` ${day}${getDaySuffix(day)} ${month} ${year}`;
   };
 
+
+  const handleQuantitySelect = async (cartId, qty) => {
+    if (qty > 5) {
+      toast.error("You can purchase a maximum of 5 quantities only.");
+      return;
+    }
+    setLoading(true);
+
+    try {
+      const response = await http.post("/user/update-cart-quantity", {
+        cartId: cartId,
+        quantity: qty,
+      });
+
+      if (response.data.success) {
+        
+        toast.success(response.data.message);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Failed to update cart");
+    } finally {
+      setLoading(false);
+    }
+
+  };
+
+
   // Helper for suffix
   const getDaySuffix = (day) => {
     if (day >= 11 && day <= 13) return "th";
@@ -1345,6 +1374,9 @@ export const Cart = () => {
                                             name="product_quantity"
                                             id="product_quantity"
                                             value={cartItemsVal.quantity}
+                                            onChange={(e) =>
+                                              handleQuantitySelect(cartItemsVal.id, Number(e.target.value))
+                                            }
                                             className="form-select weqwthyuytredfgw cbgdrfsfewerrr select-form-drpdwn"
                                           >
                                             {cartItemsVal.quantity}
@@ -1373,6 +1405,9 @@ export const Cart = () => {
                                         name="product_quantity"
                                         id="product_quantity"
                                         value={cartItemsVal.quantity}
+                                        onChange={(e) =>
+                                          handleQuantitySelect(cartItemsVal.id, Number(e.target.value))
+                                        }
                                         className="form-select weqwthyuytredfgw cbgdrfsfewerrr select-form-drpdwn"
                                       >
                                         {cartItemsVal.quantity}
