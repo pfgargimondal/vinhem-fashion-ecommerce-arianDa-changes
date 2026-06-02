@@ -4,7 +4,7 @@ import { UserProfileNavMenu } from "../../components";
 import styles from "./Css/OrderHistory.module.css";
 import { useAuth } from "../../context/AuthContext";
 import http from "../../http";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useMemo, useRef } from "react";
 // eslint-disable-next-line
 import { downloadInvoicePDF } from "../../utils/downloadInvoice";
@@ -16,6 +16,7 @@ import jsPDF from "jspdf";
 // eslint-disable-next-line
 import html2canvas from "html2canvas";
 import Loader from "../../components/Loader/Loader";
+import { toast } from "react-toastify";
 
 export const OrderHistory = () => {
 
@@ -25,7 +26,16 @@ export const OrderHistory = () => {
     const [search, setSearch] = useState("");
     const [open, setOpen] = useState(false);
     const [resUsernavToggle, setResUsernavToggle] = useState(false);
+
+
     const [returnConfirmModal, setReturnConfirmModal] = useState(false);
+    const [selectedOrderId, setSelectedOrderId] = useState(null);
+
+    const [returnData, setReturnData] = useState({
+        reason: "",
+        description: "",
+        file: null,
+    });
 
     useEffect(() => {
         const body = document.querySelector("body");
@@ -85,14 +95,14 @@ export const OrderHistory = () => {
     /* =======================
         FETCH ORDER HISTORY
     ======================= */
-    useEffect(() => {
-        if (!token) return;
-
-        const fetchOrderHistory = async () => {
+    const fetchOrderHistory = useCallback(async () => {
         try {
             setLoading(true);
+
             const res = await http.get("/user/get-order-history", {
-            headers: { Authorization: `Bearer ${token}` },
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
             });
 
             setOrderHistory(res?.data?.data?.orders || []);
@@ -101,10 +111,13 @@ export const OrderHistory = () => {
         } finally {
             setLoading(false);
         }
-        };
+    }, [token]);
+
+    useEffect(() => {
+        if (!token) return;
 
         fetchOrderHistory();
-    }, [token]);
+    }, [fetchOrderHistory, token]);
 
   /* =======================
       AUTO FOCUS SEARCH (ONCE)
@@ -200,6 +213,8 @@ export const OrderHistory = () => {
         const confirmCancel = window.confirm("Are you sure you want to cancel this order?");
         if (!confirmCancel) return;
 
+        setLoading(true);
+
         try {
             const token = localStorage.getItem("token");
             const response = await http.post(
@@ -219,8 +234,64 @@ export const OrderHistory = () => {
         } catch (err) {
             console.error(err);
             alert(" Something went wrong while cancelling the order.");
+        }finally {
+            setLoading(false);
         }
     };
+
+    const handleReturnRequest = async (e) => {
+        e.preventDefault();
+
+        if (!returnData.reason) {
+            toast.error("Please select a return reason");
+            return;
+        }
+        setLoading(true);
+        const formData = new FormData();
+
+        formData.append("order_id", selectedOrderId);
+        formData.append("reason", returnData.reason);
+        formData.append("description", returnData.description);
+
+        if (returnData.file) {
+            formData.append("file", returnData.file);
+        }
+
+        try {
+            const response = await http.post(
+            "/user/return-order-request",
+            formData,
+            {
+                headers: {
+                "Content-Type": "multipart/form-data",
+                },
+            }
+            );
+
+            if (response.data.success) {
+                toast.success(response.data.message);
+
+                setReturnConfirmModal(false);
+
+                setReturnData({
+                    reason: "",
+                    description: "",
+                    file: null,
+                });
+
+                setSelectedOrderId(null);
+
+            } else {
+                toast.error(response.data.message);
+            }
+            fetchOrderHistory();
+        } catch (error) {
+            toast.error("Failed to submit return request");
+        } finally {
+            setLoading(false);
+        }
+    };
+
 
 
     return (
@@ -297,7 +368,7 @@ export const OrderHistory = () => {
                                         <i className="fa-solid ms-1 fa-house"></i>
                                         </Link>
                                     </p>
-                                    </div>
+                              </div>
 
 
                                 <div className={styles.dfgndfjhbgdfgdf}>
@@ -372,7 +443,12 @@ export const OrderHistory = () => {
                                                                         const canReturn = diffDays <= 2;
                                                                         return canReturn ? (
 
-                                                                            <button onClick={() => setReturnConfirmModal(prev => !prev)}
+                                                                            <button 
+                                                                                // onClick={() => setReturnConfirmModal(prev => !prev)}
+                                                                                onClick={() => {
+                                                                                    setSelectedOrderId(orderHistoryVal.order_id);
+                                                                                    setReturnConfirmModal(true);
+                                                                                }}
                                                                                 className={`btn ${styles.return_ordr} border-0 px-0`}
                                                                             >
                                                                                 <i className="bi me-1 bi-arrow-counterclockwise"></i>
@@ -391,7 +467,11 @@ export const OrderHistory = () => {
                                                                     })()
                                                                 ) : orderHistoryVal.order_status === "Returned" ? (
                                                                 <button className={`btn ${styles.return_ordr} border-0 px-0`}>
-                                                                    <i className="bi me-1 bi-folder-x"></i> Return Completed
+                                                                    <i className="bi me-1 bi-folder-x"></i> Return Initiated
+                                                                </button>
+                                                                ) : orderHistoryVal.order_status === "Refunded" ? (
+                                                                <button className={`btn ${styles.return_ordr} border-0 px-0`}>
+                                                                    <i className="bi me-1 bi-folder-x"></i> Refund Completed
                                                                 </button>
                                                                 ) : (
                                                                 <button className="btn border-0 px-0 text-muted">
@@ -496,202 +576,110 @@ export const OrderHistory = () => {
                 <div className="delkwlrwer p-5 pt-0">
                     <h3 className="mb-4 px-4 text-white py-3">Tell Us Why You're Returning This Item..!</h3>
 
-                    <form className={styles.rp_form_wrapper}>
-                        <div className="cdwehjirnweijrowejrowejr">
+                    <form className={styles.rp_form_wrapper} onSubmit={handleReturnRequest}>
+                        {[
+                            "Defective / Does not work properly.",
+                            "Unflattering fit / Size Issue.",
+                            "Damaged product (crushed, torn, scratched).",
+                            "Wrong item was sent.",
+                            "Missing accessories or parts.",
+                            "Doesn't meet expectations / Poor quality.",
+                            "Replacement Required."
+                        ].map((reason, index) => (
+                            <div
+                            className={`cdwehjirnweijrowejrowejr ${
+                                index === 6 ? "mb-0" : ""
+                            }`}
+                            key={index}
+                            >
                             <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-1" className="checkbox">
-                                    <input
-                                        id="safgsg-1"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Defective / Does not work properly.</p>
-                                </label>
-                            </div>
-                        </div>
+                                <label
+                                htmlFor={`return-reason-${index}`}
+                                className="checkbox"
+                                >
+                                <input
+                                    id={`return-reason-${index}`}
+                                    className="checkbox__trigger visuallyhidden"
+                                    type="radio"
+                                    name="return_reason"
+                                    value={reason}
+                                    checked={returnData.reason === reason}
+                                    onChange={(e) =>
+                                    setReturnData({
+                                        ...returnData,
+                                        reason: e.target.value,
+                                    })
+                                    }
+                                />
 
-                        <div className="cdwehjirnweijrowejrowejr">
-                            <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-2" className="checkbox">
-                                    <input
-                                        id="safgsg-2"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Unflattering fit / Size Issue.</p>
-                                </label>
-                            </div>
-                        </div>
+                                <span className="checkbox__symbol">
+                                    <svg
+                                    aria-hidden="true"
+                                    className="icon-checkbox"
+                                    width="28px"
+                                    height="28px"
+                                    viewBox="0 0 28 28"
+                                    >
+                                    <path d="M4 14l8 7L24 7" />
+                                    </svg>
+                                </span>
 
-                        <div className="cdwehjirnweijrowejrowejr">
-                            <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-3" className="checkbox">
-                                    <input
-                                        id="safgsg-3"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Damaged product (crushed, torn, scratched).</p>
+                                <p className="checkbox__textwrapper">
+                                    {reason}
+                                </p>
                                 </label>
                             </div>
-                        </div>
-
-                        <div className="cdwehjirnweijrowejrowejr">
-                            <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-4" className="checkbox">
-                                    <input
-                                        id="safgsg-4"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Wrong item was sent.</p>
-                                </label>
                             </div>
-                        </div>
-
-                        <div className="cdwehjirnweijrowejrowejr">
-                            <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-5" className="checkbox">
-                                    <input
-                                        id="safgsg-5"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Missing accessories or parts.</p>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="cdwehjirnweijrowejrowejr">
-                            <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-6" className="checkbox">
-                                    <input
-                                        id="safgsg-6"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Doesn't meet expectations / Poor quality.</p>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="cdwehjirnweijrowejrowejr mb-0">
-                            <div className="checkbox-wrapper-33">
-                                <label htmlFor="safgsg-7" className="checkbox">
-                                    <input
-                                        id="safgsg-7"
-                                        className="checkbox__trigger visuallyhidden"
-                                        type="radio"
-                                        defaultValue="pre-draped sarees"
-                                        name="duihwerwer"
-                                    />
-                                    <span className="checkbox__symbol">
-                                        <svg
-                                            aria-hidden="true"
-                                            className="icon-checkbox"
-                                            width="28px"
-                                            height="28px"
-                                            viewBox="0 0 28 28"
-                                        >
-                                            <path d="M4 14l8 7L24 7" />
-                                        </svg>
-                                    </span>
-                                    <p className="checkbox__textwrapper">Replacement Required.</p>
-                                </label>
-                            </div>
-                        </div>
+                        ))}
 
                         <div className={`${styles.duiewrweoplrwer} mt-4`}>
-                            <label className="form-label">Return Reason<span style={{ color: "red" }}>*</span></label>
+                            <label className="form-label">
+                            Return Reason
+                            <span style={{ color: "red" }}>*</span>
+                            </label>
 
-                            <textarea name="" id="" className="form-control" placeholder="Text Me..."></textarea>
+                            <textarea
+                            className="form-control"
+                            placeholder="Text Me..."
+                            value={returnData.description}
+                            onChange={(e) =>
+                                setReturnData({
+                                ...returnData,
+                                description: e.target.value,
+                                })
+                            }
+                            />
                         </div>
 
                         <div className="iodneoiwjrwer">
-                            <input type="file" id="file" className="d-none" />
+                            <input
+                                type="file"
+                                id="file"
+                                className="d-none"
+                                onChange={(e) =>
+                                    setReturnData({
+                                    ...returnData,
+                                    file: e.target.files[0],
+                                    })
+                                }
+                            />
 
-                            <label htmlFor="file" className={`${styles.cfisjfrlkwerw} d-flex align-items-center p-3`}><i class="bi me-1 bi-plus-lg"></i> Attach a File</label>
+                            <label
+                                htmlFor="file"
+                                className={`${styles.cfisjfrlkwerw} d-flex align-items-center p-3`}
+                            >
+                                <i className="bi me-1 bi-plus-lg"></i>
+                                Attach a File
+                            </label>
+
+                            {returnData.file && (
+                                <small className="d-block mt-2">
+                                    {returnData.file.name}
+                                </small>
+                            )}
                         </div>
 
-                        <div className={`${styles.doeiwjrkweopr} text-center mt-3`}><button className="btn btn-main px-3">Submit</button></div>
+                        <div className={`${styles.doeiwjrkweopr} text-center mt-3`}><button className="btn btn-main px-3" type="submit">Submit</button></div>
                     </form>
                 </div>
             </div>
