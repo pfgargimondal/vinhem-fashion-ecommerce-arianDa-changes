@@ -1367,37 +1367,36 @@ export const Cart = () => {
                                   <p className="mb-1">ITEM ID: {cartItemsVal.item_id}</p>
                                   <p className="mb-1">Colour: {cartItemsVal.color}</p>
                                   {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
-                                    <p className="mb-1">
-                                      Stitching Option : {cartItemsVal.actual_stitch_option}
-                                      {cartItemsVal.size === null && ` | Qty : 
-                                      <div className="dgdsgee d-inline-flex ms-2">
-                                        <select
-                                            name="product_quantity"
-                                            id="product_quantity"
+                                    <p className="mb-1 d-flex align-items-center flex-wrap">
+                                      <span>
+                                        Stitching Option : {cartItemsVal.actual_stitch_option}
+                                      </span>
+
+                                      {cartItemsVal.size === null && (
+                                        <>
+                                          <span className="ms-3 me-2">| Qty :</span>
+
+                                          <select
                                             value={cartItemsVal.quantity}
                                             onChange={(e) =>
-                                              handleQuantitySelect(cartItemsVal.id, Number(e.target.value))
+                                              handleQuantitySelect(
+                                                cartItemsVal.id,
+                                                Number(e.target.value)
+                                              )
                                             }
-                                            className="form-select weqwthyuytredfgw cbgdrfsfewerrr select-form-drpdwn"
+                                            className="form-select d-inline-block"
+                                            style={{ width: "80px" }}
                                           >
-                                            {cartItemsVal.quantity}
-                                            {availableQty > 0 ? (
-                                                Array.from(
-                                                  { length: Math.min(availableQty, 5) },
-                                                  (_, i) => i + 1
-                                                ).map((qty) => (
-                                                  <option key={qty} value={qty}>
-                                                    {qty}
-                                                  </option>
-                                                ))
-                                              ) : (
-                                                <option value="0">0</option>
-                                              )}
+                                            {[1, 2, 3, 4, 5].map((qty) => (
+                                              <option key={qty} value={qty}>
+                                                {qty}
+                                              </option>
+                                            ))}
                                           </select>
-                                        </div>
-                                      `}
+                                        </>
+                                      )}
                                     </p>
-                                  )} 
+                                  )}
                                   {cartItemsVal.size !== null && (
                                     <p className="mb-1">Size : {cartItemsVal.size} | Qty : 
                                     

@@ -466,17 +466,24 @@ export const OrderHistory = () => {
                                                                         );
                                                                     })()
                                                                 ) : orderHistoryVal.order_status === "Returned" ? (
-                                                                <button className={`btn ${styles.return_ordr} border-0 px-0`}>
-                                                                    <i className="bi me-1 bi-folder-x"></i> Return Initiated
-                                                                </button>
+                                                                    orderHistoryVal.return_request === "Declined" ? (
+                                                                        <button className={`btn ${styles.return_ordr} border-0 px-0`}>
+                                                                            <i className="bi me-1 bi-folder-x"></i> Return Cancelled
+                                                                        </button>
+                                                                    ):(
+                                                                        <button className={`btn ${styles.return_ordr} border-0 px-0`}>
+                                                                            <i className="bi me-1 bi-folder-x"></i> Return Initiated
+                                                                        </button>
+                                                                    )
+                                                                
                                                                 ) : orderHistoryVal.order_status === "Refunded" ? (
-                                                                <button className={`btn ${styles.return_ordr} border-0 px-0`}>
-                                                                    <i className="bi me-1 bi-folder-x"></i> Refund Completed
-                                                                </button>
+                                                                    <button className={`btn ${styles.return_ordr} border-0 px-0`}>
+                                                                        <i className="bi me-1 bi-folder-x"></i> Refund Completed
+                                                                    </button>
                                                                 ) : (
-                                                                <button className="btn border-0 px-0 text-muted">
-                                                                    <i className="bi me-1 bi-folder-x"></i> Cancellation Not Available
-                                                                </button>
+                                                                    <button className="btn border-0 px-0 text-muted">
+                                                                        <i className="bi me-1 bi-folder-x"></i> Cancellation Not Available
+                                                                    </button>
                                                                 )}
                                                                 {orderHistoryVal.order_status === "Delivered" && (
                                                                     <button className={`btn ${styles.dwnld_invce} text-success border-0 px-0`} onClick={() => handleDownload(orderHistoryVal)}>

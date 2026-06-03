@@ -745,6 +745,37 @@ export const ProductDetail = () => {
 
   }, [productDetails]);
 
+  useEffect(() => {
+      if (
+        ( productDetails?.data?.stitching_option === "Ready To Wear" || 
+        productDetails?.data?.stitching_option === "Ready to Wear") &&
+        productDetails?.data?.product_allSize?.length > 0 &&
+        !selectedSize
+      ) {
+        // eslint-disable-next-line
+        const firstSize = productDetails.data.product_allSize[0].filter_size;
+        // const normalized = normalizeSize(firstSize);
+        const normalized = normalizeSize();
+  
+        setSelectedSize(normalized);
+        updateQtyAndPriceBySize(normalized);
+      }
+    }, [productDetails, selectedSize, updateQtyAndPriceBySize]);
+  
+  useEffect(() => {
+    const stitchingType =
+      productDetails?.data?.stitching_option?.toLowerCase();
+
+    if ( 
+      stitchingType === "unstiched-fabric" || stitchingType === "unstitched-fabric" ||
+      stitchingType === "semi-stitched" 
+    ) {
+      const qty = Number(productDetails?.data?.mto_quantity || 0);
+      setAvailableQty(qty);
+      setSelectedQuantity(1);
+    }
+  }, [productDetails]);
+
 //  useEffect(() => {
 
 //   if (!productDetails?.data) return;
@@ -1435,6 +1466,9 @@ for (let i = 0; i < filteredSpecs.length; i++) {
   };
 
 
+  console.log(selectedStitchOption, 'selectedStitchOption');
+
+
   return (
     <>
     {(loading || cartLoading || wishlistLoading) && <Loader />}
@@ -1948,6 +1982,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                                   // checked={selectedStitchOption === "stitch"}
                                   checked={
                                     selectedStitchOption === "unstitched-fabric" ||
+                                    selectedStitchOption === "semi-stitched" ||
                                     selectedStitchOption === "stitch"
                                   }
                                   // onChange={() =>
