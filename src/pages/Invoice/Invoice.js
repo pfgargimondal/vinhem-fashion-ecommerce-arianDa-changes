@@ -229,10 +229,15 @@ const Invoice = () => {
     }
   });
 
+  // eslint-disable-next-line
   totalTaxable += shippingGst.net;
+  // eslint-disable-next-line
   totalCgst += shippingGst.cgst;
+  // eslint-disable-next-line
   totalSgst += shippingGst.sgst;
+  // eslint-disable-next-line
   totalIgst += shippingGst.igst;
+  // eslint-disable-next-line
   totalAmount += shippingAmount;
 
 
@@ -275,14 +280,22 @@ const Invoice = () => {
               <td style={{ border: 0 }} className="invoice-total-label-color">
                 <b>SOLD BY :</b>
               </td>
-              <td style={{ borderBottom: 0, borderTop: 0, borderRight: 0, paddingBottom: 0 }}>
+              {/* <td style={{ borderBottom: 0, borderTop: 0, borderRight: 0, paddingBottom: 0 }}>
                 <b>CIN Number : N/A</b>
-              </td>
-              <td style={{ borderBottom: 0, borderTop: 0, borderRight: 0, paddingBottom: 0 }}>
+              </td> */}
+              <td style={{
+                    borderBottom: "1px solid #000",
+                    borderTop: 0,
+                    borderRight: 0,
+                    whiteSpace: "nowrap",
+                }}>
                 <b>Transaction ID : {order?.transaction_id}</b>
               </td>
+              <td style={{ borderTop: 0, borderRight: 0, borderInline: 0, paddingBottom: "1px", borderBottom: "1px solid #000",}}>
+                  &nbsp;
+              </td>
             </tr>
-
+   
             <tr>
               <td className="col-left" style={{ borderInline: 0, width: "50%" }}>
                 <strong>Name :</strong> VinHem Fashion<br />
@@ -364,7 +377,11 @@ const Invoice = () => {
               <th style={{borderTop: 0, borderRight: 0}} colSpan="2">CGST</th>
               <th style={{borderTop: 0, borderRight: 0}} colSpan="2">SGST</th>
               <th style={{borderTop: 0, borderRight: 0}} colSpan="2">IGST</th>
-              <th rowSpan={2} style={{borderTop: 0, borderRight: 0, borderBottom: 0, paddingTop: "1.5rem", backgroundColor: "e0e0e0"}}>Total Amount</th>
+              <th rowSpan={2} style={{
+                  backgroundColor: "#F2F2F2",
+                  borderTop: 0, borderRight: 0, borderBottom: 0, paddingTop: "1.5rem"
+                }}>
+              Total Amount</th>
             </tr>
 
             <tr className="sub-head">
@@ -395,14 +412,29 @@ const Invoice = () => {
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.get_gst_value.hsn}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.product_size || '-'}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.quantity || '-'}</td>
-                    <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.net.toFixed(2)}</td>
+                    <td style={{ borderRight: "none", borderBottom: "none" }}>
+                      {Number(gst.net).toLocaleString('en-IN', {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                      })}
+                    </td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.cgstRate}%</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.cgst.toFixed(2)}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.sgstRate}%</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.sgst.toFixed(2)}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.igstRate}%</td>
-                    <td style={{ borderRight: "none", borderBottom: "none" }}>{gst.igst.toFixed(2)}</td>
-                    <td style={{ borderRight: "none", borderBottom: "none" }}>{gross.toFixed(2)}</td>
+                    <td style={{ borderRight: "none", borderBottom: "none" }}>
+                      {Number(gst.igst).toLocaleString('en-IN', {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                      })}
+                    </td>
+                    <td style={{ borderRight: "none", borderBottom: "none" }}>
+                      {Number(gross).toLocaleString('en-IN', {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                      })}
+                    </td>
                   </tr>
 
 
@@ -504,14 +536,14 @@ const Invoice = () => {
 
             <tr>
               <td colspan="5" style={{ borderInline: 0, borderBottom: 0 }}><strong>Shipping &amp; Duties</strong></td>
-              <td style={{ borderBottom: 0, borderRight: 0 }}>{totalTaxable.toFixed(2)}</td>
+              <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.net.toFixed(2)}</td>
               <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.cgstRate}%</td>
-              <td style={{ borderBottom: 0, borderRight: 0 }}>{totalCgst.toFixed(2)}</td>
+              <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.cgst.toFixed(2)}</td>
               <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.sgstRate}%</td>
-              <td style={{ borderBottom: 0, borderRight: 0 }}>{totalSgst.toFixed(2)}</td>
+              <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.sgst.toFixed(2)}</td>
               <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.igstRate}%</td>
-              <td style={{ borderBottom: 0, borderRight: 0 }}>{totalIgst.toFixed(2)}</td>
-              <td style={{ borderBottom: 0, borderRight: 0 }}>{totalAmount.toFixed(2)}</td>
+              <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingGst.igst.toFixed(2)}</td>
+              <td style={{ borderBottom: 0, borderRight: 0 }}>{shippingAmount.toFixed(2)}</td>
             </tr>
 
             <tr>
@@ -522,7 +554,12 @@ const Invoice = () => {
               <td colspan="4" style={{ borderBottom: 0, borderRight: 0 }} className="invoice-total-label invoice-total-label-color">
                 <strong style={{ fontSize: "1rem" }}>Invoice Total</strong>
               </td>
-              <td class="invoice-total" style={{ borderRight: 0, fontSize: "1rem", borderBottom: 0 }}>{totalAmount.toFixed(2)}</td>
+              <td class="invoice-total" style={{ borderRight: 0, fontSize: "1rem", borderBottom: 0 }}>
+                {Number(totalAmount).toLocaleString('en-IN', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                })}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -547,7 +584,7 @@ const Invoice = () => {
                 www.vinhemfashion.com
               </td>
 
-              <td className="signature" style={{ borderRight: 0, borderBottom: 0 }}>
+              <td className="signature" style={{ borderRight: 0, borderBottom: 0, borderTop: 0 }}>
                 Authorised Signatory
               </td>
             </tr>
