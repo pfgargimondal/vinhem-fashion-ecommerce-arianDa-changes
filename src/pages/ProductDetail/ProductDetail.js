@@ -261,6 +261,11 @@ export const ProductDetail = () => {
     }
   }, [slug]);
 
+  useEffect(() => {
+    setActiveKey("img-1");
+    setSlideIndex(0);
+  }, [slug]);
+
   // eslint-disable-next-line
   const [activeTab, setActiveTab] = useState("tab-1");
 
@@ -1237,7 +1242,7 @@ export const ProductDetail = () => {
   useEffect(() => {
     if (!token || !productDetails?.data?.id) return;
     const fetchUserMeasurement = async () => {
-      setLoading(true);
+      // setLoading(true);
       try {
         const measurresponse = await http.get(
           `/user/fetch-measurement-details/${productDetails?.data?.id}`,
@@ -1248,9 +1253,10 @@ export const ProductDetail = () => {
         SetmeasurementDetails(measurresponse.data);
       } catch (error) {
         console.error("Error fetching measurement details:", error);
-      } finally {
-        setLoading(false);
-      }
+      } 
+      // finally {
+      //   setLoading(false);
+      // }
     };
 
     fetchUserMeasurement();
@@ -1464,9 +1470,6 @@ for (let i = 0; i < filteredSpecs.length; i++) {
       "_blank"
     );
   };
-
-
-  console.log(selectedStitchOption, 'selectedStitchOption');
 
 
   return (
@@ -1904,7 +1907,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                               }
                             </span> 
 
-                            <span className="gdfg55 fghdhdfesrer d-flex align-items-center ms-2">
+                            <span className="gdfg55 fghdhdfesrer sdfdjhejrerwr d-flex align-items-center ms-2">
                               {/* <i class="bi bi-currency-rupee"></i> */}
                               {/* {formatPrice(productDetails?.data?.mrp_price)} */}
                               {sizeAccordingMRPPrice === 0 ? (formatPrice(productDetails?.data?.mrp_price))

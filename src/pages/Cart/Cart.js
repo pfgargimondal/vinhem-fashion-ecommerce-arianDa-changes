@@ -3347,6 +3347,16 @@ export const Cart = () => {
                     }}
                   />
 
+                  {!couponItemsVal.is_applicable ? (
+                    <h4 className="oijiwuihfih-eiuheir my-4 text-center">
+                      {couponItemsVal.disable_reason}
+                    </h4>
+                  ) : !couponItemsVal.is_matched ? (
+                    <h4 className="oijiwuihfih-eiuheir my-4 text-center">
+                      This coupon is not valid for products in your cart
+                    </h4>
+                  ) : null} 
+
                   <label
                     htmlFor={couponItemsVal.code}
                     className={`w-100 position-relative ${
@@ -3442,16 +3452,6 @@ export const Cart = () => {
                         : ""
                     }                    
                   </label>
-
-                  {!couponItemsVal.is_applicable ? (
-                    <h4 className="oijiwuihfih-eiuheir my-4 text-center">
-                      {couponItemsVal.disable_reason}
-                    </h4>
-                  ) : !couponItemsVal.is_matched ? (
-                    <h4 className="oijiwuihfih-eiuheir my-4 text-center">
-                      This coupon is not valid for products in your cart
-                    </h4>
-                  ) : null}       
                 </div>
               ))}
             </div>

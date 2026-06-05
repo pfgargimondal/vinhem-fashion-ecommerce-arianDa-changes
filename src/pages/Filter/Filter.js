@@ -35,6 +35,8 @@ export const Filter = () => {
   const [allFilterMappingdata, SetallFilterMappingdata] = useState([]);
   const [filterCategories, setFilterCategories] = useState([]);
   const [productMinPrice, setProductMinPrice] = useState(0);
+  // eslint-disable-next-line
+  const [productMaxPrice, setProductMaxPrice] = useState(0);
 
   const { loading: wishlistLoading, wishlistIds, addToWishlist, removeFromWishlist } = useWishlist();
   const [loading, setLoading] = useState(true);
@@ -499,6 +501,15 @@ export const Filter = () => {
     );
   }, [currentPage, location.search, location.pathname, navigate]);
 
+  const pathSlug = useLocation().pathname;
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathSlug]);
+
 
   const segments = location.pathname.split("/").filter(Boolean);
   let category = null;
@@ -633,6 +644,7 @@ export const Filter = () => {
         setFilterCategories(response.data?.categoryData ?? []);
         SetallFilterMappingdata(response.data?.data ?? []);
         setProductMinPrice(response.data.productMinPrice ?? 0);
+        setProductMaxPrice(response.data.productMaxPrice ?? 0);
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
