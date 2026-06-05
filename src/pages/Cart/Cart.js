@@ -119,7 +119,7 @@ export const Cart = () => {
 
   useEffect(() => {
     if (!token) return;
-    setLoading(true);
+    // setLoading(true);
 
     const fetchCoupon = async () => {
       try {
@@ -131,9 +131,10 @@ export const Cart = () => {
         setPageMetaData(getMetaDataResponse.data.data.get_all_meta_title);
       } catch (error) {
         console.error("Failed to fetch cart list", error);
-      } finally {
-        setLoading(false);
-      }
+      } 
+      // finally {
+      //   setLoading(false);
+      // }
     };
 
     fetchCoupon();
@@ -195,27 +196,43 @@ export const Cart = () => {
       toast.error("You can purchase a maximum of 5 quantities only.");
       return;
     }
+
     setLoading(true);
 
     try {
       const response = await http.post("/user/update-cart-quantity", {
-        cartId: cartId,
+        cartId,
         quantity: qty,
       });
 
       if (response.data.success) {
-        
+        const res = await http.post(
+          "/user/get-cart-user",
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        setcartItems(res.data.data || []);
+        settotalPrice(res.data.total_cart_price || "");
+        setproductCoupon(res.data.all_productCoupon || []);
+        setShippingCountry(res.data.shipping_country || []);
+
         toast.success(response.data.message);
       } else {
         toast.error(response.data.message);
       }
-      fetchCartlist();
     } catch (error) {
       toast.error("Failed to update cart");
+      console.error(error);
     } finally {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 300);
     }
-
   };
 
 
