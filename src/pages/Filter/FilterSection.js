@@ -910,28 +910,43 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                             </div>
                           </div>
 
-                          <div className="slider">
+                          {/* <div className="slider">
                             <div className="progress" style={{ left: `${(minPrice / maxRange) * 100}%`, right: `${100 - (maxPrice / maxRange) * 100}%` }}></div>
+                          </div> */}
+
+                          <div className="slider">
+                            {/* <div className="progress" style={{ left: `${(minPrice / maxRange) * 100}%`, right: `${100 - (maxPrice / maxRange) * 100}%` }}></div> */}
+                            <div
+                              className="progress"
+                              style={{
+                                left: `${((effectiveMinPrice - productMinPrice) / (productMaxPrice - productMinPrice)) * 100}%`,
+                                right: `${100 - ((effectiveMaxPrice - productMinPrice) / (productMaxPrice - productMinPrice)) * 100}%`,
+                              }}
+                            ></div>
+                          
                           </div>
+                          
 
                           <div className="range-input">
+                    
                             <input
                               type="range"
-                              min={0}
+                              min={productMinPrice}
                               max={maxRange}
-                              value={minPrice}
+                              value={effectiveMinPrice}
                               onChange={handleMinRange}
-                              onMouseUp={() => applyPriceFilter(minPrice, maxPrice)}
-                              onTouchEnd={() => applyPriceFilter(minPrice, maxPrice)}
+                              onMouseUp={() => applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)}
+                              onTouchEnd={() => applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)}
                             />
+               
                             <input
                               type="range"
-                              min={0}
+                              min={productMinPrice}
                               max={maxRange}
-                              value={maxPrice}
+                              value={effectiveMaxPrice}
                               onChange={handleMaxRange}
-                              onMouseUp={() => applyPriceFilter(minPrice, maxPrice)}
-                              onTouchEnd={() => applyPriceFilter(minPrice, maxPrice)}
+                              onMouseUp={() => applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)}
+                              onTouchEnd={() => applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)}
                             />
                           </div>
 
