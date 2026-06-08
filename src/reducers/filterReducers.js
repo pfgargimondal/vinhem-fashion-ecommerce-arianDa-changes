@@ -15,6 +15,13 @@ export const filterReducer = (state, action) => {
                 maxPrice: action.payload.maxPrice
             };
 
+        case "RESET_PRICE":
+            return {
+                ...state,
+                minPrice: action.payload.minPrice,
+                maxPrice: action.payload.maxPrice,
+            };
+
         /* ---------------- MAIN CATEGORY ---------------- */
         // case "MAIN_CATEGORY":
         //     return {

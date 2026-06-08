@@ -1421,6 +1421,17 @@ export const FilterProvider = ({ children }) => {
     }
 
 
+    function resetPrice(min, max) {
+        dispatch({
+            type: "RESET_PRICE",
+            payload: {
+            minPrice: min,
+            maxPrice: max,
+            },
+        });
+    }
+
+
     const filteredProducts = filterReadyToShip(
         filterNewArrival(
             filterOnSale(
@@ -1474,6 +1485,7 @@ export const FilterProvider = ({ children }) => {
         minPrice: state.minPrice,
         maxPrice: state.maxPrice,
         setPrice,
+        resetPrice,
 
         mainCategory: state.mainCategory,
         setMainCategory,

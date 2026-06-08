@@ -23,7 +23,8 @@ export const Filter = () => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   // eslint-disable-next-line
-  const { products, initialProductList, mainCategory, subCategory, filterCategory, filterCategoryCntxt, color, material, designer, plusSize, occasion, size, celebrity, discount, shippingTime, minPrice, maxPrice, sortBy, setSortBy, setNewArrival, setReadyToShip, setCstmFit, setOnSale, resetFilter, onSale, newIn, readyToShip, removeMainCategory, removeSubCategory, removeFilterCategory, removeColor, removeMaterial, removeDesigner, removePlusSize, removeOccasion, removeSize, removeCelebrity, removeDiscount, removeShippingTime, cstmFit, page: currentPage, setPage } = useFilter();
+  const { products, initialProductList, mainCategory, subCategory, filterCategory, filterCategoryCntxt, color, material, designer, plusSize, occasion, size, celebrity, discount, shippingTime, minPrice, maxPrice, sortBy, setSortBy, setNewArrival, setReadyToShip, setCstmFit, setOnSale, setPriceWithoutURL, resetFilter, onSale, newIn, readyToShip, removeMainCategory, removeSubCategory, removeFilterCategory, removeColor, removeMaterial, removeDesigner, removePlusSize, removeOccasion, removeSize, removeCelebrity, removeDiscount, removeShippingTime, cstmFit, page: currentPage, setPage } = useFilter();
+  const { resetPrice } = useFilter();
   // eslint-disable-next-line
   const [viewType, setViewType] = useState(false);
   const [resFltrMenu, setResFltrMenu] = useState(false);
@@ -643,8 +644,15 @@ export const Filter = () => {
 
         setFilterCategories(response.data?.categoryData ?? []);
         SetallFilterMappingdata(response.data?.data ?? []);
-        setProductMinPrice(response.data.productMinPrice ?? 0);
-        setProductMaxPrice(response.data.productMaxPrice ?? 0);
+
+        const newMin = response.data.productMinPrice ?? 0;
+        const newMax = response.data.productMaxPrice ?? 0;
+
+        setProductMinPrice(newMin);
+        setProductMaxPrice(newMax);
+
+        resetPrice(newMin, newMax);
+
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
@@ -653,6 +661,7 @@ export const Filter = () => {
     };
 
     fetchFilterMapping();
+    // eslint-disable-next-line
   }, [location.pathname, category, subcategory]);
 
 
@@ -900,7 +909,7 @@ export const Filter = () => {
                   }`}
                 id="res-filtr-nav"
               >
-                <FilterSection category={category} subcategory={subcategory} filterCategory={filterCategory} setResFltrMenu={setResFltrMenu} allFilterMappingdata={allFilterMappingdata} filterCategories={filterCategories} productMinPrice={productMinPrice} setFilterLoading={setFilterLoading}/>
+                <FilterSection category={category} subcategory={subcategory} filterCategory={filterCategory} setResFltrMenu={setResFltrMenu} allFilterMappingdata={allFilterMappingdata} filterCategories={filterCategories} productMinPrice={productMinPrice} productMaxPrice={productMaxPrice} setFilterLoading={setFilterLoading}/>
               </div>
             </div>
           </div>

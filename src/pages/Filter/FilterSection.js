@@ -9,7 +9,7 @@ import Loader from "../../components/Loader/Loader";
 import { useCurrency } from "../../context/CurrencyContext";
 
 
-export default function FilterSection({ setResFltrMenu, allFilterMappingdata, filterCategories, category, subcategory, productMinPrice, setFilterLoading }) {
+export default function FilterSection({ setResFltrMenu, allFilterMappingdata, filterCategories, category, subcategory, productMinPrice, productMaxPrice, setFilterLoading }) {
   const { minPrice, maxPrice, setPrice, mainCategory, setMainCategory, subCategory, setSubCategory, filterCategoryCntxt, setFilterCategory, setFilterCategoryName, color, setColor, material, setMaterial, designer, setDesigner, plusSize, setPlusSize, occasion, setOccasion, size, setSize, celebrity, setCelebrity, discount, setDiscount, shippingTime, setShippingTime, resetFilter } = useFilter();
   const [selectedTheme, setSelectedTheme] = useState("");
   const [sbctgry, setSbctgry] = useState(null);
@@ -32,11 +32,23 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
 
   // Converted display values
   // const minDisplay = Math.floor(minPrice / rate);
-  const minDisplay = Math.floor(
-    (minPrice === 0 ? productMinPrice : minPrice) / rate
-  );
-  const maxDisplay = Math.floor(maxPrice / rate);
+  // const minDisplay = Math.floor(
+  //   (minPrice === 0 ? productMinPrice : minPrice) / rate
+  // );
+  // const maxDisplay = Math.floor(maxPrice / rate);
+  // const maxDisplay = Math.floor(
+  //   (maxPrice === 1000000 ? productMaxPrice : maxPrice) / rate
+  // );
 
+
+  const effectiveMinPrice =
+  minPrice === 0 ? productMinPrice : minPrice;
+
+  const effectiveMaxPrice =
+    maxPrice === 1000000 ? productMaxPrice : maxPrice;
+
+  const minDisplay = Math.floor(effectiveMinPrice / rate);
+  const maxDisplay = Math.floor(effectiveMaxPrice / rate);
   // console.log(filterCategories, 'filterCategories');
 
   // console.log(category);
@@ -156,9 +168,18 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
       }, 1000);
   }
 
+//   useEffect(() => {
+//   if (
+//     productMaxPrice > 0 &&
+//     maxPrice === 1000000
+//   ) {
+//     setPrice(productMinPrice, productMaxPrice);
+//   }
+// }, [productMinPrice, productMaxPrice, maxPrice, setPrice]);
 
   const priceGap = 500;
-  const maxRange = 1000000;
+  // const maxRange = 1000000;
+  const maxRange = productMaxPrice;
 
   const handleMinInput = (e) => {
     const value = e.target.value; // keep as string so user can type
@@ -178,13 +199,16 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
     let value = Number(e.target.value);
 
     if (isNaN(value)) return;
-    if (value > maxRange) value = maxRange;
 
-    // Maintain price gap
-    if (value < minPrice + priceGap) {
-      value = minPrice + priceGap;
+    if (value > productMaxPrice) {
+      value = productMaxPrice;
     }
-    setPrice(minPrice, value);
+
+    if (value < effectiveMinPrice + priceGap) {
+      value = effectiveMinPrice + priceGap;
+    }
+
+    setPrice(effectiveMinPrice, value);
   };
 
   // Handle min slider range change
@@ -212,15 +236,26 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
     applyPriceFilter(value, maxPrice);
   };
 
+  // const handleMaxBlur = () => {
+  //   let value = Number(maxPrice);
+  //   if (isNaN(value)) value = minPrice + priceGap;
+  //   if (value > maxRange) value = maxRange;
+  //   if (value < minPrice + priceGap) value = minPrice + priceGap;
+  //   // setPrice(minPrice, value);
+  //   applyPriceFilter(minPrice, value);
+  // };
+
   const handleMaxBlur = () => {
     let value = Number(maxPrice);
-    if (isNaN(value)) value = minPrice + priceGap;
-    if (value > maxRange) value = maxRange;
-    if (value < minPrice + priceGap) value = minPrice + priceGap;
-    // setPrice(minPrice, value);
+
+    if (isNaN(value)) value = productMaxPrice;
+    if (value > productMaxPrice) value = productMaxPrice;
+    if (value < minPrice + priceGap) {
+      value = minPrice + priceGap;
+    }
+
     applyPriceFilter(minPrice, value);
   };
-
 
   const handleMinEnter = (e) => {
     if (e.key === "Enter") handleMinBlur();
@@ -307,28 +342,42 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                   </div>
 
                   <div className="slider">
-                    <div className="progress" style={{ left: `${(minPrice / maxRange) * 100}%`, right: `${100 - (maxPrice / maxRange) * 100}%` }}></div>
+                    <div
+                      className="progress"
+                      style={{
+                        left: `${((effectiveMinPrice - productMinPrice) / (productMaxPrice - productMinPrice)) * 100}%`,
+                        right: `${100 - ((effectiveMaxPrice - productMinPrice) / (productMaxPrice - productMinPrice)) * 100}%`,
+                      }}
+                    ></div>
                   </div>
 
                   <div className="range-input">
-                    <input
-                      type="range"
-                      min={productMinPrice}
-                      max={maxRange}
-                      value={minPrice === 0 ? productMinPrice : minPrice}
-                      onChange={handleMinRange}
-                      onMouseUp={() => applyPriceFilter(minPrice, maxPrice)}
-                      onTouchEnd={() => applyPriceFilter(minPrice, maxPrice)}
-                    />
-                    <input
-                      type="range"
-                      min={productMinPrice}
-                      max={maxRange}
-                      value={maxPrice}
-                      onChange={handleMaxRange}
-                      onMouseUp={() => applyPriceFilter(minPrice, maxPrice)}
-                      onTouchEnd={() => applyPriceFilter(minPrice, maxPrice)}
-                    />
+                     <input
+                        type="range"
+                        min={productMinPrice}
+                        max={maxRange}
+                        value={effectiveMinPrice}
+                        onChange={handleMinRange}
+                        onMouseUp={() =>
+                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+                        }
+                        onTouchEnd={() =>
+                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+                        }
+                      />
+                      <input
+                        type="range"
+                        min={productMinPrice}
+                        max={maxRange}
+                        value={effectiveMaxPrice}
+                        onChange={handleMaxRange}
+                        onMouseUp={() =>
+                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+                        }
+                        onTouchEnd={() =>
+                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+                        }
+                      />
                   </div>
 
                   <div className="diwenjriwejrjhwer d-flex align-items-center justify-content-between mt-3">
