@@ -30,7 +30,7 @@ function App() {
 
       <Header footerBottomResNav={footerBottomResNav} shouldHideHeader={shouldHideHeader} shouldHideFullHeaderFooterRoutes={shouldHideFullHeaderFooterRoutes} shouldHideHeaderCategoryRoutes={shouldHideHeaderCategoryRoutes} />
 
-      <main className={["/profile", "/change-password", "/cancelled-order", "/order-history", "/wishlist", "/chat"].includes(pathname)
+      <main className={["/profile", "/change-password", "/cancelled-order", "/order-history", "/your-orders", "/wishlist", "/chat"].includes(pathname)
         ? "" 
         : ""}>
         <AllRoutes />

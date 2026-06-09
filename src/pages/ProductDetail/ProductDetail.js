@@ -445,12 +445,48 @@ export const ProductDetail = () => {
   };
 
 
+  const saveProductView = useCallback(async (productId) => {
+    try {
+      const payload = {
+        product_id: productId,
+        guest_id: token ? null : getGuestId(),
+      };
+
+      const headers = token
+        ? {
+            Authorization: `Bearer ${token}`,
+          }
+        : {};
+
+      await http.post(
+        "/save-product-view",
+        payload,
+        { headers }
+      );
+
+    } catch (error) {
+      console.error(error);
+    }
+  }, [token]);
+
+
   useEffect(() => {
     const fetchProductDetailsPage = async () => {
       setLoading(true);
       try {
-        const getresponse = await http.get(`/fetch-product-details/${slug}`);
+        const getresponse = await http.get(`/fetch-product-details/${slug}`,{
+          params: {
+              guest_id: token ? null : getGuestId(),
+            },
+            headers: token
+              ? {
+                  Authorization: `Bearer ${token}`,
+                }
+              : {},
+          }
+        );
         SetproductDetails(getresponse.data);
+        saveProductView(getresponse.data.data.id);
       } catch (error) {
         console.error("Error fetching product details:", error);
       } finally {
@@ -461,7 +497,18 @@ export const ProductDetail = () => {
     if (slug) {
       fetchProductDetailsPage();
     }
-  }, [slug]);
+  }, [slug, saveProductView, token]);
+
+  const getGuestId = () => {
+    let guestId = localStorage.getItem("guest_id");
+
+    if (!guestId) {
+      guestId = crypto.randomUUID();
+      localStorage.setItem("guest_id", guestId);
+    }
+
+    return guestId;
+  };
 
   useMetaData({
     meta_title: productDetails?.data?.product_name,
@@ -3193,13 +3240,14 @@ for (let i = 0; i < filteredSpecs.length; i++) {
 
                     <div className="fgjhdfgdfgdf py-4">
                       <Swiper {...swiperConfig}>
-                        {/* {featuredProducts.map((featuredProduct) => (
+                        {productDetails?.data?.customer_viewd_product.map(
+                          (featuredProduct) => (
                           <SwiperSlide key={featuredProduct.id}>
                             <FeaturedProducts
                               featuredProduct={featuredProduct}
                             />
                           </SwiperSlide>
-                        ))} */}
+                        ))}
                       </Swiper>
                     </div>
                   </div>

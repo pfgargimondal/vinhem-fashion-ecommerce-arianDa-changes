@@ -227,7 +227,9 @@ export const OrderHistory = () => {
 
             if (response.data.success) {
                 alert("Your order cancelled request sent successfully!");
-                navigate("/order-history"); 
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
             } else {
                 alert(`${response.data.message || "Failed to sent request"}`);
             }
@@ -407,11 +409,11 @@ export const OrderHistory = () => {
                                                                         <button className="btn border-0 px-0 text-muted" disabled>
                                                                         <i className="bi me-1 bi-clock-history"></i> Cancellation Request Pending
                                                                         </button>
-                                                                    ) : orderHistoryVal.order_status === "Declined" ? (
+                                                                    ) : orderHistoryVal.cancel_request === "Declined" ? (
                                                                         <button className="btn border-0 px-0 text-muted" disabled>
                                                                         <i className="bi me-1 bi-clock-history"></i> Cancellation Declined By Admin
                                                                         </button>
-                                                                    ) : orderHistoryVal.order_status === "Approved" ? (
+                                                                    ) : orderHistoryVal.cancel_request === "Approved" ? (
                                                                         <button className="btn border-0 px-0 text-muted" disabled>
                                                                         <i className="bi me-1 bi-clock-history"></i> Cancel Approved
                                                                         </button>
