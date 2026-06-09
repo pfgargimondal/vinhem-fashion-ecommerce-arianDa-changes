@@ -623,45 +623,45 @@ export const OrderDetails = () => {
 
           <div className="details mb-4">
             <p>
-              <strong>Order Status:</strong> {order?.order_status?.replace(/_/g, " ").toUpperCase() || "N/A"}
+              <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ").toUpperCase() || "N/A"}
             </p>
             <p>
-              <strong>Payment Method:</strong> {order?.payment_method?.replace(/_/g, " ").toUpperCase() || "N/A"}
+              <strong className="diemoewr">Payment Method:</strong> {order?.payment_method?.replace(/_/g, " ").toUpperCase() || "N/A"}
             </p>
             <p>
-              <strong>Date:</strong> {formatDate(order?.created_at)}
+              <strong className="diemoewr">Date:</strong> {formatDate(order?.created_at)}
             </p>
             <p>
-              <strong>Updated:</strong> {formatDate(order?.updated_at)}
+              <strong className="diemoewr">Updated:</strong> {formatDate(order?.updated_at)}
             </p>
           </div>
 
           <div className="row mb-4">
             <div className="col-md-6">
-              <h6 className="fw-bold">Shipping Address</h6>
+              <h6 className="fw-bold">Billing Address</h6>
               <p>
-                <strong>Name:</strong> {order?.shippingName} <br />
-                <strong>Email:</strong> {order?.shippingEmail} <br />
-                <strong>Phone:</strong> {order?.shippingNumber} <br />
-                <strong>Address:</strong> {order?.shippingFullAddress} <br />
-                <strong>State:</strong> {order?.shippingState} <br />
-                <strong>City:</strong> {order?.shippingCity} <br />
-                <strong>Zip:</strong> {order?.shippingPinCode} <br />
-                <strong>Address As:</strong> {order?.shippingAddressAs}
+                <strong className="diemoewr">Name:</strong> {order?.billingName} <br />
+                <strong className="diemoewr">Email:</strong> {order?.billingEmail} <br />
+                <strong className="diemoewr">Phone:</strong> {order?.billingNumber} <br />
+                <strong className="diemoewr">Address:</strong> {order?.billingFullAddress} <br />
+                <strong className="diemoewr">State:</strong> {order?.billingState} <br />
+                <strong className="diemoewr">City:</strong> {order?.billingCity} <br />
+                <strong className="diemoewr">Zip:</strong> {order?.billingPinCode} <br />
+                <strong className="diemoewr">Address As:</strong> {order?.billingAddressAs}
               </p>
             </div>
 
             <div className="col-md-6">
-              <h6 className="fw-bold">Billing Address</h6>
+              <h6 className="fw-bold">Shipping Address</h6>
               <p>
-                <strong>Name:</strong> {order?.billingName} <br />
-                <strong>Email:</strong> {order?.billingEmail} <br />
-                <strong>Phone:</strong> {order?.billingNumber} <br />
-                <strong>Address:</strong> {order?.billingFullAddress} <br />
-                <strong>State:</strong> {order?.billingState} <br />
-                <strong>City:</strong> {order?.billingCity} <br />
-                <strong>Zip:</strong> {order?.billingPinCode} <br />
-                <strong>Address As:</strong> {order?.billingAddressAs}
+                <strong className="diemoewr">Name:</strong> {order?.shippingName} <br />
+                <strong className="diemoewr">Email:</strong> {order?.shippingEmail} <br />
+                <strong className="diemoewr">Phone:</strong> {order?.shippingNumber} <br />
+                <strong className="diemoewr">Address:</strong> {order?.shippingFullAddress} <br />
+                <strong className="diemoewr">State:</strong> {order?.shippingState} <br />
+                <strong className="diemoewr">City:</strong> {order?.shippingCity} <br />
+                <strong className="diemoewr">Zip:</strong> {order?.shippingPinCode} <br />
+                <strong className="diemoewr">Address As:</strong> {order?.shippingAddressAs}
               </p>
             </div>
           </div>
@@ -730,7 +730,7 @@ export const OrderDetails = () => {
                       <tr className="dijweoikroiwejrwer">
                         <div className="doiwenmjre d-flex">
                           <div className="col-lg-4">
-                            <div><strong>Stitching Options:</strong> 
+                            <div><strong>Stitching Options: </strong> 
                               {item?.stitch_option === 'customFit' ? (
                                   <>
                                     Custom Fit
@@ -743,7 +743,7 @@ export const OrderDetails = () => {
                               {/* {item?.actual_stitch_option} */}
                             </div>
 
-                            <div><strong>Stitching Charges:</strong>
+                            <div><strong>Stitching Charges: </strong>
                               { item?.custom_fit_charge !== '0' 
                                   ? item?.custom_fit_charge 
                                   : item?.stitching_charge 
@@ -790,7 +790,7 @@ export const OrderDetails = () => {
 
           <div className="text-end mt-4">
             <p className="fw-bold fs-5">
-              Total: <span>₹{order?.total_order_amount}</span>
+              Total Amount: <span>₹{order?.total_order_amount}</span>
             </p>
           </div>
         </div>

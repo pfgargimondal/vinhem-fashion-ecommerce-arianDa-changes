@@ -38,12 +38,12 @@
 }
 .order-details table td {
   vertical-align: middle;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #333;
 }
 .order-details table img {
-  width: 60px;
-  height: 80px;
+  width: 100px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -58,12 +58,16 @@
 .doiwenmjre{ 
   padding: 5px 20px;
 }
+.doiwenmjre > div > div{
+  color: #555;
+}
 .doiwenmjre > div > div strong {
   font-weight: 500 !important;
   font-size: 0.9rem;
+  color: #000;
 }
-.order-details .text-end p span {
-  margin-left: 200px;
+.order-details .text-end p {
+  color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -268,17 +272,9 @@
   line-height: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.diemoewr{
+  color: #000;
+}
 
 
 
