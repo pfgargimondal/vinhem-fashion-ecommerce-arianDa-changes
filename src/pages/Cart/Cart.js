@@ -3446,7 +3446,7 @@ export const Cart = () => {
                             <img src="./images/cpncde.png" className="img-fluid" style={{ width: "8rem" }} alt="" />
                           </div>
 
-                          <h6 className="text-white mb-0" style={{marginTop: "1rem", fontSize: "0.82rem", transform: "translate(14px, -10px)"}}>*T&C Apply</h6>
+                          <h6 className="rgbsdfbh text-white mb-0" style={{marginTop: "1rem", fontSize: "0.82rem", transform: "translate(14px, -10px)"}}>*T&C Apply</h6>
                         </div>
                       </div>
                     </div>
