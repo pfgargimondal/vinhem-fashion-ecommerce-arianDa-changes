@@ -27,6 +27,9 @@ export const Cart = () => {
   const { token } = useAuth();
   const { user } = useAuth();
 
+
+  const [inputCouponCode, setInputCouponCode] = useState("");
+
   const [gstNumber, setGstNumber] = useState("");
   const [gstSaved, setGstSaved] = useState(false);
   const [gstError, setGstError] = useState("");
@@ -2062,14 +2065,14 @@ export const Cart = () => {
                           </tr>
                           {appliedDiscount > 0 && !freeShipping ? (
                             <tr>
-                              <td className="">Coupon Discount :</td>
+                              <td className="">Coupon Discount :&nbsp;<span className="sergvasdrg">(Coupon Applied)</span></td>
                               <td className="sergvasdrg">
                                 (-) {formatPrice(appliedDiscount, { showDecimals: true })}
                               </td>
                             </tr>
                           ) : appliedDiscount > 0 && freeShipping ? (
                             <tr>
-                              <td className="">Coupon Discount :</td>
+                              <td className="">Coupon Discount :&nbsp;<span className="sergvasdrg">(Coupon Applied)</span></td>
                               <td className="sergvasdrg">
                                 (-) {formatPrice(appliedDiscount, { showDecimals: true })}
                               </td>
@@ -2831,14 +2834,14 @@ export const Cart = () => {
              
                           {appliedDiscount > 0 && !freeShipping ? (
                             <tr>
-                              <td className="">Coupon Discount :</td>
+                              <td className="">Coupon Discount :&nbsp;<span className="sergvasdrg">(Coupon Applied)</span></td>
                               <td className="sergvasdrg">
                                 (-) {formatPrice(appliedDiscount, { showDecimals: true })}
                               </td>
                             </tr>
                           ) : appliedDiscount > 0 && freeShipping ? (
                             <tr>
-                              <td className="">Coupon Discount :</td>
+                              <td className="">Coupon Discount :&nbsp;<span className="sergvasdrg">(Coupon Applied)</span></td>
                               <td className="sergvasdrg">
                                 (-) {formatPrice(appliedDiscount, { showDecimals: true })}
                               </td>
@@ -3206,8 +3209,8 @@ export const Cart = () => {
                 type="text"
                 className="form-control"
                 placeholder="Enter Coupon Code"
-                // value={selectedCoupon}
-                value=""
+                value={inputCouponCode}
+                onChange={(e) => setInputCouponCode(e.target.value)}
                 // disabled={couponApplied}
                 // onChange={(e) => {
                 //   const value = e.target.value;
@@ -3295,7 +3298,7 @@ export const Cart = () => {
                 return bEnabled - aEnabled;
               })
               ?.map((couponItemsVal) => (
-                <div className="jidnwenjrwerwer mb-2">
+                <div className={`jidnwenjrwerwer ${(couponApplied || !couponItemsVal.is_applicable || !couponItemsVal.is_matched) ? "mb-4" : "mb-2"}`}>
                   <input
                     id={couponItemsVal.code}
                     name="coupon"
@@ -3348,11 +3351,11 @@ export const Cart = () => {
                   />
 
                   {!couponItemsVal.is_applicable ? (
-                    <h4 className="oijiwuihfih-eiuheir my-4 text-center">
+                    <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
                       {couponItemsVal.disable_reason}
                     </h4>
                   ) : !couponItemsVal.is_matched ? (
-                    <h4 className="oijiwuihfih-eiuheir my-4 text-center">
+                    <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
                       This coupon is not valid for products in your cart
                     </h4>
                   ) : null} 
@@ -3443,12 +3446,12 @@ export const Cart = () => {
                             <img src="./images/cpncde.png" className="img-fluid" style={{ width: "8rem" }} alt="" />
                           </div>
 
-                          <h6 className="text-white mb-0" style={{marginTop: "1rem"}}>*T&C Apply</h6>
+                          <h6 className="text-white mb-0" style={{marginTop: "1rem", fontSize: "0.82rem", transform: "translate(14px, -10px)"}}>*T&C Apply</h6>
                         </div>
                       </div>
                     </div>
                     {(couponItemsVal.is_applicable && couponItemsVal.is_matched)
-                        ? <img src="./images/cissor.png" className="w-100 p-3" alt="" />
+                        ? <img src="./images/cissor.png" className="w-100 p-3 pb-2" alt="" />
                         : ""
                     }                    
                   </label>
