@@ -668,7 +668,7 @@ export const OrderDetails = () => {
 
           {/* <h6 className="fw-bold mb-3">Products</h6> */}
           <div className="table-responsive">
-            <table className="table align-middle">
+            <table className="jiksdfnkrjwer table align-middle">
               <thead className="bg-light">
                 <tr>
                   <th>Product Details</th>
@@ -788,7 +788,7 @@ export const OrderDetails = () => {
             </table>
           </div>
 
-          <div className="text-end mt-4">
+          <div className="text-end">
             <p className="fw-bold fs-5">
               Total Amount: <span>₹{order?.total_order_amount}</span>
             </p>
