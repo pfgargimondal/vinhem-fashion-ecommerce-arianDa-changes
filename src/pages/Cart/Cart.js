@@ -3286,7 +3286,7 @@ export const Cart = () => {
             </div>
           </div>
 
-          <div className={`doeiwjorjweorwer mt-4 ${(couponItems.length < 3) ? "px-4" : "ps-4"}`}>
+          <div className={`doeiwjorjweorwer mt-4 ${(couponItems.length < 4) ? "px-4" : "ps-4"}`}>
             <h5 className="mb-4 text-center">Offers Available To Apply</h5>
 
             <div className="deoiwjrewrwer">
