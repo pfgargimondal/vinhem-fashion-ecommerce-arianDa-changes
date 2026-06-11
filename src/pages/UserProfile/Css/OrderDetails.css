@@ -70,6 +70,11 @@
   color: #000;
 }
 
+.diewhruiwejirhwejre{
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
 @media (max-width: 1200px) {
   .order-details .heading {
     margin: 15px 40px;

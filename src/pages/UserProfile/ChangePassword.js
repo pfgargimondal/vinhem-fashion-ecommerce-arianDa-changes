@@ -127,11 +127,12 @@ export const ChangePassword = () => {
                           <h4 className="mb-4">My Vouchers</h4>
 
                           <div className={`${styles.doejwijwe_list} mb-4`}>
-                            <div><h5 className={`${styles.deikwnhwenriwejr}`}><span>1)</span> Coupon Code: VFXFT2508 - [Valid Till 28/02/2026]</h5></div>
+                            {/* <div><h5 className={`${styles.deikwnhwenriwejr}`}><span>1)</span> Coupon Code: VFXFT2508 - [Valid Till 28/02/2026]</h5></div> */}
+                            <div><h5 className={`${styles.deikwnhwenriwejr}`}>No Vouchers Available</h5></div>
                           </div>
                         </div>
 
-                        <p className="mb-0">No. of Active Vouchers: <span>1</span></p>                        
+                        <p className="mb-0">No. of Active Vouchers: <span>0</span></p>                        
                       </div>
                     </div>
 

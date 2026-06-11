@@ -1685,6 +1685,16 @@ h4.oijiwuihfih-eiuheir{
   text-align: center;
 }
 
+.my-size-chart {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.my-size-chart th,
+.my-size-chart td {
+  text-align: center;
+}
+
 .dfghjdfgdfgf 
 {
   margin-left: -50px;

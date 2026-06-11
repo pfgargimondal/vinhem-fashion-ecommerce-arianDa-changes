@@ -119,7 +119,7 @@ export const DesignerSizeChart = ({ productDetails }) => {
                 </div>
               </div>
               <div className="jnmkjhihewirwer mt-3">
-                <Table responsive="xl">
+                <Table responsive="xl" className="my-size-chart">
                   {productDetails?.data?.product_category?.toLowerCase() === "women" && (
                     <>
                       <thead>

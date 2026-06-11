@@ -610,188 +610,190 @@ export const OrderDetails = () => {
     <div className="dthnxdftnj">
       <section className="order-details py-5">
         <div className="container">
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <h5>
-              Order: <span>#{order?.order_id}</span>
-            </h5>
-            <div className="buttons">
-              <button className="second-button" onClick={() => navigate(-1)}>
-                <i className="bi bi-arrow-left"></i> Back
-              </button>
+          <div className="diewhruiwejirhwejre p-4">
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h5>
+                Order: <span>#{order?.order_id}</span>
+              </h5>
+              <div className="buttons">
+                <button className="second-button" onClick={() => navigate(-1)}>
+                  <i className="bi bi-arrow-left"></i> Back
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div className="details mb-4">
-            <p>
-              <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ").toUpperCase() || "N/A"}
-            </p>
-            <p>
-              <strong className="diemoewr">Payment Method:</strong> {order?.payment_method?.replace(/_/g, " ").toUpperCase() || "N/A"}
-            </p>
-            <p>
-              <strong className="diemoewr">Date:</strong> {formatDate(order?.created_at)}
-            </p>
-            <p>
-              <strong className="diemoewr">Updated:</strong> {formatDate(order?.updated_at)}
-            </p>
-          </div>
-
-          <div className="row mb-4">
-            <div className="col-md-6">
-              <h6 className="fw-bold">Billing Address</h6>
+            <div className="details mb-4">
               <p>
-                <strong className="diemoewr">Name:</strong> {order?.billingName} <br />
-                <strong className="diemoewr">Email:</strong> {order?.billingEmail} <br />
-                <strong className="diemoewr">Phone:</strong> {order?.billingNumber} <br />
-                <strong className="diemoewr">Address:</strong> {order?.billingFullAddress} <br />
-                <strong className="diemoewr">State:</strong> {order?.billingState} <br />
-                <strong className="diemoewr">City:</strong> {order?.billingCity} <br />
-                <strong className="diemoewr">Zip:</strong> {order?.billingPinCode} <br />
-                <strong className="diemoewr">Address As:</strong> {order?.billingAddressAs}
+                <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ").toUpperCase() || "N/A"}
+              </p>
+              <p>
+                <strong className="diemoewr">Payment Method:</strong> {order?.payment_method?.replace(/_/g, " ").toUpperCase() || "N/A"}
+              </p>
+              <p>
+                <strong className="diemoewr">Date:</strong> {formatDate(order?.created_at)}
+              </p>
+              <p>
+                <strong className="diemoewr">Updated:</strong> {formatDate(order?.updated_at)}
               </p>
             </div>
 
-            <div className="col-md-6">
-              <h6 className="fw-bold">Shipping Address</h6>
-              <p>
-                <strong className="diemoewr">Name:</strong> {order?.shippingName} <br />
-                <strong className="diemoewr">Email:</strong> {order?.shippingEmail} <br />
-                <strong className="diemoewr">Phone:</strong> {order?.shippingNumber} <br />
-                <strong className="diemoewr">Address:</strong> {order?.shippingFullAddress} <br />
-                <strong className="diemoewr">State:</strong> {order?.shippingState} <br />
-                <strong className="diemoewr">City:</strong> {order?.shippingCity} <br />
-                <strong className="diemoewr">Zip:</strong> {order?.shippingPinCode} <br />
-                <strong className="diemoewr">Address As:</strong> {order?.shippingAddressAs}
-              </p>
-            </div>
-          </div>
+            <div className="row mb-4">
+              <div className="col-md-6">
+                <h6 className="fw-bold">Billing Address</h6>
+                <p>
+                  <strong className="diemoewr">Name:</strong> {order?.billingName} <br />
+                  <strong className="diemoewr">Email:</strong> {order?.billingEmail} <br />
+                  <strong className="diemoewr">Phone:</strong> {order?.billingNumber} <br />
+                  <strong className="diemoewr">Address:</strong> {order?.billingFullAddress} <br />
+                  <strong className="diemoewr">State:</strong> {order?.billingState} <br />
+                  <strong className="diemoewr">City:</strong> {order?.billingCity} <br />
+                  <strong className="diemoewr">Zip:</strong> {order?.billingPinCode} <br />
+                  <strong className="diemoewr">Address As:</strong> {order?.billingAddressAs}
+                </p>
+              </div>
 
-          {/* <h6 className="fw-bold mb-3">Products</h6> */}
-          <div className="table-responsive">
-            <table className="jiksdfnkrjwer table align-middle">
-              <thead className="bg-light">
-                <tr>
-                  <th>Product Details</th>
-                  <th>Status</th>
-                  <th>Updated</th>
-                </tr>
-              </thead>
-              <tbody>
-                {products?.map((item, index) => (
-                  <>
-                    <tr key={index}>
-                      <td className="d-flex align-items-center gap-3">
-                        <img
-                          src={optimizeImage(item?.product_image) || "/images/no-image.png"}
-                          className="rounded"
-                          alt={item?.product?.product_name}
-                          width={70}
-                          height={70}
-                        />
-                        <div>
-                          <p className="mb-1 fw-bold text-dark">
-                            {item?.product?.product_name}
-                          </p>
-                          <p className="mb-0">
-                            Quantity: {item?.quantity} <br />
-                            {item?.product_size !== "" && (
+              <div className="col-md-6">
+                <h6 className="fw-bold">Shipping Address</h6>
+                <p>
+                  <strong className="diemoewr">Name:</strong> {order?.shippingName} <br />
+                  <strong className="diemoewr">Email:</strong> {order?.shippingEmail} <br />
+                  <strong className="diemoewr">Phone:</strong> {order?.shippingNumber} <br />
+                  <strong className="diemoewr">Address:</strong> {order?.shippingFullAddress} <br />
+                  <strong className="diemoewr">State:</strong> {order?.shippingState} <br />
+                  <strong className="diemoewr">City:</strong> {order?.shippingCity} <br />
+                  <strong className="diemoewr">Zip:</strong> {order?.shippingPinCode} <br />
+                  <strong className="diemoewr">Address As:</strong> {order?.shippingAddressAs}
+                </p>
+              </div>
+            </div>
+
+            {/* <h6 className="fw-bold mb-3">Products</h6> */}
+            <div className="table-responsive">
+              <table className="jiksdfnkrjwer table align-middle">
+                <thead className="bg-light">
+                  <tr>
+                    <th>Product Details</th>
+                    <th>Status</th>
+                    <th>Updated</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {products?.map((item, index) => (
+                    <>
+                      <tr key={index}>
+                        <td className="d-flex align-items-center gap-3">
+                          <img
+                            src={optimizeImage(item?.product_image) || "/images/no-image.png"}
+                            className="rounded"
+                            alt={item?.product?.product_name}
+                            width={70}
+                            height={70}
+                          />
+                          <div>
+                            <p className="mb-1 fw-bold text-dark">
+                              {item?.product?.product_name}
+                            </p>
+                            <p className="mb-0">
+                              Quantity: {item?.quantity} <br />
+                              {item?.product_size !== "" && (
+                                <>
+                                Size: {item?.product_size} <br />
+                                </>
+                              )}
+                              Price: ₹{item?.total_price}
+
+                              <div className="idniehrewrer d-flex align-items-center">
+                                <span className="d-block me-3" onClick={() => toggleDetails(index)}>More Details <i class="fa-solid fa-caret-down"></i></span>
+                                {order?.order_status !== 'Cancelled' &&
+                                  item?.stitch_option === 'customFit' && (
+                                    <span className="mb-0" onClick={() => handleMessrmntTogle(item)}>
+                                      {item.user_measurmentDetails
+                                        ? 'Measurement Chart Details'
+                                        : 'Add Measurement Details'}
+                                    </span>
+                                  )
+                                }
+                              </div>
+                            </p>
+                          </div>
+                        </td>
+
+                        <td>
+                          <span className="fw-bold">
+                            {order?.order_status || "N/A"}
+                          </span>
+                        </td>
+                        
+                        <td>{formatDate(order?.updated_at)}</td>
+                      </tr>
+
+                      {moreDetails[index] && (
+                        <tr className="dijweoikroiwejrwer">
+                          <div className="doiwenmjre d-flex">
+                            <div className="col-lg-4">
+                              <div><strong>Stitching Options: </strong> 
+                                {item?.stitch_option === 'customFit' ? (
+                                    <>
+                                      Custom Fit
+                                    </>
+                                  ) : (
+                                    <>
+                                      {item?.actual_stitch_option}
+                                    </>
+                                  )}
+                                {/* {item?.actual_stitch_option} */}
+                              </div>
+
+                              <div><strong>Customize Charges: </strong>
+                                { item?.custom_fit_charge !== '0' 
+                                    ? item?.custom_fit_charge 
+                                    : item?.stitching_charge 
+                                }
+                              </div>
+                            </div>
+
+                            { item?.mojri_selected === 1 && (
                               <>
-                              Size: {item?.product_size} <br />
+                              <div className="col-lg-4">
+                                <div><strong>Mojri Price:</strong> {item?.mojri_charge}</div>
+
+                                <div><strong>Mojri Size:</strong> {item?.mojri_size}</div>
+                              </div>
                               </>
                             )}
-                            Price: ₹{item?.total_price}
 
-                            <div className="idniehrewrer d-flex align-items-center">
-                              <span className="d-block me-3" onClick={() => toggleDetails(index)}>More Details <i class="fa-solid fa-caret-down"></i></span>
-                              {order?.order_status !== 'Cancelled' &&
-                                item?.stitch_option === 'customFit' && (
-                                  <span className="mb-0" onClick={() => handleMessrmntTogle(item)}>
-                                    {item.user_measurmentDetails
-                                      ? 'Measurement Chart Details'
-                                      : 'Add Measurement Details'}
-                                  </span>
-                                )
-                              }
-                            </div>
-                          </p>
-                        </div>
-                      </td>
+                            { item?.stole_selected === 1 && (
+                              <>
+                              <div className="col-lg-4">
+                                <div><strong>Stole Price:</strong> {item?.stole_charge}</div>
+                              </div>
+                              </>
+                            )}
 
-                      <td>
-                        <span className="fw-bold">
-                          {order?.order_status || "N/A"}
-                        </span>
-                      </td>
-                      
-                      <td>{formatDate(order?.updated_at)}</td>
-                    </tr>
+                            { item?.turban_selected === 1 && (
+                              <>
+                              <div className="col-lg-4">
+                                <div><strong>Turbon Price:</strong> {item?.turban_charge}</div>
 
-                    {moreDetails[index] && (
-                      <tr className="dijweoikroiwejrwer">
-                        <div className="doiwenmjre d-flex">
-                          <div className="col-lg-4">
-                            <div><strong>Stitching Options: </strong> 
-                              {item?.stitch_option === 'customFit' ? (
-                                  <>
-                                    Custom Fit
-                                  </>
-                                ) : (
-                                  <>
-                                    {item?.actual_stitch_option}
-                                  </>
-                                )}
-                              {/* {item?.actual_stitch_option} */}
-                            </div>
-
-                            <div><strong>Stitching Charges: </strong>
-                              { item?.custom_fit_charge !== '0' 
-                                  ? item?.custom_fit_charge 
-                                  : item?.stitching_charge 
-                              }
-                            </div>
+                                <div><strong>Turbon Size:</strong> {item?.turban_size}</div>
+                              </div>
+                              </>
+                            )}
+          
                           </div>
+                        </tr>
+                      )}
+                    </>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-                          { item?.mojri_selected === 1 && (
-                            <>
-                            <div className="col-lg-4">
-                              <div><strong>Mojri Price:</strong> {item?.mojri_charge}</div>
-
-                              <div><strong>Mojri Size:</strong> {item?.mojri_size}</div>
-                            </div>
-                            </>
-                          )}
-
-                          { item?.stole_selected === 1 && (
-                            <>
-                            <div className="col-lg-4">
-                              <div><strong>Stole Price:</strong> {item?.stole_charge}</div>
-                            </div>
-                            </>
-                          )}
-
-                          { item?.turban_selected === 1 && (
-                            <>
-                            <div className="col-lg-4">
-                              <div><strong>Turbon Price:</strong> {item?.turban_charge}</div>
-
-                              <div><strong>Turbon Size:</strong> {item?.turban_size}</div>
-                            </div>
-                            </>
-                          )}
-        
-                        </div>
-                      </tr>
-                    )}
-                  </>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="text-end">
-            <p className="fw-bold fs-5">
-              Total Amount: <span>₹{order?.total_order_amount}</span>
-            </p>
+            <div className="text-end">
+              <p className="fw-bold fs-5">
+                Total Amount: <span>₹{order?.total_order_amount}</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>

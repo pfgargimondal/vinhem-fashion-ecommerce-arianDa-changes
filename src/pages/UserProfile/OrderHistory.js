@@ -470,11 +470,11 @@ export const OrderHistory = () => {
                                                                 ) : orderHistoryVal.order_status === "Returned" ? (
                                                                     orderHistoryVal.return_request === "Declined" ? (
                                                                         <button className={`btn ${styles.return_ordr} border-0 px-0`}>
-                                                                            <i className="bi me-1 bi-folder-x"></i> Return Cancelled
+                                                                            <i className="bi me-1 bi-folder-x"></i> Not Eligible For Return
                                                                         </button>
                                                                     ):(
                                                                         <button className={`btn ${styles.return_ordr} border-0 px-0`}>
-                                                                            <i className="bi me-1 bi-folder-x"></i> Return Initiated
+                                                                            <i className="bi me-1 bi-folder-x"></i> Returned-Initiated
                                                                         </button>
                                                                     )
                                                                 

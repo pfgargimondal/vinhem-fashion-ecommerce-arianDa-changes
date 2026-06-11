@@ -403,6 +403,7 @@ export const ProductDetail = () => {
   };
 
   const [productDetails, SetproductDetails] = useState({});
+  const [recentProducts, setRecentProducts] = useState([]);
 
   // shipping time = 48 Hrs
   const getEstimatedShippingDate = (shipping_time) => {
@@ -445,48 +446,74 @@ export const ProductDetail = () => {
   };
 
 
-  const saveProductView = useCallback(async (productId) => {
-    try {
-      const payload = {
-        product_id: productId,
-        guest_id: token ? null : getGuestId(),
-      };
+  // const saveProductView = useCallback(async (productId) => {
+  //   try {
+  //     const payload = {
+  //       product_id: productId,
+  //       guest_id: token ? null : getGuestId(),
+  //     };
 
-      const headers = token
-        ? {
-            Authorization: `Bearer ${token}`,
-          }
-        : {};
+  //     const headers = token
+  //       ? {
+  //           Authorization: `Bearer ${token}`,
+  //         }
+  //       : {};
 
-      await http.post(
-        "/save-product-view",
-        payload,
-        { headers }
-      );
+  //     await http.post(
+  //       "/save-product-view",
+  //       payload,
+  //       { headers }
+  //     );
 
-    } catch (error) {
-      console.error(error);
-    }
-  }, [token]);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }, [token]);
 
 
   useEffect(() => {
     const fetchProductDetailsPage = async () => {
       setLoading(true);
       try {
-        const getresponse = await http.get(`/fetch-product-details/${slug}`,{
-          params: {
-              guest_id: token ? null : getGuestId(),
-            },
-            headers: token
-              ? {
-                  Authorization: `Bearer ${token}`,
-                }
-              : {},
-          }
+        const getresponse = await http.get(`/fetch-product-details/${slug}`
+          // params: {
+          //     guest_id: token ? null : getGuestId(),
+          //   },
+          //   headers: token
+          //     ? {
+          //         Authorization: `Bearer ${token}`,
+          //       }
+          //     : {},
+          // }
         );
         SetproductDetails(getresponse.data);
-        saveProductView(getresponse.data.data.id);
+        // saveProductView(getresponse.data.data.id);
+
+        // Save current slug
+        const existing =
+          JSON.parse(localStorage.getItem("recentlyViewedSlugs")) || [];
+
+        const filtered = existing.filter(item => item !== slug);
+
+        const updated = [slug, ...filtered].slice(0, 10);
+
+        localStorage.setItem(
+          "recentlyViewedSlugs",
+          JSON.stringify(updated)
+        );
+
+        const recentSlugs = updated.filter(item => item !== slug);
+
+        // Fetch recent products
+        const recentRes = await http.post(
+          "/recent-view-product",
+          {
+            slugs: recentSlugs,
+          }
+        );
+
+        setRecentProducts(recentRes.data);
+
       } catch (error) {
         console.error("Error fetching product details:", error);
       } finally {
@@ -497,18 +524,18 @@ export const ProductDetail = () => {
     if (slug) {
       fetchProductDetailsPage();
     }
-  }, [slug, saveProductView, token]);
+  }, [slug, token]);
 
-  const getGuestId = () => {
-    let guestId = localStorage.getItem("guest_id");
+  // const getGuestId = () => {
+  //   let guestId = localStorage.getItem("guest_id");
 
-    if (!guestId) {
-      guestId = crypto.randomUUID();
-      localStorage.setItem("guest_id", guestId);
-    }
+  //   if (!guestId) {
+  //     guestId = crypto.randomUUID();
+  //     localStorage.setItem("guest_id", guestId);
+  //   }
 
-    return guestId;
-  };
+  //   return guestId;
+  // };
 
   useMetaData({
     meta_title: productDetails?.data?.product_name,
@@ -3020,8 +3047,8 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                               >
                                 +91 7003672926
                               </a>{" "}
-                              or call us at
-                              <a href="tel:7003672926"> 7003672926</a>
+                              or call us at{" "}
+                              <a href="tel:7003672926"> +91 7003672926</a>
                             </p>
 
                             <p className="mb-2">Return Policy</p>
@@ -3256,7 +3283,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
 
               <div className="col-lg-12">
                 <div className="diweurbhwer_inner mt-4">
-                  <RecentlyViewed />
+                  <RecentlyViewed recentProducts={recentProducts}/>
                 </div>
               </div>
             </div>

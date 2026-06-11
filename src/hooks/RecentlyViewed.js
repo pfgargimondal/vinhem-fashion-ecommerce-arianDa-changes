@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import http from "../http";
+// import { useEffect, useState } from "react";
+// import http from "../http";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // eslint-disable-next-line
@@ -7,9 +7,9 @@ import { Autoplay, Pagination, Navigation, Mousewheel } from "swiper/modules";
 import { FeaturedProducts } from "../components";
 
 
-export default function RecentlyViewed() {
+export default function RecentlyViewed({ recentProducts }) {
 
-  const [recentProducts, setRecentProducts] = useState([]);
+  // const [recentProducts, setRecentProducts] = useState([]);
   
   const swiperConfig = {
     spaceBetween: 20,
@@ -25,19 +25,19 @@ export default function RecentlyViewed() {
     },
   };
 
-  useEffect(() => {
-    const slugs = JSON.parse(localStorage.getItem("recentlyViewedSlugs")) || [];
-    if (slugs.length) fetchRecentProducts(slugs);
-  }, []);
+  // useEffect(() => {
+  //   const slugs = JSON.parse(localStorage.getItem("recentlyViewedSlugs")) || [];
+  //   if (slugs.length) fetchRecentProducts(slugs);
+  // }, []);
 
-  const fetchRecentProducts = async (slugs) => {
-    try {
-      const res = await http.post("/recent-view-product", { slugs });
-      setRecentProducts(res.data);
-    } catch (error) {
-      console.error("Failed to fetch recent products:", error);
-    }
-  };
+  // const fetchRecentProducts = async (slugs) => {
+  //   try {
+  //     const res = await http.post("/recent-view-product", { slugs });
+  //     setRecentProducts(res.data);
+  //   } catch (error) {
+  //     console.error("Failed to fetch recent products:", error);
+  //   }
+  // };
 
   if (!recentProducts?.data?.length) return null;
 
