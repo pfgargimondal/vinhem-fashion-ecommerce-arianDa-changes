@@ -2436,16 +2436,16 @@ export const Cart = () => {
                                           
                                         </h5>
 
-                                        <p className="mb-1">ITEM ID: {cartItemsVal.item_id}</p>
-                                        <p className="mb-1">Colour: {cartItemsVal.color}</p>
+                                        <p className="sdgaewrerer mb-1">ITEM ID: {cartItemsVal.item_id}</p>
+                                        <p className="sdgaewrerer mb-1">Colour: {cartItemsVal.color}</p>
                                         {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
-                                          <p className="mb-2">
+                                          <p className="sdgaewrerer mb-2">
                                             Stitching Option : {cartItemsVal.actual_stitch_option}
                                             {cartItemsVal.size === null && ` | Qty : ${cartItemsVal.quantity}`}
                                           </p>
                                         )} 
                                         {cartItemsVal.size !== null && (
-                                          <p className="mb-1">Size : {cartItemsVal.size} | Qty : {cartItemsVal.quantity}</p>
+                                          <p className="sdgaewrerer mb-1">Size : {cartItemsVal.size} | Qty : {cartItemsVal.quantity}</p>
                                         )}
                                         {(
                                           cartItemsVal.turban_selected === "1" ||
@@ -2455,7 +2455,7 @@ export const Cart = () => {
                                           <div className="">
 
                                             {/* FIRST LINE */}
-                                            <p className="mb-1">
+                                            <p className="sdgaewrerer mb-1">
                                               Add On :
                                               {cartItemsVal.turban_selected === "1" && ` Matching Turban | Qty : 1`}
                                               {cartItemsVal.mojri_selected === "1" && cartItemsVal.turban_selected !== "1" && 
@@ -2467,12 +2467,12 @@ export const Cart = () => {
                                             </p>
 
                                             {cartItemsVal.mojri_selected === "1" && cartItemsVal.turban_selected === "1" && (
-                                              <p className="mb-1">Matching Mojri | Qty : 1</p>
+                                              <p className="sdgaewrerer mb-1">Matching Mojri | Qty : 1</p>
                                             )}
 
                                             {cartItemsVal.stole_selected === "1" && 
                                               (cartItemsVal.turban_selected === "1" || cartItemsVal.mojri_selected === "1") && (
-                                              <p className="mb-1">Matching Stole | Qty : 1</p>
+                                              <p className="sdgaewrerer mb-1">Matching Stole | Qty : 1</p>
                                             )}
 
                                           </div>
@@ -3356,7 +3356,7 @@ export const Cart = () => {
                     </h4>
                   ) : !couponItemsVal.is_matched ? (
                     <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
-                      This coupon is not valid for products in your cart
+                      Below coupon is not valid for products in your cart
                     </h4>
                   ) : null} 
 
