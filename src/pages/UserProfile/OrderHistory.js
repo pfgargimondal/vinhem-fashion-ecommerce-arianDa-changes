@@ -400,7 +400,7 @@ export const OrderHistory = () => {
     
                                                             <p className="mb-0">No. of items: {orderHistoryVal.total_orderProduct}</p> 
 
-                                                            <p className={`${styles.oknknkmer} mb-0`}   onClick={() => navigate(`/order-details/${orderHistoryVal.order_id}`)} ><i class={`bi ${styles.vew_dtls} bi-eye`}></i> View Details</p>
+                                                            <p className={`${styles.oknknkmer} mb-0`} onClick={() => navigate(`/order-details/${orderHistoryVal.order_id}`)} ><i class={`bi ${styles.vew_dtls} bi-eye`}></i> View Details</p>
                                                         </div>
 
                                                         <div className={`d-flex ${styles.dweknriwehrwer} align-items-center justify-content-between`}>
@@ -512,21 +512,32 @@ export const OrderHistory = () => {
                                                         ) : orderHistoryVal.order_status === "Shipped" ? (
                                                             <button className={styles.dfgfd5544b}>{orderHistoryVal.order_status}</button>
                                                         ) : orderHistoryVal.order_status === "Dispatched" ? (
-                                                            <button className={styles.dfgfd5544b}>IN-TRANSIT</button>
+                                                            orderHistoryVal.tracking_link !== null ? (
+                                                                <button className={styles.dfgfd5544bsgdsbgd}>IN-TRANSIT</button>
+                                                            ):(
+                                                                <button className={styles.dfgfd5544bsgdsbgd}>Ready-To-Dispatch</button>
+                                                            )
                                                         ) : orderHistoryVal.order_status === "Delivered" ? (
                                                             <div className="d-flex align-items-center justify-content-center gap-2">
                                                                 <button className={styles.dfgfd5544}>
-                                                                    {orderHistoryVal.order_status}
+                                                                    {orderHistoryVal.order_status} {" "} On
                                                                 </button>
 
-                                                                <span className="text-muted small">
+                                                                <span className="">
                                                                     | {new Date(orderHistoryVal.delivery_date)
                                                                         .toLocaleDateString("en-GB")
                                                                         .replace(/\//g, "-")}
                                                                 </span>
                                                             </div>
                                                         ) : orderHistoryVal.order_status === "Returned" ? (
-                                                            <button className={styles.dfgfd5544dvxc}>{orderHistoryVal.order_status}</button>
+                                                            <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                <button className={styles.dfgfd5544dvxc}>{orderHistoryVal.order_status} {" "} On</button>
+                                                                <span className="">
+                                                                    | {new Date(orderHistoryVal.return_initated_dateTime)
+                                                                        .toLocaleDateString("en-GB")
+                                                                        .replace(/\//g, "-")}
+                                                                </span>
+                                                            </div>
                                                         ) : (
                                                             <button className={styles.dfgfd5544}>{orderHistoryVal.order_status}</button>
                                                         )}
