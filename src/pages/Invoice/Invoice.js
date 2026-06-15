@@ -295,12 +295,12 @@ const Invoice = () => {
                   &nbsp;
               </td>
             </tr>
-   
+
             <tr>
               <td className="col-left" style={{ borderInline: 0, width: "50%" }}>
                 <strong>Name :</strong> VinHem Fashion<br />
-                <strong>Address :</strong> 13, Rameswar Mallick 1st Bye Lane, 3rd Floor,<br />
-                Room - 3A, Howrah - 711101<br />
+                <strong>Address :</strong> 13th, R, M, 1st Bye Lane, 3rd Floor, Room - 3A,<br />
+                 Howrah - 711101<br />
                 <strong>Name of State :</strong> West Bengal |
                 <strong> State Code :</strong> 29<br />
                 <strong>Name of Country :</strong> India<br />
@@ -327,7 +327,12 @@ const Invoice = () => {
               <td className="col-right" style={{ width: "25%", borderRight: 0, borderTop: 0}}>
                 <strong>Customer Code :</strong> {user?.customer_code}<br />
                 <strong>Order No :</strong> {order?.order_id}<br />
-                <strong style={{ textDecoration: "underline" }}>Shipment Details :</strong><br />
+                <strong style={{
+                    // borderTop: "1px solid #000",
+                    borderBottom: "1px solid #000",
+                    borderRight: 0,
+                    whiteSpace: "nowrap",
+                }}>Shipment Details :</strong><br />
                 <strong>Country :</strong> {order?.shippingCountry}<br />
                 <strong>Shipped By :</strong> {order?.shipping_method ? order?.shipping_method : "-"}<br />
                 <strong>AWB Number :</strong> {order?.awb_no}
@@ -408,7 +413,7 @@ const Invoice = () => {
                   {/* MAIN PRODUCT ROW */}
                   <tr style={{border: "none"}}>
                     <td style={{borderRight: "none", borderBottom: "none", borderLeft: "none"}}>{++serial}</td>
-                    <td style={{ borderRight: "none", borderBottom: "none" }}>{item.product_name}</td>
+                    <td style={{ borderRight: "none", borderBottom: "none", textAlign: "left" }}>{item.product_name} | SKU : {item.get_product_details?.vendor_sku}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.get_gst_value.hsn}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.product_size || '-'}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.quantity || '-'}</td>
@@ -576,6 +581,11 @@ const Invoice = () => {
 
               <td style={{ borderRight: 0, borderBottom: 0, fontSize: "1rem", width: "20%" }} className="company-name">
                 VinHem Fashion
+                <img
+                  src="/images/vinhem-signature.png"
+                  style={{ height: "108px" }}
+                  alt="Signature"
+                />
               </td>
             </tr>
 
