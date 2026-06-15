@@ -64,6 +64,8 @@ export const Cart = () => {
   const [pymntSmmryDrpdwn, setPymntSmmryDrpdwn] = useState(true);
   const [pageMetaData, setPageMetaData] = useState([]);
 
+  const [isManualCouponApplied, setIsManualCouponApplied] = useState(false);
+
                         
   const pathName = useLocation().pathname;
 
@@ -911,6 +913,49 @@ export const Cart = () => {
     useEffect(() => {
       localStorage.setItem("is_gift", isGift);
     }, [isGift]);
+
+  const handleApplyCoupon = () => {
+    const coupon = couponItems.find(
+      c =>
+        c.code?.trim().toLowerCase() ===
+        inputCouponCode?.trim().toLowerCase()
+    );
+
+    if (!coupon) {
+      alert("Invalid Coupon Code");
+      return;
+    }
+
+    // if (!coupon.is_applicable) {
+    //   alert(coupon.disable_reason);
+    //   return;
+    // }
+
+    // if (!coupon.is_matched) {
+    //   alert("Coupon is not valid for products in your cart");
+    //   return;
+    // }
+
+    let discount =
+      coupon.type === "percent"
+        ? (Number(totalPrice.cart_totalPrice) * parseInt(coupon.value)) / 100
+        : parseInt(coupon.value);
+
+    setSelectedCoupon(coupon.code);
+    setSelectedDiscount(discount);
+    setAppliedDiscount(discount);
+    setCouponApplied(true);
+
+    setIsManualCouponApplied(true);
+
+    if (coupon.apply_ShippingCost === "Yes") {
+      setFreeShipping(true);
+      setShippingDiscount(shippingCharge);
+    } else {
+      setFreeShipping(false);
+      setShippingDiscount(0);
+    }
+  };
 
 
   const handlePaymentFlow = async () => {
@@ -2565,7 +2610,7 @@ export const Cart = () => {
                               <div className="doiweuijrwerwer">
                                 <div className="radio-wrapper-26 mb-3" style={{marginTop: "25px"}}>
                                   <label htmlFor="example-26sda">
-                                    <div className="inputAndLeftText d-flex">
+                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
                                       <input
                                         id="example-26sda"
                                         type="radio"
@@ -2583,7 +2628,7 @@ export const Cart = () => {
 
                                 <div className="radio-wrapper-26 mb-3">
                                   <label htmlFor="example-26sweda">
-                                    <div className="inputAndLeftText d-flex">
+                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
                                       <input
                                         id="example-26sweda"
                                         type="radio"
@@ -2602,7 +2647,7 @@ export const Cart = () => {
 
                                 <div className="radio-wrapper-26 mb-3">
                                   <label htmlFor="example-sdsd">
-                                    <div className="inputAndLeftText d-flex">
+                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
                                       <input
                                         id="example-sdsd"
                                         type="radio"
@@ -2621,7 +2666,7 @@ export const Cart = () => {
 
                                 <div className="radio-wrapper-26 mb-3">
                                   <label htmlFor="example-sddsw">
-                                    <div className="inputAndLeftText d-flex">
+                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
                                       <input
                                         id="example-sddsw"
                                         type="radio"
@@ -2660,7 +2705,7 @@ export const Cart = () => {
 
                                 <div className="radio-wrapper-26 mb-3">
                                   <label htmlFor="example-rerr">
-                                    <div className="inputAndLeftText d-flex">
+                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
                                       <input
                                         id="example-rerr"
                                         type="radio"
@@ -2681,7 +2726,7 @@ export const Cart = () => {
 
                                 <div className="radio-wrapper-26 mb-3">
                                   <label htmlFor="example-rerrfdbv">
-                                    <div className="inputAndLeftText d-flex">
+                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
                                       <input
                                         id="codOption"
                                         type="radio"
@@ -3244,45 +3289,32 @@ export const Cart = () => {
               />
 
 
-              <button
-                  type="button"
-                  className="btn position-absolute btn-main"
-                  // onClick={() => {
-                  //   const coupon = couponItems.find(c => c.code === selectedCoupon);
-                  //   if (!coupon || !coupon.is_applicable || !coupon.is_matched) return;
-                  //   setCouponApplied(true);
-                  // }}
-                >
-                  Apply
-                </button>
-              {/* {!couponApplied ? (
-                <button
-                  type="button"
-                  className="btn position-absolute btn-main"
-                  onClick={() => {
-                    const coupon = couponItems.find(c => c.code === selectedCoupon);
-                    if (!coupon || !coupon.is_applicable || !coupon.is_matched) return;
-                    setCouponApplied(true);
-                  }}
-                >
-                  Apply
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  className="btn position-absolute btn-main"
-                  onClick={() => {
-                    setSelectedCoupon("");
-                    setSelectedDiscount(0);
-                    setAppliedDiscount(0);
-                    setCouponApplied(false);
-                    setFreeShipping(false);
-                    setShippingDiscount(0);
-                  }}
-                >
-                  Remove
-                </button>
-              )} */}
+                {!isManualCouponApplied ? (
+                  <button
+                    type="button"
+                    className="btn position-absolute btn-main"
+                    onClick={handleApplyCoupon}
+                  >
+                    Apply
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="btn position-absolute btn-main"
+                    onClick={() => {
+                      setInputCouponCode("");
+                      setSelectedCoupon("");
+                      setSelectedDiscount(0);
+                      setAppliedDiscount(0);
+                      setCouponApplied(false);
+                      setFreeShipping(false);
+                      setShippingDiscount(0);
+                      setIsManualCouponApplied(false);
+                    }}
+                  >
+                    Remove
+                  </button>
+                )}
             </div>
           </div>
 
@@ -3290,7 +3322,10 @@ export const Cart = () => {
             <h5 className="mb-4 text-center">Offers Available To Apply</h5>
 
             <div className="deoiwjrewrwer">
-              {couponItems?.sort((a, b) => {
+              {couponItems?.filter(
+                (coupon) => coupon.frontend_visible === "Visible"
+              )
+              ?.sort((a, b) => {
                 const aEnabled =
                   a.is_applicable && a.is_matched ? 1 : 0;
                 const bEnabled =
@@ -3397,6 +3432,8 @@ export const Cart = () => {
 
                                   setSelectedCoupon(couponItemsVal.code);
                                   setCouponApplied(true);
+
+                                  setIsManualCouponApplied(false);
 
                                   let discount = couponItemsVal.type === "percent"
                                     ? (Number(totalPrice.cart_totalPrice) * parseInt(couponItemsVal.value)) / 100

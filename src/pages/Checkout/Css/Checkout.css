@@ -261,8 +261,12 @@
   /* line-height: 60px; */
   align-items: center;
   margin-top: 9px;
-
 }
+
+.inputAndLeftText.sgsfasfeerr{
+  align-items: initial !important;
+}
+
  .doiweuijrwerwer .radio-wrapper-26 label:not(:has(input:disabled)):hover {
 	 background: #f5f6f8;
 }

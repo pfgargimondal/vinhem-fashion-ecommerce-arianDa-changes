@@ -12,16 +12,50 @@ export default function RecentlyViewed({ recentProducts }) {
   // const [recentProducts, setRecentProducts] = useState([]);
   
   const swiperConfig = {
+    modules: [Autoplay, Pagination, Navigation, Mousewheel],
     spaceBetween: 20,
     slidesPerView: 4,
     navigation: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: { clickable: true },
     breakpoints: {
-      0: { slidesPerView: 1 },
-      420: { slidesPerView: 2 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 4 },
-      1200: { slidesPerView: 4 },
+      0: { 
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 15
+      },
+      320: { 
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 15
+      },
+      393: { 
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 15
+      },
+      576: { 
+        slidesPerView: 2.2,
+        centeredSlides: true,
+        spaceBetween: 15
+      },
+      768: { 
+        slidesPerView: 3.2,
+        centeredSlides: true,
+        spaceBetween: 15
+      },
+      992: { 
+        slidesPerView: 4.2,
+        centeredSlides: false 
+      },
+      1200: { 
+        slidesPerView: 4,
+        centeredSlides: false 
+      }
     },
   };
 
@@ -47,7 +81,7 @@ export default function RecentlyViewed({ recentProducts }) {
         <h4 className="pb-2">Recently Viewed</h4>
       </div>
 
-      <div className="fgjhdfgdfgdf py-4">
+      <div className="fgjhdfgdfgdf dhbdgshfggdgrg py-4">
         <Swiper {...swiperConfig}>
             {recentProducts?.data?.map((featuredProduct) => (
                 <SwiperSlide key={featuredProduct.id}>

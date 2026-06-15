@@ -3086,8 +3086,8 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                         <hr />
 
                         <div
-                          className="coisdefisdhifhsdjifjhosd dhfhgsersefsfsdf doiwejrjwejr"
-                          style={{ height: "100vh" }}>
+                          className="coisdefisdhifhsdjifjhosd dhfhgsersefsfsdf doiwejrjwejr bzfsafaqdwe"
+                          style={{ height: "680px" }}>
                           {productDetails?.data?.matching_product?.length > 0 && (
                             <Swiper
                               modules={[
@@ -3168,7 +3168,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                           )}                          
                         </div>
 
-                        <div className="coisdefisdhifhsdjifjhosd derwerwrrr d-none">
+                        <div className="coisdefisdhifhsdjifjhosd derwerwrrr sgsfadawdasd d-none">
                           <Swiper
                             {...swiperMatchingConfig}
                             className="mySwiper"
@@ -3242,7 +3242,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                     </div>
 
                     <div className="fgjhdfgdfgdf dhbdgshfggdgrg dghdjkgmskrt py-4">
-                      <Swiper {...swiperConfig}>
+                      <Swiper key={`similar-${productDetails?.data?.similar_product?.length}`} {...swiperConfig}>
                         {productDetails?.data?.similar_product.map(
                           (featuredProduct) => (
                             <SwiperSlide key={featuredProduct.id}>
@@ -3265,8 +3265,8 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                       <h4 className="pb-2">Customer Also Viewed</h4>
                     </div>
 
-                    <div className="fgjhdfgdfgdf py-4">
-                      <Swiper {...swiperConfig}>
+                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg py-4">
+                      <Swiper key={`cav-${productDetails?.data?.customer_viewd_product?.length}`} {...swiperConfig}>
                         {productDetails?.data?.customer_viewd_product.map(
                           (featuredProduct) => (
                           <SwiperSlide key={featuredProduct.id}>

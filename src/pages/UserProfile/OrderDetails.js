@@ -611,11 +611,8 @@ export const OrderDetails = () => {
       <section className="order-details py-5">
         <div className="container">
           <div className="diewhruiwejirhwejre p-4">
-            <div className="d-flex justify-content-between align-items-center mb-4">
-              <h5>
-                Order: <span>#{order?.order_id}</span>
-              </h5>
-              <div className="buttons">
+            <div className="d-flex justify-content-end">
+              <div className="buttons svdhbfer d-none">
                 <button className="second-button" onClick={() => navigate(-1)}>
                   <i className="bi bi-arrow-left"></i> Back
                 </button>
@@ -624,10 +621,10 @@ export const OrderDetails = () => {
 
             <div className="details mb-4">
               <p>
-                <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ").toUpperCase() || "N/A"}
+                <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ")?.toLowerCase()?.replace(/\b\w/g, char => char.toUpperCase()) || "N/A"}
               </p>
               <p>
-                <strong className="diemoewr">Payment Method:</strong> {order?.payment_method?.replace(/_/g, " ").toUpperCase() || "N/A"}
+                <strong className="diemoewr">Payment Method:</strong> {order?.payment_method?.replace(/_/g, " ")?.toLowerCase()?.replace(/\b\w/g, char => char.toUpperCase()) || "N/A"}
               </p>
               <p>
                 <strong className="diemoewr">Date:</strong> {formatDate(order?.created_at)}
@@ -639,7 +636,7 @@ export const OrderDetails = () => {
 
             <div className="row mb-4">
               <div className="col-md-6">
-                <h6 className="fw-bold">Billing Address</h6>
+                <h5>Billing Address</h5>
                 <p>
                   <strong className="diemoewr">Name:</strong> {order?.billingName} <br />
                   <strong className="diemoewr">Email:</strong> {order?.billingEmail} <br />
@@ -653,7 +650,7 @@ export const OrderDetails = () => {
               </div>
 
               <div className="col-md-6">
-                <h6 className="fw-bold">Shipping Address</h6>
+                <h5>Shipping Address</h5>
                 <p>
                   <strong className="diemoewr">Name:</strong> {order?.shippingName} <br />
                   <strong className="diemoewr">Email:</strong> {order?.shippingEmail} <br />
@@ -668,7 +665,7 @@ export const OrderDetails = () => {
             </div>
 
             {/* <h6 className="fw-bold mb-3">Products</h6> */}
-            <div className="table-responsive">
+            <div className="table-responsive dnhddfdfgsdfdf">
               <table className="jiksdfnkrjwer table align-middle">
                 <thead className="bg-light">
                   <tr>
@@ -719,7 +716,7 @@ export const OrderDetails = () => {
                         </td>
 
                         <td>
-                          <span className="fw-bold">
+                          <span className="dgsdfewrwer">
                             {order?.order_status || "N/A"}
                           </span>
                         </td>
@@ -793,6 +790,14 @@ export const OrderDetails = () => {
               <p className="fw-bold fs-5">
                 Total Amount: <span>₹{order?.total_order_amount}</span>
               </p>
+            </div>
+
+            <div className="d-flex justify-content-end">
+              <div className="buttons cgbdfsdfsf d-none">
+                <button className="second-button" onClick={() => navigate(-1)}>
+                  <i className="bi bi-arrow-left"></i> Back
+                </button>
+              </div>
             </div>
           </div>
         </div>

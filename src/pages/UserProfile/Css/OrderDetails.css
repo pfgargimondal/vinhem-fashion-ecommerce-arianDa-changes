@@ -18,7 +18,7 @@
   border-radius: 10px;
   padding: 5px 20px;
   border: none;
-  color: white;
+  color: #fff;
 }
 .order-details .second-button i {
   font-size: 1.1rem;
@@ -31,6 +31,7 @@
 .order-details p {
   margin-bottom: 0.4rem;
   color: #555;
+  font-weight: 500 !important;
 }
 .order-details table th {
   font-weight: 600;
@@ -40,6 +41,7 @@
   vertical-align: middle;
   font-size: 1rem;
   color: #333;
+  font-weight: 500;
 }
 .order-details table img {
   width: 100px;
@@ -59,6 +61,7 @@
   padding: 5px 20px;
 }
 .doiwenmjre > div > div{
+  font-weight: 500 !important;
   color: #555;
 }
 .doiwenmjre > div > div strong {
@@ -279,10 +282,15 @@
 
 .diemoewr{
   color: #000;
+  font-weight: 500 !important;
 }
 
 .jiksdfnkrjwer{
   margin-bottom: 0 !important;
+}
+
+.dgsdfewrwer{
+  font-weight: 500;
 }
 
 
@@ -291,5 +299,33 @@
 @media only screen and (max-width:991px) {
   .messrmnt-modal{
     width: 70%;
+  }
+
+  .dnhddfdfgsdfdf.table-responsive{
+    min-width: initial;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 428px){
+  .svdhbfer.d-none{
+    display: block !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cgbdfsdfsf.d-none{
+    display: block !important;
+    margin-top: 1.5rem;
+  }
+
+  .doifhisdhfjghsdf{
+    display: none;    
+  }
+
+  .order-details.py-5{
+    padding-top: 0.5rem !important;
   }
 }
