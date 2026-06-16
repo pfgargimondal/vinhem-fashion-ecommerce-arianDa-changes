@@ -697,7 +697,7 @@ export const OrderDetails = () => {
                                 Size: {item?.product_size} <br />
                                 </>
                               )}
-                              Price: ₹{item?.total_price}
+                              Price: ₹{Number(item?.total_price || 0).toLocaleString("en-IN")}
 
                               <div className="idniehrewrer d-flex align-items-center">
                                 <span className="d-block me-3" onClick={() => toggleDetails(index)}>More Details <i class="fa-solid fa-caret-down"></i></span>
@@ -788,7 +788,7 @@ export const OrderDetails = () => {
 
             <div className="text-end">
               <p className="fw-bold fs-5">
-                Total Amount: <span>₹{order?.total_order_amount}</span>
+                Total Amount: <span>₹{Number(order?.total_order_amount || 0).toLocaleString("en-IN")}</span>
               </p>
             </div>
 

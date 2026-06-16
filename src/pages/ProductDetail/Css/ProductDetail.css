@@ -60,6 +60,10 @@
   padding: 40px 0;
 }
 
+.chat-iframe-wrap{
+  bottom: 14%;
+}
+
 .dsfbsdghfjs {
   display: flex;
   align-items: baseline;

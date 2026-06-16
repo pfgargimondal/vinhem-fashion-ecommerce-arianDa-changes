@@ -7,10 +7,16 @@ const GlobalChat = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      toggleZohoChatWindow(false);
-    }, 1500);
-  }, []);
+    const handleChatState = (e) => {
+        setIsOpen(e.detail.open);
+    };
+
+    window.addEventListener("zohoChatToggle", handleChatState);
+
+    return () => {
+        window.removeEventListener("zohoChatToggle", handleChatState);
+    };
+}, []);
 
   const handleClick = () => {
     toggleZohoChatWindow(!isOpen);
