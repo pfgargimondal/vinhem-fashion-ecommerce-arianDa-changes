@@ -442,6 +442,10 @@
     .iakdpleejwrwerer h6 {
         font-size: 1.7vw !important;
     }
+
+    .cdwehjirnweijrowejrowejr .checkbox-wrapper-33 .checkbox{
+        line-height: 2rem;
+    }
 }
 
 
@@ -895,7 +899,11 @@
 
 @media only screen and (max-width: 419px){
     .idjweihewr .nav-link p {
-        font-size: 15px;
+        font-size: 1.2rem;
+    }
+
+    .cdwehjirnweijrowejrowejr .checkbox-wrapper-33 .checkbox__textwrapper {
+        font-size: 1.2rem;
     }
 }
 

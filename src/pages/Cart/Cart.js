@@ -1432,7 +1432,7 @@ export const Cart = () => {
                                   <p className="mb-1">ITEM ID: {cartItemsVal.item_id}</p>
                                   <p className="mb-1">Colour: {cartItemsVal.color}</p>
                                   {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
-                                    <p className="mb-1 d-flex align-items-center flex-wrap">
+                                    <p className="mb-1 gfxbdgsfeherh d-flex align-items-center flex-wrap">
                                       <span>
                                         Stitching Option : {cartItemsVal.actual_stitch_option}
                                       </span>
@@ -3225,7 +3225,7 @@ export const Cart = () => {
       <div id="paypal-container" style={{ display: "none" }}></div>
 
       <div className="col-lg-12" style={{ display: key === "cart" ? "block" : "none" }}>
-        <div className="diweurbhwer_inner container-fluid mt-4">
+        <div className="diweurbhwer_inner dfgdxhsdsgsfer container-fluid mt-4">
           <TrandingProduct />
         </div>
       </div>
