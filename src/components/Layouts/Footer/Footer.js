@@ -24,6 +24,7 @@ export const Footer = ({ shouldHideFullHeaderFooterRoutes }) => {
   const [emailToggle, setEmailToggle] = useState(false);
   const [selectedCode, setSelectedCode] = useState('+91');
   const [countryCodes, setCountryCodes] = useState([]);
+  const [socialMediaLinks, setSocialMediaLinks] = useState([]);
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
@@ -78,6 +79,18 @@ export const Footer = ({ shouldHideFullHeaderFooterRoutes }) => {
       }
     };
     fetchCountryCode();
+  }, []);
+
+  useEffect(() => {
+    const fetchSocialMediaLink = async () => {
+      try {
+        const response = await http.get('/get-social-media-link');
+        setSocialMediaLinks(response.data.data);
+      } catch (error) {
+        console.error('Error fetching Social Media Link', error);
+      }
+    };
+    fetchSocialMediaLink();
   }, []);
 
   useEffect(() => {
@@ -386,17 +399,96 @@ export const Footer = ({ shouldHideFullHeaderFooterRoutes }) => {
                   <h5>Follow Us</h5>
 
                   <ul className="f-fu-link mb-4 ps-0">
-                    <li><Link to="https://www.facebook.com/VinhemFashion/" target="_blank" className="social facebook"><i class="bi bi-facebook"></i></Link></li>
+                    {socialMediaLinks?.map((mediaLink, index) => {
+                      switch (mediaLink?.media_section) {
+                        case "Facebook":
+                          return (
+                            <li key={index}>
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social facebook"
+                              >
+                                <i className="bi bi-facebook"></i>
+                              </a>
+                            </li>
+                          );
 
-                    <li><Link to="https://www.instagram.com/vinhem_fashion/?hl=en" target="_blank" className="social instagram"><i class="bi bi-instagram"></i></Link></li>
+                        case "Instagram":
+                          return (
+                            <li key={index}>
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social instagram"
+                              >
+                                <i className="bi bi-instagram"></i>
+                              </a>
+                            </li>
+                          );
 
-                    <li><Link to="https://in.pinterest.com/vinhemfashion/" target="_blank" className="social pinterest"><i class="bi bi-pinterest"></i></Link></li>
+                        case "Pinterest":
+                          return (
+                            <li key={index}>
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social pinterest"
+                              >
+                                <i className="bi bi-pinterest"></i>
+                              </a>
+                            </li>
+                          );
 
-                    <li><Link to="" className="social twitter"><i class="bi bi-twitter-x"></i></Link></li>
+                        case "Twitter":
+                          return (
+                            <li key={index}>
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social twitter"
+                              >
+                                <i className="bi bi-twitter-x"></i>
+                              </a>
+                            </li>
+                          );
 
-                    <li><Link to="" className="social youtube"><i class="bi bi-youtube"></i></Link></li>
+                        case "Youtube":
+                          return (
+                            <li key={index}>
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social youtube"
+                              >
+                                <i className="bi bi-youtube"></i>
+                              </a>
+                            </li>
+                          );
 
-                    <li><Link to="" className="social youtube"><i class="bi bi-linkedin"></i></Link></li>
+                        case "Linkedin":
+                          return (
+                            <li key={index}>
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social linkedin"
+                              >
+                                <i className="bi bi-linkedin"></i>
+                              </a>
+                            </li>
+                          );
+
+                        default:
+                          return null;
+                      }
+                    })}
                   </ul>
 
                   <h5>Fashion Updates</h5>
