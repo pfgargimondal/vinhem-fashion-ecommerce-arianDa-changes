@@ -192,6 +192,7 @@ form input:global(.form-control){
 .dfgndfjhbgdfgdf table td {
   padding: 0.625em;
   text-align: left;
+  font-weight: 500;
 }
 .dfgndfjhbgdfgdf table th {
   font-size: 0.85em;
@@ -201,6 +202,10 @@ form input:global(.form-control){
 .dfgndfjhbgdfgdf .sdfsdf {
   display: flex;
   align-items: center;
+}
+.dfgndfjhbgdfgdf .sdfsdf p{
+  font-weight: 500;
+  font-size: 18px;
 }
 .oknknkmer{
   cursor: pointer;
@@ -213,11 +218,11 @@ form input:global(.form-control){
   color: var(--pink-main-color);  
 }
 .dweknriwehrwer .cncl_ordr{
-  color: #dc3545 !important;
+  color: var(--pink-main-color) !important;
 }
 
 .dweknriwehrwer .return_ordr{
-  color: #ef7105 !important;
+  color: var(--pink-main-color) !important;
 }
 
 .dweknriwehrwer .cncl_ordr:hover{
@@ -251,20 +256,35 @@ form input:global(.form-control){
   padding-top: 5px;
 }
 .dfgndfjhbgdfgdf .dfgfd5544 {
-  padding: 6px 15px !important;
-  background-color: #d1fbea !important;
-  color: #00c986 !important;
-  font-weight: 600;
-  font-size: 13px !important;
+  padding-left: 15px !important;
+  background-color: transparent !important;
+  color: var(--pink-main-color) !important;
+  font-weight: 500;
+  font-size: 18px !important;
   border: none !important;
   border-radius: 8px !important;
+}
+.dweknriwehrwer button:first-child{
+  color: var(--pink-main-color);
+  font-weight: 500;
+  font-size: 18px;
+}
+.dweknriwehrwer button:first-child:disabled{
+  opacity: 1 !important;
+}
+.dweknriwehrwer button.dwnld_invce{
+  font-weight: 500;
+  font-size: 18px;
+}
+.vdfbfsdcvere{
+  font-weight: 500;
 }
 .dfgndfjhbgdfgdf .dfgfd5544a {
   padding: 6px 15px !important;
   background-color: #fbd1d1 !important;
   color: #c90000 !important;
   font-weight: 600;
-  font-size: 13px !important;
+  font-size: 18px !important;
   border: none !important;
   border-radius: 8px !important;
 }
@@ -273,7 +293,7 @@ form input:global(.form-control){
   background-color: #fbebd1 !important;
   color: #c99000 !important;
   font-weight: 600;
-  font-size: 13px !important;
+  font-size: 18px !important;
   border: none !important;
   border-radius: 8px !important;
 }
@@ -283,7 +303,7 @@ form input:global(.form-control){
   background-color: #D3F5FC !important;
   color: #0DCAF0 !important;
   font-weight: 600;
-  font-size: 13px !important;
+  font-size: 18px !important;
   border: none !important;
   border-radius: 8px !important;
 }
@@ -294,7 +314,7 @@ form input:global(.form-control){
   background-color: #d1f2fb !important;
   color: #002fc9 !important;
   font-weight: 600;
-  font-size: 13px !important;
+  font-size: 18px !important;
   border: none !important;
   border-radius: 8px !important;
 }
@@ -304,7 +324,7 @@ form input:global(.form-control){
     background-color: #f3bf92 !important;
     color: #1c1919 !important;
     font-weight: 600;
-    font-size: 13px !important;
+    font-size: 18px !important;
     border: none !important;
     border-radius: 8px !important;
 }

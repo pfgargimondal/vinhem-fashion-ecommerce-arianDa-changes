@@ -374,18 +374,18 @@ export const OrderHistory = () => {
 
 
                                 <div className={styles.dfgndfjhbgdfgdf}>
-                                    <Table striped responsive bordered hover>
+                                    <Table responsive bordered hover>
                                         <thead>
                                             <tr>
-                                                <th className="text-center">Order Id</th>
+                                                <th className="text-center" style={{ background: "#E0E0E0" }}>Order Id</th>
 
-                                                <th className="text-center">Order Information</th>
+                                                <th className="text-center" style={{ background: "#E0E0E0" }}>Order Information</th>
 
-                                                <th className="text-center">Date</th>
+                                                <th className="text-center" style={{ background: "#E0E0E0" }}>Date</th>
 
-                                                <th className="text-center">Total Amount</th>
+                                                <th className="text-center" style={{ background: "#E0E0E0" }}>Total Amount</th>
 
-                                                <th className="text-center">Status</th>
+                                                <th className="text-center" style={{ background: "#E0E0E0" }}>Status</th>
                                             </tr>
                                         </thead>
                                         
@@ -393,7 +393,7 @@ export const OrderHistory = () => {
                                             {filteredOrders.length > 0 ? (
                                                 filteredOrders.map((orderHistoryVal) => (
                                                 <tr>
-                                                    <td className="text-center">{orderHistoryVal.order_id}</td>
+                                                    <td className="text-center" style={{ fontWeight: 500 }}>{orderHistoryVal.order_id}</td>
 
                                                     <td className="text-center">
                                                         <div className={`${styles.sdfsdf} justify-content-between mb-3`}>
@@ -406,31 +406,47 @@ export const OrderHistory = () => {
                                                         <div className={`d-flex ${styles.dweknriwehrwer} align-items-center justify-content-between`}>
                                                             {orderHistoryVal.order_status === "Placed" ? (
                                                                     orderHistoryVal.cancel_request === "Requested" ? (
-                                                                        <button className="btn border-0 px-0 text-muted" disabled>
+                                                                        <button className="btn border-0 px-0" disabled>
                                                                         <i className="bi me-1 bi-clock-history"></i> Cancellation Request Pending
                                                                         </button>
                                                                     ) : orderHistoryVal.cancel_request === "Declined" ? (
-                                                                        <button className="btn border-0 px-0 text-muted" disabled>
+                                                                        <button className="btn border-0 px-0" disabled>
                                                                         <i className="bi me-1 bi-clock-history"></i> Cancellation Declined By Admin
                                                                         </button>
                                                                     ) : orderHistoryVal.cancel_request === "Approved" ? (
-                                                                        <button className="btn border-0 px-0 text-muted" disabled>
+                                                                        <button className="btn border-0 px-0" disabled>
                                                                         <i className="bi me-1 bi-clock-history"></i> Cancel Approved
                                                                         </button>
                                                                     ) : (
-                                                                        <button
-                                                                        className={`btn ${styles.cncl_ordr} border-0 px-0`}
-                                                                        onClick={() => handleCancelOrder(orderHistoryVal)}
-                                                                        >
-                                                                        <i className="bi me-1 bi-folder-x"></i> Cancel Order
-                                                                        </button>
+                                                                        (() => {
+                                                                            const orderDate = new Date(orderHistoryVal.order_date);
+                                                                            const currentDate = new Date();
+
+                                                                            const diffHours =
+                                                                                (currentDate.getTime() - orderDate.getTime()) / (1000 * 60 * 60);
+
+                                                                            return diffHours <= 24 ? (
+                                                                                <button
+                                                                                className={`btn ${styles.cncl_ordr} border-0 px-0`}
+                                                                                onClick={() => handleCancelOrder(orderHistoryVal)}
+                                                                                >
+                                                                                <i className="bi me-1 bi-folder-x"></i>
+                                                                                Cancel Order
+                                                                                </button>
+                                                                            ) : (
+                                                                                <button className="btn border-0 px-0" disabled>
+                                                                                    <i className="bi me-1 bi-clock-history"></i>
+                                                                                    Do Not Cancel
+                                                                                </button>
+                                                                            );
+                                                                        })()
                                                                     )
                                                                 ) : orderHistoryVal.order_status === "Pending" ? (
-                                                                <button className="btn border-0 px-0 text-muted">
+                                                                <button className="btn border-0 px-0">
                                                                     <i className="bi me-1 bi-clock-history"></i> Pending Order
                                                                 </button>
                                                                 ) : orderHistoryVal.order_status === "Shipped" ? (
-                                                                <button className="btn border-0 px-0 text-muted">
+                                                                <button className="btn border-0 px-0">
                                                                     <i className="bi me-1 bi-folder-x"></i> Cancellation Not Available
                                                                 </button>
                                                                 ) : orderHistoryVal.order_status === "Delivered" ? (
@@ -454,11 +470,11 @@ export const OrderHistory = () => {
                                                                                 className={`btn ${styles.return_ordr} border-0 px-0`}
                                                                             >
                                                                                 <i className="bi me-1 bi-arrow-counterclockwise"></i>
-                                                                                Return Order
+                                                                                Mark Return 
                                                                             </button>
                                                                         ) : (
                                                                             <button
-                                                                                className="btn border-0 px-0 text-muted"
+                                                                                className="btn border-0 px-0"
                                                                                 disabled
                                                                             >
                                                                                 <i className="bi me-1 bi-clock-history"></i>
@@ -480,12 +496,17 @@ export const OrderHistory = () => {
                                                                 
                                                                 ) : orderHistoryVal.order_status === "Refunded" ? (
                                                                     <button className={`btn ${styles.return_ordr} border-0 px-0`}>
-                                                                        <i className="bi me-1 bi-folder-x"></i> Refund Completed
+                                                                        <i className="bi me-1 bi-folder-x"></i> Returned Complete 
+                                                                    </button>
+                                                                ) : orderHistoryVal.order_status === "In Process" ? (
+                                                                    <button className={`btn ${styles.return_ordr} border-0 px-0`}>
+                                                                        <i className="bi me-1 bi-folder-x"></i> Order In Process
                                                                     </button>
                                                                 ) : (
-                                                                    <button className="btn border-0 px-0 text-muted">
-                                                                        <i className="bi me-1 bi-folder-x"></i> Cancellation Not Available
-                                                                    </button>
+                                                                    // <button className="btn border-0 px-0">
+                                                                    //     <i className="bi me-1 bi-folder-x"></i> Cancellation Not Available
+                                                                    // </button>
+                                                                    null
                                                                 )}
                                                                 {orderHistoryVal.order_status === "Delivered" && (
                                                                     <button className={`btn ${styles.dwnld_invce} text-success border-0 px-0`} onClick={() => handleDownload(orderHistoryVal)}>
@@ -502,20 +523,75 @@ export const OrderHistory = () => {
                                                         ? orderHistoryVal.order_date.split("-").reverse().join("-")
                                                         : ""}</td>
 
-                                                    <td className="text-center">₹{orderHistoryVal.total_order_amount}</td>
+                                                    <td className="text-center" style={{ color: "var(--pink-main-color)", fontWeight: 500, fontSize: "18px" }}>₹{Number(orderHistoryVal.total_order_amount).toLocaleString("en-IN")}</td>
 
                                                     <td className="text-center">
                                                         {orderHistoryVal.order_status === "Placed" ? (
-                                                            <button className={styles.dfgfd5544}>{orderHistoryVal.order_status}</button>
+                                                            orderHistoryVal.cancel_request === null ? (
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>Order Place On</button>
+                                                                    <span className="vdfbfsdcvere">
+                                                                    | {new Date(orderHistoryVal.order_date).toLocaleDateString("en-GB", {
+                                                                        day: "numeric",
+                                                                        month: "long",
+                                                                        year: "numeric",
+                                                                        })}
+                                                                    </span>
+                                                                </div>
+                                                            ) : (orderHistoryVal.cancel_request === 'Requested') ? (
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>Cancellation-Initiated</button>
+                                                                    <span className="vdfbfsdcvere">
+                                                                    | {new Date(orderHistoryVal.cancel_request_date).toLocaleDateString("en-GB", {
+                                                                        day: "numeric",
+                                                                        month: "long",
+                                                                        year: "numeric",
+                                                                        })}
+                                                                    </span>
+                                                                </div>
+                                                            ) : (orderHistoryVal.cancel_request === 'Approved') ? (
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>Order Cancelled</button>
+                                                                    <span className="vdfbfsdcvere">
+                                                                    | {new Date(orderHistoryVal.cancel_date).toLocaleDateString("en-GB", {
+                                                                        day: "numeric",
+                                                                        month: "long",
+                                                                        year: "numeric",
+                                                                        })}
+                                                                    </span>
+                                                                </div>
+                                                            ) : null
+                                                            
                                                         ) : (orderHistoryVal.order_status === "Pending" && orderHistoryVal.action === "accepted") ? (
-                                                            <button className={styles.dfgfd5544c}>In Process</button>
+                                                            <button className={styles.dfgfd5544}>Order In Process</button>
+                                                        ) : (orderHistoryVal.order_status === "In Process") ? (
+                                                            <button className={styles.dfgfd5544}>Order In Process</button>
                                                         ) : orderHistoryVal.order_status === "Shipped" ? (
                                                             <button className={styles.dfgfd5544b}>{orderHistoryVal.order_status}</button>
                                                         ) : orderHistoryVal.order_status === "Dispatched" ? (
                                                             orderHistoryVal.tracking_link !== null ? (
-                                                                <button className={styles.dfgfd5544bsgdsbgd}>IN-TRANSIT</button>
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>IN-TRANSIT </button>
+
+                                                                    <span className="vdfbfsdcvere">
+                                                                        | {new Date(orderHistoryVal.updated_at).toLocaleDateString("en-GB", {
+                                                                            day: "numeric",
+                                                                            month: "long",
+                                                                            year: "numeric",
+                                                                        })}
+                                                                    </span>
+                                                                </div>
                                                             ):(
-                                                                <button className={styles.dfgfd5544bsgdsbgd}>Ready-To-Dispatch</button>
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>Ready-To-Dispatch </button>
+                                                                    <span className="vdfbfsdcvere">
+                                                                        | {new Date(orderHistoryVal.updated_at).toLocaleDateString("en-GB", {
+                                                                                day: "numeric",
+                                                                                month: "long",
+                                                                                year: "numeric",
+                                                                            })}
+                                                                    </span>
+                                                                </div>
                                                             )
                                                         ) : orderHistoryVal.order_status === "Delivered" ? (
                                                             <div className="d-flex align-items-center justify-content-center gap-2">
@@ -523,19 +599,63 @@ export const OrderHistory = () => {
                                                                     {orderHistoryVal.order_status} {" "} On
                                                                 </button>
 
-                                                                <span className="">
-                                                                    | {new Date(orderHistoryVal.delivery_date)
-                                                                        .toLocaleDateString("en-GB")
-                                                                        .replace(/\//g, "-")}
+                                                                <span className="vdfbfsdcvere">
+                                                                    | {new Date(orderHistoryVal.delivery_date).toLocaleDateString("en-GB", {
+                                                                            day: "numeric",
+                                                                            month: "long",
+                                                                            year: "numeric",
+                                                                        })}
                                                                 </span>
                                                             </div>
-                                                        ) : orderHistoryVal.order_status === "Returned" ? (
+                                                        ) : orderHistoryVal.order_status === "Refunded" ? (
+                                                            <>
                                                             <div className="d-flex align-items-center justify-content-center gap-2">
-                                                                <button className={styles.dfgfd5544dvxc}>{orderHistoryVal.order_status} {" "} On</button>
+                                                                <button className={styles.dfgfd5544}>Returned Complete </button>
                                                                 <span className="">
-                                                                    | {new Date(orderHistoryVal.return_initated_dateTime)
-                                                                        .toLocaleDateString("en-GB")
-                                                                        .replace(/\//g, "-")}
+                                                                    | {new Date(orderHistoryVal.refund_date).toLocaleDateString("en-GB", {
+                                                                        day: "numeric",
+                                                                        month: "long",
+                                                                        year: "numeric",
+                                                                    })}
+                                                                </span>
+                                                            </div><br/>
+                                                            <span className="">Your Refund has been issued.</span>
+                                                            </>
+                                                        ) : orderHistoryVal.order_status === "Returned" ? (
+                                                            orderHistoryVal.return_request === null ? (
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>Return-Initiated</button>
+                                                                    <span className="">
+                                                                        | {new Date(orderHistoryVal.return_initated_dateTime).toLocaleDateString("en-GB", {
+                                                                            day: "numeric",
+                                                                            month: "long",
+                                                                            year: "numeric",
+                                                                        })}
+                                                                    </span>
+                                                                </div>
+                                                            ):(orderHistoryVal.return_request === 'Declined') ? (
+                                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                    <button className={styles.dfgfd5544}>Returned Cancelled </button>
+                                                                    <span className="">
+                                                                        | {new Date(orderHistoryVal.updated_at).toLocaleDateString("en-GB", {
+                                                                            day: "numeric",
+                                                                            month: "long",
+                                                                            year: "numeric",
+                                                                        })}
+                                                                    </span>
+                                                                </div>
+                                                            ) : null
+                                                            
+                                                        ) : orderHistoryVal.order_status === "Cancelled" ? (
+                                                            
+                                                            <div className="d-flex align-items-center justify-content-center gap-2">
+                                                                <button className={styles.dfgfd5544}>Order Cancelled</button>
+                                                                <span className="vdfbfsdcvere">
+                                                                | {new Date(orderHistoryVal.cancel_date).toLocaleDateString("en-GB", {
+                                                                    day: "numeric",
+                                                                    month: "long",
+                                                                    year: "numeric",
+                                                                    })}
                                                                 </span>
                                                             </div>
                                                         ) : (
