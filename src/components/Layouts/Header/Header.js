@@ -1,7 +1,8 @@
   // eslint-disable-next-line
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { SwiperSlide } from 'swiper/react';
+  // eslint-disable-next-line
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useAuth } from "../../../context/AuthContext";
 import { DropdownLoggedIn } from "../../Elements/Dropdown/DropdownLoggedIn";
 import http from "../../../http";
@@ -600,47 +601,51 @@ export const Header = ({ shouldHideHeader, shouldHideFullHeaderFooterRoutes, sho
 
 
 
+
   return (
     <>
     {(loading) && <Loader />}
       { !shouldHideFullHeaderFooterRoutes && (
         <header>
-          <div className="advertisement-slider position-relative" style={{background: "url('/images/csadad.jpg') no-repeat", backgroundPosition: "top", backgroundSize: "cover"}}>
-          <div className="marquee-container">
-            <div className="marquee-track marquee-left">
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+          <div className="advertisement-slider position-relative py-2" style={{background: "url('/images/csadad.jpg') no-repeat", backgroundPosition: "top", backgroundSize: "cover"}}>
+            <div className="fbnhfgbhgsdvsdv">
+              <div className="marquee">
+                <div className="marquee-track">
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
-              </div>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
 
-              <div className="scroll-card">
-                <p className="mb-0"><a href="/">SUMMER SALE: UP TO 70% OFF SELECTED ITEMS</a></p>
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
           </div>
 
           <div className={`header-sticky-wrapper ${isSticky ? "is-fixed-top" : ""} ${shouldHideHeader ? "d-none" : ""}`}>

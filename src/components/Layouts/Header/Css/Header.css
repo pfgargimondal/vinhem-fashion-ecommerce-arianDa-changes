@@ -31,14 +31,13 @@ header .advertisement-slider .marquee-track {
   width: max-content;
 }
 header .advertisement-slider .marquee-left {
-  animation: marquee-left 20s linear infinite;
+  animation: marquee-left 15s linear infinite;
 }
 header .advertisement-slider .marquee-right {
   animation: marquee-right 20s linear infinite;
 }
 header .advertisement-slider .scroll-card {
   border-radius: 10px;
-  margin-right: 9rem;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -47,6 +46,32 @@ header .advertisement-slider .scroll-card p a {
   color: #fff;
   font-size: 13px;
 }
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 500px;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 .duiewhewijrrqq img{
   width: 90%;
 }
