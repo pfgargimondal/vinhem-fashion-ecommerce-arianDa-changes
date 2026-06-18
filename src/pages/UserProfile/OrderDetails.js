@@ -612,7 +612,7 @@ export const OrderDetails = () => {
         <div className="container">
           <div className="diewhruiwejirhwejre p-4">
             <div className="d-flex justify-content-end">
-              <div className="buttons svdhbfer d-none">
+              <div className="buttons svdhbfer">
                 <button className="second-button" onClick={() => navigate(-1)}>
                   <i className="bi bi-arrow-left"></i> Back
                 </button>
@@ -620,6 +620,9 @@ export const OrderDetails = () => {
             </div>
 
             <div className="details mb-4">
+              <p>
+                <strong className="diemoewr">Order No:</strong> {order?.order_id || "N/A"}
+              </p>
               <p>
                 <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ")?.toLowerCase()?.replace(/\b\w/g, char => char.toUpperCase()) || "N/A"}
               </p>
@@ -740,13 +743,14 @@ export const OrderDetails = () => {
                                   )}
                                 {/* {item?.actual_stitch_option} */}
                               </div>
-
-                              <div><strong>Customize Charges: </strong>
-                                { item?.custom_fit_charge !== '0' 
-                                    ? item?.custom_fit_charge 
-                                    : item?.stitching_charge 
-                                }
-                              </div>
+                              {item?.actual_stitch_option !== 'Ready To Wear' && (
+                                <div><strong>Customize Charges: </strong>
+                                  { item?.custom_fit_charge !== '0' 
+                                      ? item?.custom_fit_charge 
+                                      : item?.stitching_charge 
+                                  }
+                                </div>
+                              )}
                             </div>
 
                             { item?.mojri_selected === 1 && (
