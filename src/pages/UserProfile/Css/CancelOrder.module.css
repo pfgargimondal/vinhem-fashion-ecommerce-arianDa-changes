@@ -102,21 +102,14 @@
   transition: 0.2s ease-in-out;
 }
 
-/* .dweknriwehrwer .cncl_ordr{
-  color: #dc3545 !important;
+.dweknriwehrwer .cncl_ordr{
+  color: var(--pink-main-color) !important;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .dweknriwehrwer .cncl_ordr:hover{
   text-decoration: underline;
-} */
-
-.dweknriwehrwer button:first-child{
-  color: var(--pink-main-color);
-  font-weight: 500;
-  font-size: 18px;
-}
-.dweknriwehrwer button:first-child:disabled{
-  opacity: 1 !important;
 }
 
 .dfbghdfg p {
@@ -176,11 +169,6 @@ form input:global(.form-control){
   align-items: center;
 }
 
-.dfgndfjhbgdfgdf .sdfsdf p{
-  font-weight: 500;
-  font-size: 18px;
-}
-
 .dienwrhwerwer{
   text-align: right;
 }
@@ -237,6 +225,8 @@ form input:global(.form-control){
 .dfgndfjhbgdfgdf table td {
   padding: 0.625em;
   text-align: left;
+  font-size: 18px !important;
+  font-weight: 500;
 }
 .dfgndfjhbgdfgdf table th {
   font-size: 0.85em;
@@ -247,8 +237,13 @@ form input:global(.form-control){
 .dfgndfjhbgdfgdf .sdfsdf {
   display: flex;
   align-items: center;
-  padding: 1rem;
 }
+
+.dfgndfjhbgdfgdf .sdfsdf p{
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .dfgndfjhbgdfgdf .dsfhsd {
   width: 20%;
   text-align: center;
@@ -263,17 +258,6 @@ form input:global(.form-control){
   max-width: 100%;
   max-height: 95px;
 }
-
-@media only screen and (max-width: 991px){
-  :global(.table-responsive){
-    min-width: 800px;
-  }
-
-  .customSearchWrapper {
-    margin-right: 20px;
-  }
-}
-
 
 .customSearchWrapper {
   position: relative;
@@ -378,6 +362,14 @@ form input:global(.form-control){
 
 
 @media only screen and (max-width: 991px){
+  :global(.table-responsive){
+    min-width: 800px;
+  }
+
+  .customSearchWrapper {
+    margin-right: 20px;
+  }
+  
   .fbghdfg{
     width: 100%;
   }
@@ -394,6 +386,34 @@ form input:global(.form-control){
 
   .fbghdfg{
     box-shadow: none;
+  }
+
+  .dfgndfjhbgdfgdf table th,
+  .dfgndfjhbgdfgdf table td{
+    white-space: nowrap;
+  }
+
+  .dfgndfjhbgdfgdf .sdfsdf p,
+  .dfgndfjhbgdfgdf table th,
+  .dfgndfjhbgdfgdf table td,
+  .dweknriwehrwer button:first-child,
+  .dfgndfjhbgdfgdf .dfgfd5544{
+    font-size: 16px !important;
+  }
+
+  .dfgndfjhbgdfgdf .sdfsdf {
+    gap: 30px;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 335px){
+  .doiewhrwerr > p,
+  .dfjhdsbfsdf h4{
+    font-size: 1rem !important;
   }
 }
 

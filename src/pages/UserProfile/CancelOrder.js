@@ -219,14 +219,14 @@ export const CancelOrder = () => {
 
                 {/* TABLE */}
                 <div className={styles.dfgndfjhbgdfgdf}>
-                  <Table responsive bordered hover>
+                  <Table striped responsive bordered hover>
                     <thead>
                       <tr>
-                        <th className="text-center" style={{ background: "#E0E0E0" }}>Order Id</th>
-                        <th className="text-center" style={{ background: "#E0E0E0" }}>Order Information</th>
-                        <th className="text-center" style={{ background: "#E0E0E0" }}>Order Date</th>
-                        <th className="text-center" style={{ background: "#E0E0E0" }}>Cancel Date</th>
-                        <th className="text-center" style={{ background: "#E0E0E0" }}>Total Amount</th>
+                        <th className="text-center" style={{ background: "#ECECEC" }}>Order Id</th>
+                        <th className="text-center" style={{ background: "#ECECEC" }}>Order Information</th>
+                        <th className="text-center" style={{ background: "#ECECEC" }}>Order Date</th>
+                        <th className="text-center" style={{ background: "#ECECEC" }}>Cancel Date</th>
+                        <th className="text-center" style={{ background: "#ECECEC" }}>Total Amount</th>
                       </tr>
                     </thead>
 
@@ -306,7 +306,7 @@ export const CancelOrder = () => {
                                 : ""}
                             </td>
 
-                            <td className="text-center" style={{fontWeight: "500", fontSize: "18px"}}>₹{CanceledOrderVal.total_order_amount}</td>
+                            <td className="text-center" style={{ color: "var(--pink-main-color)" }}>₹{CanceledOrderVal.total_order_amount}</td>
                           </tr>
                         ))
                       ) : (

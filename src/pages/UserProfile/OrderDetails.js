@@ -614,7 +614,7 @@ export const OrderDetails = () => {
             <div className="d-flex justify-content-end">
               <div className="buttons svdhbfer">
                 <button className="second-button" onClick={() => navigate(-1)}>
-                  <i className="bi bi-arrow-left"></i> Back
+                  <i className="fa-solid fa-arrow-left-long"></i> Back
                 </button>
               </div>
             </div>
@@ -638,7 +638,7 @@ export const OrderDetails = () => {
             </div>
 
             <div className="row mb-4">
-              <div className="col-md-6">
+              <div className="col-md-6 vbdsthsfgsdvxcv">
                 <h5>Billing Address</h5>
                 <p>
                   <strong className="diemoewr">Name:</strong> {order?.billingName} <br />
