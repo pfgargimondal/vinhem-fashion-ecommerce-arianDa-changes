@@ -219,14 +219,14 @@ export const CancelOrder = () => {
 
                 {/* TABLE */}
                 <div className={styles.dfgndfjhbgdfgdf}>
-                  <Table striped bordered hover responsive>
+                  <Table responsive bordered hover>
                     <thead>
                       <tr>
-                        <th className="text-center">Order Id</th>
-                        <th className="text-center">Order Information</th>
-                        <th className="text-center">Order Date</th>
-                        <th className="text-center">Cancel Date</th>
-                        <th className="text-center">Total Amount</th>
+                        <th className="text-center" style={{ background: "#E0E0E0" }}>Order Id</th>
+                        <th className="text-center" style={{ background: "#E0E0E0" }}>Order Information</th>
+                        <th className="text-center" style={{ background: "#E0E0E0" }}>Order Date</th>
+                        <th className="text-center" style={{ background: "#E0E0E0" }}>Cancel Date</th>
+                        <th className="text-center" style={{ background: "#E0E0E0" }}>Total Amount</th>
                       </tr>
                     </thead>
 
@@ -234,41 +234,79 @@ export const CancelOrder = () => {
                       {filteredOrders.length > 0 ? (
                         filteredOrders.map(CanceledOrderVal => (
                           <tr key={CanceledOrderVal.order_id}>
-                            <td className="text-center">{CanceledOrderVal.order_id}</td>
+                            <td className="text-center" style={{ fontWeight: 500 }}>{CanceledOrderVal.order_id}</td>
 
                             <td className="text-center">
                                 <div className={`${styles.sdfsdf} justify-content-between mb-3`}>
-                                <p className="mb-0">
-                                    No. of items: {CanceledOrderVal.total_orderProduct}
-                                </p>
 
-                                <p className={`${styles.oknknkmer} mb-0`} onClick={() => navigate(`/order-details/${CanceledOrderVal.order_id}`)}>
-                                    <i className={`bi ${styles.vew_dtls} bi-eye`}></i> View Details
-                                </p>
+                                    <p className="mb-0">No. of items: {CanceledOrderVal.total_orderProduct}</p> 
+
+                                    <p className={`${styles.oknknkmer} mb-0`} onClick={() => navigate(`/order-details/${CanceledOrderVal.order_id}`)} ><i class={`bi ${styles.vew_dtls} bi-eye`}></i> View Details</p>
                                 </div>
 
-                                <div
-                                className={`d-flex ${styles.dweknriwehrwer} align-items-center justify-content-between`}
-                                >
-                                <button className={`btn ${styles.cncl_ordr} border-0 px-0`}>
-                                    <i className="bi me-1 bi-folder-x"></i> Cancelled Order
-                                </button>
+                                <div className={`d-flex ${styles.dweknriwehrwer} align-items-center justify-content-between`}>
+                                    {CanceledOrderVal.order_status === "Placed" ? (
+                                            CanceledOrderVal.cancel_request === "Requested" ? (
+                                                <button className="btn border-0 px-0" disabled>
+                                                <i className="bi me-1 bi-clock-history"></i> Cancellation Request Pending
+                                                </button>
+                                            ) : CanceledOrderVal.cancel_request === "Declined" ? (
+                                                <button className="btn border-0 px-0" disabled>
+                                                <i className="bi me-1 bi-clock-history"></i> Cancellation Declined By Admin
+                                                </button>
+                                            ) : CanceledOrderVal.cancel_request === "Approved" ? (
+                                                <button className="btn border-0 px-0" disabled>
+                                                <i className="bi me-1 bi-clock-history"></i> Cancel Approved
+                                                </button>
+                                            ) : (
+                                                (() => {
+                                                    const orderDate = new Date(CanceledOrderVal.order_date);
+                                                    const currentDate = new Date();
+
+                                                    const diffHours =
+                                                        (currentDate.getTime() - orderDate.getTime()) / (1000 * 60 * 60);
+
+                                                    return diffHours <= 24 ? (
+                                                        <button
+                                                        className={`btn ${styles.cncl_ordr} border-0 px-0`}>
+                                                        <i className="bi me-1 bi-folder-x"></i>
+                                                        Cancel Order
+                                                        </button>
+                                                    ) : (
+                                                        <button className="btn border-0 px-0" disabled>
+                                                            <i className="bi me-1 bi-clock-history"></i>
+                                                            Do Not Cancel
+                                                        </button>
+                                                    );
+                                                })()
+                                            )
+                                        ) : CanceledOrderVal.order_status === "Pending" ? (
+                                        <button className="btn border-0 px-0">
+                                            <i className="bi me-1 bi-clock-history"></i> Pending Order
+                                        </button>
+                                        ) : (
+                                            // <button className="btn border-0 px-0">
+                                            //     <i className="bi me-1 bi-folder-x"></i> Cancellation Not Available
+                                            // </button>
+                                            null
+                                        )}
+                                    
                                 </div>
                             </td>
 
-                            <td className="text-center">
+                            <td className="text-center" style={{fontWeight: "500", fontSize: "18px"}}>
                                 {CanceledOrderVal.order_date
                                 ? CanceledOrderVal.order_date.split("-").reverse().join("-")
                                 : ""}
                             </td>
 
-                            <td className="text-center">
+                            <td className="text-center" style={{fontWeight: "500", fontSize: "18px"}}>
                                 {CanceledOrderVal.cancel_date
                                 ? CanceledOrderVal.cancel_date.split("-").reverse().join("-")
                                 : ""}
                             </td>
 
-                            <td className="text-center">₹{CanceledOrderVal.total_order_amount}</td>
+                            <td className="text-center" style={{fontWeight: "500", fontSize: "18px"}}>₹{CanceledOrderVal.total_order_amount}</td>
                           </tr>
                         ))
                       ) : (
