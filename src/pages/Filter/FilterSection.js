@@ -450,7 +450,17 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                                             <label htmlFor={`mnctgry-${filterCategory.id}`} className="checkbox">
                                               <input
                                                 id={`mnctgry-${filterCategory.id}`}
-                                                onChange={() => setMainCategory(filterCategory.mainCategory_name.toLowerCase())}
+                                                onChange={() => {
+                                                  if (window.innerWidth > 991) {
+                                                    setFilterLoading(true);
+                                                  }
+
+                                                  setMainCategory(filterCategory.mainCategory_name.toLowerCase());
+
+                                                  setTimeout(() => {
+                                                    setFilterLoading(false);
+                                                  }, 1000);
+                                                }}
                                                 // checked={mainCategory.includes(filterCategory.mainCategory_name.toLowerCase())}
                                                 checked={mainCategory === filterCategory.mainCategory_name.toLowerCase()}
                                                 value={filterCategory.mainCategory_name.toLowerCase()}
@@ -511,7 +521,17 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                                                     <label htmlFor={`sbctgry-${sub_category.id}`} className="checkbox">
                                                       <input
                                                         id={`sbctgry-${sub_category.id}`}
-                                                        onChange={() => setSubCategory(mainSlug, subSlug)}
+                                                        onChange={() => {
+                                                          if (window.innerWidth > 991) {
+                                                            setFilterLoading(true);
+                                                          }
+
+                                                          setSubCategory(mainSlug, subSlug);
+
+                                                          setTimeout(() => {
+                                                            setFilterLoading(false);
+                                                          }, 1000);
+                                                        }}
                                                         checked={isChecked}
                                                         value={subSlug}
                                                         className="checkbox__trigger visuallyhidden"
@@ -569,11 +589,21 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                                                         <div className="checkbox-wrapper-33">
                                                           <label htmlFor={`insd-sb-ctgry-${filter_category.id}`} className="checkbox">
                                                             <input
-                                                              onChange={() => setFilterCategory(
-                                                                filterCategory.mainCategory_name.toLowerCase(),
-                                                                sub_category.subCategories_name.toLowerCase(),
-                                                                filter_category.filterCategories_name.toLowerCase()
-                                                              )}
+                                                              onChange={() => {
+                                                                if (window.innerWidth > 991) {
+                                                                  setFilterLoading(true);
+                                                                }
+
+                                                                setFilterCategory(
+                                                                  filterCategory.mainCategory_name.toLowerCase(),
+                                                                  sub_category.subCategories_name.toLowerCase(),
+                                                                  filter_category.filterCategories_name.toLowerCase()
+                                                                );
+
+                                                                setTimeout(() => {
+                                                                  setFilterLoading(false);
+                                                                }, 1000);
+                                                              }}
                                                               // checked={filterCategoryCntxt?.includes(filterPath)}
                                                               checked={filterCategoryCntxt === filterPath}
                                                               value={filter_category.filterCategories_name.toLowerCase()}
