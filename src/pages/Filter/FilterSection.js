@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-import Loader from "../../components/Loader/Loader";
+// import Loader from "../../components/Loader/Loader";
 import { useCurrency } from "../../context/CurrencyContext";
 
 
@@ -15,7 +15,7 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   const [sbctgry, setSbctgry] = useState(null);
   const [insdSbctgry, setInsdSbctgry] = useState(null);
   const [expandedFilters, setExpandedFilters] = useState({});
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const { formatPrice, selectedCurrency } = useCurrency();
   const [priceExpand, setPriceExpand] = useState(true);
   const [mainCtgyOptions, setMainCtgyOptions] = useState(true);
@@ -80,7 +80,7 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   const handleSelect = (filterType, value) => {
 
     if (window.innerWidth > 991) {
-      setLoading(true);
+      setFilterLoading(true);
     }
     switch (filterType.toLowerCase()) {
       case "color":
@@ -131,7 +131,7 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
     }
 
     setTimeout(() => {
-      setLoading(false);
+      setFilterLoading(false);
     }, 1000);
   }
 
@@ -267,19 +267,16 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
 
   const applyPriceFilter = (min, max) => {
     if (window.innerWidth > 991) {
-      setLoading(true);
+      setFilterLoading(true);
     }
     setPrice(min, max);
 
     // stop loader after filter completes
     setTimeout(() => {
-      setLoading(false);
+      setFilterLoading(false);
     }, 1000); // replace with API response
   };
 
-  if (loading) {
-    return <Loader />;
-  }
 
 
   return (
