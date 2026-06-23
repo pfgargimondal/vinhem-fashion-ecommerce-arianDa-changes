@@ -611,7 +611,7 @@ export const OrderDetails = () => {
       <section className="order-details py-5">
         <div className="container">
           <div className="diewhruiwejirhwejre p-4">
-            <div className="d-flex justify-content-end">
+            <div className="cvbnxfghng float-end">
               <div className="buttons svdhbfer">
                 <button className="second-button" onClick={() => navigate(-1)}>
                   <i className="fa-solid fa-arrow-left-long"></i> Back
@@ -620,9 +620,7 @@ export const OrderDetails = () => {
             </div>
 
             <div className="details mb-4">
-              <p>
-                <strong className="diemoewr">Order No:</strong> {order?.order_id || "N/A"}
-              </p>
+              <h5 className="fgxhsfgvfxcvxcv">Order No: {order?.order_id || "N/A"}</h5>
               <p>
                 <strong className="diemoewr">Order Status:</strong> {order?.order_status?.replace(/_/g, " ")?.toLowerCase()?.replace(/\b\w/g, char => char.toUpperCase()) || "N/A"}
               </p>
@@ -674,14 +672,14 @@ export const OrderDetails = () => {
                   <tr>
                     <th>Product Details</th>
                     <th>Status</th>
-                    <th>Updated</th>
+                    <th className="vsdfvscfsdc">Updated</th>
                   </tr>
                 </thead>
                 <tbody>
                   {products?.map((item, index) => (
                     <>
                       <tr key={index}>
-                        <td className="d-flex align-items-center gap-3">
+                        <td className="bvzvdczc d-flex align-items-center gap-3">
                           <img
                             src={optimizeImage(item?.product_image) || "/images/no-image.png"}
                             className="rounded"
@@ -718,7 +716,7 @@ export const OrderDetails = () => {
                           </div>
                         </td>
 
-                        <td>
+                        <td className="bvzvdczc">
                           <span className="dgsdfewrwer">
                             {order?.order_status || "N/A"}
                           </span>
@@ -799,7 +797,7 @@ export const OrderDetails = () => {
             <div className="d-flex justify-content-end">
               <div className="buttons cgbdfsdfsf d-none">
                 <button className="second-button" onClick={() => navigate(-1)}>
-                  <i className="bi bi-arrow-left"></i> Back
+                  <i className="fa-solid fa-arrow-left-long"></i> Back
                 </button>
               </div>
             </div>

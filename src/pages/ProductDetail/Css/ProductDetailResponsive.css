@@ -63,7 +63,7 @@
     }
 
     .chat-iframe-wrap{
-        bottom: 14%;
+        bottom: 14% !important;
     }
 }
 
@@ -133,7 +133,7 @@
     }
 
     .chat-iframe-wrap{
-        bottom: 14%;
+        bottom: 14% !important;
     }
 }
 
@@ -203,7 +203,7 @@
     }
 
     .chat-iframe-wrap{
-        bottom: 14%;
+        bottom: 14% !important;
     }
 }
 
@@ -264,7 +264,7 @@
     }
 
     .chat-iframe-wrap{
-        bottom: 15%;
+        bottom: 15% !important;
     }
 }
 
@@ -352,7 +352,7 @@
     }
 
     .chat-iframe-wrap{
-        bottom: 16%;
+        bottom: 16% !important;
     }
 }
 
@@ -447,7 +447,7 @@
     }
 
     .chat-iframe-wrap{
-        bottom: 17%;
+        bottom: 17% !important;
     }
 }
 

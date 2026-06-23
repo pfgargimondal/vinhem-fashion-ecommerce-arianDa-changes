@@ -374,18 +374,18 @@ export const OrderHistory = () => {
 
 
                                 <div className={styles.dfgndfjhbgdfgdf}>
-                                    <Table striped responsive bordered hover>
+                                    <Table responsive bordered hover>
                                         <thead>
                                             <tr>
-                                                <th className="text-center" style={{ background: "#ECECEC" }}>Order Id</th>
+                                                <th className="text-center" style={{ background: "#f5f5f5" }}>Order Id</th>
 
-                                                <th className="text-center" style={{ background: "#ECECEC" }}>Order Information</th>
+                                                <th className="text-center" style={{ background: "#f5f5f5" }}>Order Information</th>
 
-                                                <th className="text-center" style={{ background: "#ECECEC" }}>Date</th>
+                                                <th className="text-center" style={{ background: "#f5f5f5" }}>Date</th>
 
-                                                <th className="text-center" style={{ background: "#ECECEC" }}>Total Amount</th>
+                                                <th className="text-center" style={{ background: "#f5f5f5" }}>Total Amount</th>
 
-                                                <th className="text-center" style={{ background: "#ECECEC" }}>Status</th>
+                                                <th className="text-center" style={{ background: "#f5f5f5" }}>Status</th>
                                             </tr>
                                         </thead>
                                         

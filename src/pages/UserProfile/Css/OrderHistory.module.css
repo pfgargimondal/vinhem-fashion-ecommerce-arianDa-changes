@@ -194,9 +194,14 @@ form input:global(.form-control){
   text-align: left;
   font-weight: 500;
 }
+
+.dfgndfjhbgdfgdf :global(.table-hover) > tbody > tr:hover > *{
+  --bs-table-bg-state: #f5f5f5 !important;
+}
+
 .dfgndfjhbgdfgdf table th {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .dfgndfjhbgdfgdf .sdfsdf {
@@ -612,6 +617,18 @@ form input:global(.form-control){
 
   .dfgndfjhbgdfgdf .sdfsdf {
     gap: 30px;
+  }
+  
+  .dweknriwehrwer{
+    flex-direction: column;    
+  }
+
+  .dweknriwehrwer:global(.align-items-center){
+    align-items: flex-start !important;
+  }
+
+  .dweknriwehrwer:global(.justify-content-between){
+    justify-content: initial !important;
   }
 }
 

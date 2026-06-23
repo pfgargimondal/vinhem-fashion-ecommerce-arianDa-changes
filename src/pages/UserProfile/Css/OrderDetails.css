@@ -92,7 +92,7 @@
   .order-details .first-button,
   .order-details .second-button {
     padding: 8px 16px;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 576px) {
@@ -287,6 +287,10 @@
   font-weight: 500 !important;
 }
 
+.fgxhsfgvfxcvxcv{
+
+}
+
 .jiksdfnkrjwer{
   margin-bottom: 0 !important;
 }
@@ -309,6 +313,18 @@
 
   .vbdsthsfgsdvxcv{
     margin-bottom: 1rem;
+  }
+  
+  .vsdfvscfsdc{
+    text-align: center;
+  }
+
+  .order-details table td.bvzvdczc{
+    padding-right: 2.5rem !important;
+  }
+
+  .bvzvdczc.align-items-center{
+    align-items: normal !important;
   }
 }
 
@@ -333,5 +349,41 @@
 
   .order-details.py-5{
     padding-top: 0.5rem !important;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 375px){
+  .diewhruiwejirhwejre.p-4{
+    padding-inline: 0 !important;
+  }
+
+  .order-details .first-button, .order-details .second-button {
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 320px){
+  .diewhruiwejirhwejre.p-4{
+    padding-inline: 0 !important;
+  }
+
+  .order-details .first-button, .order-details .second-button {
+    padding: 3px 6px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+  }
+
+  .order-details h5 {
+    font-size: 1rem;
   }
 }
