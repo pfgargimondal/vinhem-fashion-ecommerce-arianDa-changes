@@ -688,8 +688,8 @@ ul.social-icons {
 }
 
 .socl-meda-icons a:nth-child(2) {
-  color: #1DA1F2;
-  background-image: linear-gradient(#fff 50%, #1DA1F2 50%);
+  color: #000000;
+  background-image: linear-gradient(#fff 50%, #000000 50%);
 }
 
 .socl-meda-icons a:nth-child(3) {
@@ -698,8 +698,8 @@ ul.social-icons {
 }
 
 .socl-meda-icons a:nth-child(4) {
-  color: #0A66C2;
-  background-image: linear-gradient(#fff 50%, #0A66C2 50%);
+  color: #DC002E;
+  background-image: linear-gradient(#fff 50%, #DC002E 50%);
 }
 
 .socl-meda-icons a:nth-child(5) {

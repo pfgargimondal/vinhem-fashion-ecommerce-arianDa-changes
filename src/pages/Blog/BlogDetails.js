@@ -501,7 +501,7 @@ export const BlogDetails = () => {
                       </a>
 
                       <a href="/" onClick={handleLinkedinShare}>
-                        <i className="fa-brands fa-linkedin-in" />
+                        <i className="fa-brands fa-pinterest-p"></i>
                       </a>
 
                       <a href="/">

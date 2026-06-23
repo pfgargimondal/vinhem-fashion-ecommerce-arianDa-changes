@@ -478,7 +478,7 @@ export const Blog = () => {
                   </a>
 
                   <a href="/">
-                    <i className="fa-brands fa-linkedin-in" />
+                    <i className="fa-brands fa-pinterest-p"></i>
                   </a>
 
                   <a href="/">
