@@ -32,7 +32,7 @@ export const DropdownLoggedIn = () => {
                 <span className="prfl-optns-divider d-flex align-items-center">|</span>
 
                 <div className="diewirjwejrwer">
-                  <img src="./images/sadw.png" alt="" />
+                  <img src="/images/sadw.png" alt="" />
                 </div>
               </Link>
             </li>

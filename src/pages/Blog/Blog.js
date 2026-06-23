@@ -25,6 +25,8 @@ export const Blog = () => {
 
   const [blogBanner, setBlogBanner] = useState([]);
   const [blogBannerimageBaseUrl, setBlogBannerImageBaseUrl] = useState("");
+       // eslint-disable-next-line
+   const [socialMediaLinks, setSocialMediaLinks] = useState([]);
 
   const location = useLocation();
   const pathName = location.pathname;
@@ -142,6 +144,18 @@ export const Blog = () => {
       }
     };
     fetchBlogs();
+  }, []);
+
+  useEffect(() => {
+    const fetchSocialMediaLink = async () => {
+      try {
+        const response = await http.get('/get-social-media-link');
+        setSocialMediaLinks(response.data.data);
+      } catch (error) {
+        console.error('Error fetching Social Media Link', error);
+      }
+    };
+    fetchSocialMediaLink();
   }, []);
 
   const indexOfLastBlog = currentPage * blogsPerPage;
