@@ -11,6 +11,7 @@ import "./Css/BlogResponsive.css";
 import { FooterBlog, HeaderBlog } from "../../components";
 import Loader from "../../components/Loader/Loader";
 import { optimizeImage } from "../../utils/optimizeImage";
+import { useMetaData } from "../../hooks/useMetaData";
 
 export const Blog = () => {
   const [loading, setLoading] = useState(false);
@@ -24,8 +25,15 @@ export const Blog = () => {
   const [blogvedio, setBlogVedio] = useState("");
   const [blogBanner, setBlogBanner] = useState([]);
   const [blogBannerimageBaseUrl, setBlogBannerImageBaseUrl] = useState("");
+  const [pageMetaData, setPageMetaData] = useState([]);
        // eslint-disable-next-line
-   const [socialMediaLinks, setSocialMediaLinks] = useState([]);
+  const [socialMediaLinks, setSocialMediaLinks] = useState([]);
+  const [metaData, setMetaData] = useState({
+    meta_title: "Blog",
+    meta_description: "",
+    meta_keyword: "",
+  });
+  useMetaData(metaData);
 
   const location = useLocation();
   const pathName = location.pathname;
@@ -56,8 +64,10 @@ export const Blog = () => {
 
       try {
         const getresponse = await http.get("/blogs");
+        const getMetaDataResponse = await http.get("/get-all-page-meta-title");
 
         const dataBlogs = getresponse.data;
+        setPageMetaData(getMetaDataResponse.data.data.get_all_meta_title);
 
         const decodedCategory = decodeURIComponent(urlLastSegment || "");
 
@@ -73,8 +83,18 @@ export const Blog = () => {
           filteredBlogs = filteredBlogs.filter(
             (datablog) =>
               datablog.head_category_slug?.toLowerCase() ===
-              decodedCategory.toLowerCase(),
+              decodedCategory.toLowerCase()
           );
+
+          if (filteredBlogs.length > 0) {
+            setMetaData({
+              meta_title: filteredBlogs[0]?.head_category_meta_title || "Blog",
+              meta_description:
+                filteredBlogs[0]?.head_category_meta_description || "",
+              meta_keyword:
+                filteredBlogs[0]?.head_category_meta_keyword || "",
+            });
+          }
         }
 
         // TAG FILTER
@@ -124,6 +144,21 @@ export const Blog = () => {
 
     fetchBlogs();
   }, [pathName, urlLastSegment, urlTagLastSegment, searchQuery]);
+
+   const matchedMeta = pageMetaData.find((item) => {
+      const slug = item.page_name
+          ?.toLowerCase()
+          .trim()
+          .replace(/\s+/g, "-");
+
+      return `/${slug}` === '/blog';
+  });
+
+  useMetaData({
+      meta_title: matchedMeta?.meta_title || "Vinhem Fashion Blog",
+      meta_description: matchedMeta?.meta_description || "",
+      meta_keyword: matchedMeta?.meta_keyword || ""
+  });
 
   useEffect(() => {
     const fetchBlogs = async () => {

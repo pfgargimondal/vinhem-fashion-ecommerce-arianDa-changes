@@ -17,7 +17,6 @@ export const Home = () => {
   const [homepage, Sethomepage] = useState({});
   const [loading, setLoading] = useState(true);
   const [pageMetaData, setPageMetaData] = useState([]);
-  
   // eslint-disable-next-line
   const pathName = useLocation().pathname;
 

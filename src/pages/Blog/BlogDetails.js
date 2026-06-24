@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { FooterBlog, HeaderBlog } from "../../components";
 import Loader from "../../components/Loader/Loader";
 import { optimizeImage } from "../../utils/optimizeImage";
+import { useMetaData } from "../../hooks/useMetaData";
 
 export const BlogDetails = () => {
   const [loading, setLoading] = useState(false);
@@ -41,6 +42,12 @@ export const BlogDetails = () => {
     };
     fetchBlogDetails();
   }, [slug]);
+
+  useMetaData({
+    meta_title: blogs?.meta_title,
+    meta_description: blogs?.meta_Description,
+    meta_keyword: blogs?.meta_keyword
+  });
 
   useEffect(() => {
     const fetchTagsAndCategories = async () => {
