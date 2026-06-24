@@ -22,7 +22,6 @@ export const Blog = () => {
   const [allblogCategories, setAllBlogCategories] = useState([]);
   const [blogTags, setBlogTags] = useState([]);
   const [blogvedio, setBlogVedio] = useState("");
-
   const [blogBanner, setBlogBanner] = useState([]);
   const [blogBannerimageBaseUrl, setBlogBannerImageBaseUrl] = useState("");
        // eslint-disable-next-line

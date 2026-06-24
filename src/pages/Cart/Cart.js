@@ -955,6 +955,8 @@ export const Cart = () => {
       setFreeShipping(false);
       setShippingDiscount(0);
     }
+
+    toast.success(`Coupon "${coupon.code}" applied successfully`);
   };
 
 
@@ -3302,6 +3304,7 @@ export const Cart = () => {
                     type="button"
                     className="btn position-absolute btn-main"
                     onClick={() => {
+                      toast.error("Coupon removed successfully");
                       setInputCouponCode("");
                       setSelectedCoupon("");
                       setSelectedDiscount(0);
@@ -3449,6 +3452,10 @@ export const Cart = () => {
                                     setFreeShipping(false);
                                     setShippingDiscount(0);
                                   }
+
+                                  toast.success(
+                                    `Coupon "${couponItemsVal.code}" applied successfully`
+                                  );
                                 }}
                               >
                                 TAP TO APPLY
@@ -3458,6 +3465,7 @@ export const Cart = () => {
                                   to=""
                                   className="d-flex align-items-center justify-content-center"
                                   onClick={() => {
+                                    toast.error("Coupon removed successfully");
                                     setSelectedCoupon("");
                                     setSelectedDiscount(0);
                                     setAppliedDiscount(0);
