@@ -152,7 +152,7 @@ export const Blog = () => {
           .replace(/\s+/g, "-");
 
       return `/${slug}` === '/blog';
-  });
+  });  
 
   useMetaData({
       meta_title: matchedMeta?.meta_title || "Vinhem Fashion Blog",
