@@ -523,7 +523,7 @@ export const OrderHistory = () => {
                                                         ? orderHistoryVal.order_date.split("-").reverse().join("-")
                                                         : ""}</td>
 
-                                                    <td className="text-center" style={{ color: "var(--pink-main-color)", fontWeight: 500, fontSize: "18px" }}>₹{Number(orderHistoryVal.total_order_amount).toLocaleString("en-IN")}</td>
+                                                    <td className="text-center" style={{ color: "var(--pink-main-color)", fontWeight: 500 }}>₹{Number(orderHistoryVal.total_order_amount).toLocaleString("en-IN")}</td>
 
                                                     <td className="text-center">
                                                         {orderHistoryVal.order_status === "Placed" ? (

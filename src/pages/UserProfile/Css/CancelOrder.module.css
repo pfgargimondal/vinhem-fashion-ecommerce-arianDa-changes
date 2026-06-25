@@ -36,6 +36,7 @@
 .dfjhdsbfsdf h4 {
   text-transform: uppercase;
   color: var(--text-main-color);
+  font-size: 1.2rem;
 }
 
 .dfjhdsbfsdf {
@@ -243,7 +244,7 @@ form input:global(.form-control){
 }
 
 .dfgndfjhbgdfgdf .sdfsdf p{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 

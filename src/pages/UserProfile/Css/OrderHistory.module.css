@@ -28,6 +28,7 @@
 .dfjhdsbfsdf h4 {
   text-transform: uppercase;
   color: var(--text-main-color);
+  font-size: 1.2rem;
 }
 
 .dfjhdsbfsdf {
@@ -210,7 +211,7 @@ form input:global(.form-control){
 }
 .dfgndfjhbgdfgdf .sdfsdf p{
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
 }
 .oknknkmer{
   cursor: pointer;
@@ -265,14 +266,14 @@ form input:global(.form-control){
   background-color: transparent !important;
   color: var(--pink-main-color) !important;
   font-weight: 500;
-  font-size: 18px !important;
+  font-size: 16px !important;
   border: none !important;
   border-radius: 8px !important;
 }
 .dweknriwehrwer button:first-child{
   color: var(--pink-main-color);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
 }
 .dweknriwehrwer button:first-child:disabled{
   opacity: 1 !important;

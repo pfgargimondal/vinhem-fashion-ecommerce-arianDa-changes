@@ -294,13 +294,13 @@ export const CancelOrder = () => {
                                 </div>
                             </td>
 
-                            <td className="text-center" style={{fontWeight: "500", fontSize: "18px"}}>
+                            <td className="text-center" style={{fontWeight: "500"}}>
                                 {CanceledOrderVal.order_date
                                 ? CanceledOrderVal.order_date.split("-").reverse().join("-")
                                 : ""}
                             </td>
 
-                            <td className="text-center" style={{fontWeight: "500", fontSize: "18px"}}>
+                            <td className="text-center" style={{fontWeight: "500"}}>
                                 {CanceledOrderVal.cancel_date
                                 ? CanceledOrderVal.cancel_date.split("-").reverse().join("-")
                                 : ""}
