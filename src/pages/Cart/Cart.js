@@ -1435,10 +1435,17 @@ export const Cart = () => {
                                   <p className="mb-1">Colour: {cartItemsVal.color}</p>
                                   {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
                                     <p className="mb-1 gfxbdgsfeherh d-flex align-items-center flex-wrap">
-                                      <span>
-                                        Stitching Option : {cartItemsVal.actual_stitch_option}
-                                      </span>
-
+                                      {cartItemsVal.stitch_option === 'customFit' ?
+                                        (
+                                          <span>
+                                            Stitching Option : Custom-Fit
+                                          </span>
+                                        ):(
+                                          <span>
+                                            Stitching Option : {cartItemsVal.actual_stitch_option}
+                                          </span>
+                                        )
+                                      }
                                       {cartItemsVal.size === null && (
                                         <>
                                           <span className="ms-3 me-2">| Qty :</span>
