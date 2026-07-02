@@ -742,11 +742,12 @@ export const OrderDetails = () => {
                                 {/* {item?.actual_stitch_option} */}
                               </div>
                               {item?.actual_stitch_option !== 'Ready To Wear' && (
-                                <div><strong>Customize Charges: </strong>
-                                  { item?.custom_fit_charge !== '0' 
-                                      ? item?.custom_fit_charge 
-                                      : item?.stitching_charge 
-                                  }
+                                <div>
+                                  <strong>Customize Charges: </strong>
+                                  {(parseFloat(item?.custom_fit_charge || 0) > 0
+                                    ? parseFloat(item?.custom_fit_charge || 0)
+                                    : parseFloat(item?.stitching_charge || 0)
+                                  ) * parseInt(item?.quantity || 1)}
                                 </div>
                               )}
                             </div>

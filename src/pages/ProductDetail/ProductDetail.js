@@ -655,8 +655,8 @@ export const ProductDetail = () => {
     );
 
     // Add optional selections if chosen
-    if (selectedStitchOption === "stitch") total += stitchingCharge;
-    if (selectedStitchOption === "customFit") total += customFitCharge;
+    if (selectedStitchOption === "stitch") total += stitchingCharge * qty;
+    if (selectedStitchOption === "customFit") total += customFitCharge * qty;
     if (isTurbanChecked) total += turbanPrice;
     if (isMojriChecked) total += mojriPrice;
     if (isStoleChecked) total += stolePrice;
@@ -1086,8 +1086,8 @@ export const ProductDetail = () => {
       productDetails?.data?.stole_charges?.price || 0
     );
 
-    if (selectedStitchOption === "stitch") total += stitchingCharge;
-    if (selectedStitchOption === "customFit") total += customFitCharge;
+    if (selectedStitchOption === "stitch") total += stitchingCharge * selectedQuantity;
+    if (selectedStitchOption === "customFit") total += customFitCharge * selectedQuantity;
     if (isTurbanChecked) total += turbanPrice;
     if (isMojriChecked) total += mojriPrice;
     if (isStoleChecked) total += stolePrice;
