@@ -209,6 +209,17 @@ form input:global(.form-control){
   background-color: red;
 }
 
+.gdfg55dvdv{
+  font-weight: 500;
+  font-size: 1.3rem !important;
+  text-decoration: line-through;
+  color: #616161;
+}
+
+.udbncsddf h5{
+  font-weight: 500;
+}
+
 .dfgjhbdfg {
   width: 100%;
   position: relative;
@@ -283,7 +294,7 @@ form input:global(.form-control){
   bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -302,7 +313,7 @@ form input:global(.form-control){
 }
 
 .ddfhfgsedegjfree{
-  top: 3%;
+  top: 1%;
   z-index: 9999;
   cursor: pointer;
 }
@@ -365,6 +376,10 @@ form input:global(.form-control){
     line-height: 2.5;
     width: 47px !important;
   }
+
+  .fgcbdfgdf{
+    padding-inline: 0 !important;
+  }
 }
 
 
@@ -373,13 +388,13 @@ form input:global(.form-control){
 
 @media only screen and (max-width: 425px){
   :global(.fdbdfgdfgdf) h5,
-  :global(.gdfg55dvdv),
+  .gdfg55dvdv,
   :global(.gdfg55) {
     font-size: 1rem !important;
   }  
 
-  :global(.fghfgg114) {
-    font-size: 0.9rem !important;
+  :global(.fghfgg114).ibjncm {
+    font-size: 0.8rem !important;
   }
 }
 

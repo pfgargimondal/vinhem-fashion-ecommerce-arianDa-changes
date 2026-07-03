@@ -1363,6 +1363,11 @@
     .jnmkjhihewirwer td {
         min-width: 5rem;
     }
+
+    .deiwhirhwejpekr.sticky-top {
+        margin-top: 1.5rem;
+        top: 0;
+    }
 }
 
 
@@ -1408,11 +1413,7 @@
 @media only screen and (max-width: 540px){
     .doijijewjuewr {
         max-height: 47vh;
-    }
-
-    .deiwhirhwejpekr.sticky-top {
-        margin-top: 2rem;
-    }
+    }    
 
     .small-image-up-arrow {
         top: -4%;
@@ -1759,14 +1760,6 @@
 @media only screen and (max-width: 356px){
     .vfeghrfgfferrer.d-none{
         flex-wrap: wrap;
-    }
-
-    .vfeghrfgfferrer.d-none {
-        transform: translateY(5rem);
-    }
-
-    .dfghjdfgdfgf {
-        margin-top: 5rem;
     }
 
     .vfeghrfgfferrer.justify-content-between{

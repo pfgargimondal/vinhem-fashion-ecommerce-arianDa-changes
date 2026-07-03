@@ -130,17 +130,17 @@ export const Wishlist = () => {
 
                                                             <h4>{wishlistProduct.product_name}</h4>
 
-                                                            <div className="d-flex flex-wrap align-items-center">
+                                                            <div className={`${styles.udbncsddf} d-flex flex-wrap align-items-center`}>
                                                                 <h5 className="mb-0">
                                                                     {formatPrice(wishlistProduct.selling_price)}
                                                                 </h5>
 
-                                                                <span class="gdfg55dvdv d-flex align-items-center ms-2">
+                                                                <span class={`${styles.gdfg55dvdv} d-flex align-items-center ms-2`}>
                                                                     {/* <i class="bi bi-currency-rupee"></i>  */}
                                                                     {formatPrice(wishlistProduct.mrp_price)}
                                                                 </span>
 
-                                                                <span class="fghfgg114 d-flex align-items-center ms-2">{wishlistProduct?.discount}%OFF</span>
+                                                                <span class={`${styles.ibjncm} fghfgg114 d-flex align-items-center ms-2`}>{wishlistProduct?.discount}%OFF</span>
                                                             </div>
                                                         </div>
                                                     </div>

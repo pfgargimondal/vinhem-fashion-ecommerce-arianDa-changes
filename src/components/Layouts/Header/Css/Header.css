@@ -55,7 +55,7 @@ header .advertisement-slider .scroll-card p a {
   display: flex;
   gap: 500px;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 3000s linear infinite;
 }
 
 @keyframes marquee {

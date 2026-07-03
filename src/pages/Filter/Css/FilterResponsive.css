@@ -623,9 +623,12 @@
 
 
 @media only screen and (max-width: 600px){
-    .breadcrumb,
-    .alosjdjkhrjfse{
+    .breadcrumb{
         display: none !important;
+    }
+
+    .alosjdjkhrjfse{
+        margin-top: 1.4rem;
     }
 
     .products-wrapper.mt-3{
@@ -1134,5 +1137,15 @@
 
     .idjweihewr .nav-link {
         padding-inline: 4px !important;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 303px){
+    .filter-wrapper .alosjdjkhrjfse h4 {
+        font-size: 1.2rem;
     }
 }

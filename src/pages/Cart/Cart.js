@@ -1658,7 +1658,7 @@ export const Cart = () => {
                         </ul>
                       </div>
 
-                      <div className="uiwdhiwerwerwer dojweirkwejirwer">
+                      <div className="uiwdhiwerwerwer dojweirkwejirwer fgzdvscxsffdf">
                         <Link to={"/all-products"}>
                           <button className="btn px-5 btn-main">
                             Continue Shopping

@@ -691,6 +691,15 @@ export const Filter = () => {
   }, [productsLoaded, filtersLoaded]);
 
 
+  useEffect(() => {
+    setNewArrival(false);
+    setReadyToShip(null);
+    setOnSale(false);
+    setCstmFit(false);
+    // eslint-disable-next-line
+  }, [location.pathname]);
+  
+
   if (!loading && filterCategories.length === 0) {
     return <PageNotFound />;
   }
@@ -1066,7 +1075,7 @@ export const Filter = () => {
                                   />
                                 </Link>
 
-                                <div className="doikwenirnwekhrwer d-flex position-absolute" style={{ top: (onSale || discount) && product?.discount ? "17%" : "3%" }}>
+                                <div className="doikwenirnwekhrwer d-flex position-absolute" style={{ top: (onSale || discount) && product?.discount ? "14%" : "3%" }}>
                                   {user ? (
                                     <>
                                       <button
@@ -1149,7 +1158,7 @@ export const Filter = () => {
                                   <span class="fghfgg114 d-flex align-items-center ms-2">{product?.discount}%OFF</span>
                                 </div>
 
-                                <div className="dlksfskjrewrwere d-flex align-items-center justify-content-between mt-5" style={{ top: (onSale || discount) && product?.discount ? "17%" : "3%" }}>
+                                <div className="dlksfskjrewrwere d-flex align-items-center justify-content-between mt-5" style={{ top: (onSale || discount) && product?.discount ? "14%" : "3%" }}>
                                   <div className="doikwenirnwekhrwer position-relative">
                                     {user ? (
                                       <>

@@ -175,8 +175,6 @@ export const Profile = () => {
 
                 <div className={`${styles.fbhdfs} row justify-content-between align-items-center mb-4`}>
                   <div className={`${styles.dfghdfgdf} col-4 mb-4`}>
-                    <i onClick={() => setResUsernavToggle(true)} className={`fa-solid ${styles.bgdfbsseeew} d-none me-2 fa-angles-right`}></i>
-                     
                     <div className={`${styles.sdfjhsdfs} position-relative`}>
                       <img
                         src={previewImage || "./images/pfle.jpg"}
@@ -202,6 +200,8 @@ export const Profile = () => {
                     <div className={styles.dfbghdfg}>
                       <h5 className="mb-0">{formData.name}</h5>
                     </div>
+
+                    <i onClick={() => setResUsernavToggle(true)} className={`fa-solid ${styles.bgdfbsseeew} d-none me-2 fa-angles-right`}></i>
                   </div>                  
                   
                   <div className={`${styles.dwoejoidwemjr} col-lg-4`}>

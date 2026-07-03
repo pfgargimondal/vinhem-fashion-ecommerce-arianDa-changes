@@ -1011,7 +1011,22 @@
     .doeiwhrkwdeor img {
         width: 8rem;
     }
+
+    .is-fixed-top {
+        height: 105px;
+    }
 }
+
+
+
+
+
+@media only screen and (max-width: 520px){
+    .is-fixed-top {
+        height: 93px;
+    }
+}
+
 
 
 
@@ -1019,6 +1034,10 @@
 @media only screen and (max-width: 432px) {
     .dowejojiweujrwer ul li i {
         font-size: 1.1rem !important;
+    }
+
+    .is-fixed-top {
+        height: 80px;
     }
 }
 
@@ -1033,6 +1052,10 @@
 
     .copn-cde{
         width: 48% !important;
+    }
+
+    .is-fixed-top {
+        height: 77px;
     }
 }
 

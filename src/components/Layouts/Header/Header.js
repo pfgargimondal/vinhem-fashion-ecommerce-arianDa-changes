@@ -643,6 +643,2435 @@ export const Header = ({ shouldHideHeader, shouldHideFullHeaderFooterRoutes, sho
                   <div className="scroll-card">
                     <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
                   </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+                  
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
+                  
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">75 + COUNTRIES SERVED </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">CUSTOM MADE STITCHING AVAILABLE </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">OVER 25 K SELECTION OF ETHNIC WEAR </a></p>
+                  </div>
+
+                  <div className="scroll-card">
+                    <p className="mb-0"><a href="/">UPTO 60% OFF ON SELECTED ITEMS </a></p>
+                  </div>
                 </div>
               </div>
             </div>
