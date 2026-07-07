@@ -3234,7 +3234,7 @@ export const Cart = () => {
       <div id="paypal-container" style={{ display: "none" }}></div>
 
       <div className="col-lg-12" style={{ display: key === "cart" ? "block" : "none" }}>
-        <div className="diweurbhwer_inner dfgdxhsdsgsfer container-fluid mt-4">
+        <div className="diweurbhwer_inner dfgdxhsdsgsfer xfhdgvfvxcv container-fluid mt-4">
           <TrandingProduct />
         </div>
       </div>

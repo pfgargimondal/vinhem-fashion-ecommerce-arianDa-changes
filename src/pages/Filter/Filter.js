@@ -1051,7 +1051,7 @@ export const Filter = () => {
                   {products?.length > 0 ? (
                     currentProduct?.map((product) => (
                       <div className={`smdflcsdlpfkselkrpr ${!viewType ? "col-lg-4 col-md-6 col-sm-6 col-6" : "col-lg-12"} mb-4`}>
-                        <div className="dfgjhbdfg">
+                        <div className="dfgjhbdfg xfhdgvfvxcv">
                           <div className="images">
                             <div className="image position-relative">
                               {(onSale || discount) && product?.discount && (

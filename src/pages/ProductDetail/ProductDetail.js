@@ -3241,7 +3241,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                       <h4 className="pb-2">Similar Items</h4>
                     </div>
 
-                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg dghdjkgmskrt py-4">
+                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg dghdjkgmskrt xfhdgvfvxcv py-4">
                       <Swiper key={`similar-${productDetails?.data?.similar_product?.length}`} {...swiperConfig}>
                         {productDetails?.data?.similar_product.map(
                           (featuredProduct) => (
@@ -3265,7 +3265,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                       <h4 className="pb-2">Customer Also Viewed</h4>
                     </div>
 
-                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg py-4">
+                    <div className="fgjhdfgdfgdf dhbdgshfggdgrg xfhdgvfvxcv py-4">
                       <Swiper key={`cav-${productDetails?.data?.customer_viewd_product?.length}`} {...swiperConfig}>
                         {productDetails?.data?.customer_viewd_product.map(
                           (featuredProduct) => (
@@ -3282,7 +3282,7 @@ for (let i = 0; i < filteredSpecs.length; i++) {
               </div>
 
               <div className="col-lg-12">
-                <div className="diweurbhwer_inner mt-4">
+                <div className="diweurbhwer_inner xfhdgvfvxcv mt-4">
                   <RecentlyViewed recentProducts={recentProducts}/>
                 </div>
               </div>

@@ -628,7 +628,7 @@
     }
 
     .alosjdjkhrjfse{
-        margin-top: 1.4rem;
+        margin-top: 0;
     }
 
     .products-wrapper.mt-3{
@@ -663,6 +663,10 @@
 
     .idjweihewr .col-8 {
         width: 64.666667%;
+    }
+
+    .filter-wrapper .alosjdjkhrjfse h4 span{
+        font-size: 1.4rem;
     }
 }
 
