@@ -413,7 +413,7 @@ const Invoice = () => {
                   {/* MAIN PRODUCT ROW */}
                   <tr style={{border: "none"}}>
                     <td style={{borderRight: "none", borderBottom: "none", borderLeft: "none"}}>{++serial}</td>
-                    <td style={{ borderRight: "none", borderBottom: "none", textAlign: "left" }}>{item.product_name} | SKU : {item.get_product_details?.vendor_sku}</td>
+                    <td style={{ borderRight: "none", borderBottom: "none", textAlign: "left" }}>{item.product_name} | PID : {item.get_product_details?.PID}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.get_gst_value.hsn}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.product_size || '-'}</td>
                     <td style={{ borderRight: "none", borderBottom: "none" }}>{item.quantity || '-'}</td>
