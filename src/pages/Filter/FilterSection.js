@@ -181,6 +181,7 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   // const maxRange = 1000000;
   const maxRange = productMaxPrice;
 
+  // eslint-disable-next-line
   const handleMinInput = (e) => {
     const value = e.target.value; // keep as string so user can type
     setPrice(Number(value), maxPrice); // temporarily update
@@ -195,6 +196,7 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   //   }
   //   setPrice(minPrice, Number(value));
   // };
+  // eslint-disable-next-line
   const handleMaxInput = (e) => {
     let value = Number(e.target.value);
 
@@ -257,10 +259,12 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
     applyPriceFilter(minPrice, value);
   };
 
+  // eslint-disable-next-line
   const handleMinEnter = (e) => {
     if (e.key === "Enter") handleMinBlur();
   };
-
+  
+  // eslint-disable-next-line
   const handleMaxEnter = (e) => {
     if (e.key === "Enter") handleMaxBlur();
   };
@@ -302,10 +306,11 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
 
                         <input
                           type="number"
+                          readOnly
                           value={minDisplay}
-                          onChange={handleMinInput}
-                          onBlur={handleMinBlur}
-                          onKeyDown={handleMinEnter}
+                          // onChange={handleMinInput}
+                          // onBlur={handleMinBlur}
+                          // onKeyDown={handleMinEnter}
                         />
                       </div>
                     </div>
@@ -327,12 +332,13 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                         /> */}
                         <input
                           type="number"
+                          readOnly
                           value={maxDisplay}
                           min={minPrice + priceGap}
                           max={maxRange}
-                          onChange={handleMaxInput}
-                          onBlur={handleMaxBlur}
-                          onKeyDown={handleMaxEnter}
+                          // onChange={handleMaxInput}
+                          // onBlur={handleMaxBlur}
+                          // onKeyDown={handleMaxEnter}
                           onWheel={(e) => e.target.blur()}/>
                       </div>
                     </div>
@@ -901,10 +907,11 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
 
                                 <input
                                   type="number"
+                                  readOnly
                                   value={minDisplay}
-                                  onChange={handleMinInput}
-                                  onBlur={handleMinBlur}
-                                  onKeyDown={handleMinEnter}
+                                  // onChange={handleMinInput}
+                                  // onBlur={handleMinBlur}
+                                  // onKeyDown={handleMinEnter}
                                 />
                               </div>
                             </div>
@@ -926,12 +933,13 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                       /> */}
                                 <input
                                   type="number"
+                                  readOnly
                                   value={maxDisplay}
                                   min={minPrice + priceGap}
                                   max={maxRange}
-                                  onChange={handleMaxInput}
-                                  onBlur={handleMaxBlur}
-                                  onKeyDown={handleMaxEnter}
+                                  // onChange={handleMaxInput}
+                                  // onBlur={handleMaxBlur}
+                                  // onKeyDown={handleMaxEnter}
                                   onWheel={(e) => e.target.blur()} />
                               </div>
                             </div>

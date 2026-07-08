@@ -756,16 +756,33 @@ export const Filter = () => {
               </ul>
             </div>
 
-            <div className="alosjdjkhrjfse">
-              <h4 className="mb-0">
-                {category === "all-products"
-                  ? "All Products"
-                  : subcategory
-                    ? `${toTitleCase(subcategory)} For ${toTitleCase(category)}`
-                    : `All Products For ${toTitleCase(category)}`}
-                <span> - Showing {products?.length ?? 0} Results</span>
-              </h4>
-            </div>
+            {window.innerWidth <= 991 && (
+                <div className="alosjdjkhrjfse jhvhvbjh">
+                  <h4 className="mb-0">
+                    {category === "all-products"
+                      ? "All Products"
+                      : subcategory
+                        ? `${toTitleCase(subcategory)}`
+                        // ? `${toTitleCase(subcategory)} For ${toTitleCase(category)}`
+                        : `All Products`}
+                        {/* : `All Products For ${toTitleCase(category)}`} */}
+                    <span> - Showing {products?.length ?? 0} Results</span>
+                  </h4>
+                </div>
+              )
+            }
+            {window.innerWidth > 991 && (
+              <div className="alosjdjkhrjfse">
+                <h4 className="mb-0">
+                  {category === "all-products"
+                    ? "All Products"
+                    : subcategory
+                      ? `${toTitleCase(subcategory)} For ${toTitleCase(category)}`
+                      : `All Products For ${toTitleCase(category)}`}
+                  <span> - Showing {products?.length ?? 0} Results</span>
+                </h4>
+              </div>
+            )}
           </div>
 
           {filterTopBannerHide.includes(category) && !subcategory && (

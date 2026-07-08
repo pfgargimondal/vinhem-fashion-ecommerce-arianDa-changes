@@ -2869,21 +2869,25 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                           <div className="injdewrwer">
                             {/* <h4 className="mb-0 me-2">Coupon Code -</h4> */}
 
-                            <div className="oijdmkmeiwrew d-flex align-items-center">
-                              {productDetails?.data?.coupon_code &&
-                                productDetails.data.coupon_code
-                                  .split(" , ") // Split by comma to get each coupon
-                                  .map((coupon, index, arr) => {
-                                    return (
+                            {productDetails?.data?.coupon_code &&
+                              productDetails.data.coupon_code !== "0" && (
+                                <div className="oijdmkmeiwrew d-flex align-items-center">
+                                  {productDetails.data.coupon_code
+                                    .split(" , ")
+                                    .map((coupon, index, arr) => (
                                       <div
                                         key={index}
-                                        className={(arr.length === 1) ? "copn-cde text-center dfswgfwqwgrtwewee p-2 mb-2 me-5 rounded-2" : "copn-cde text-center p-2 mb-2 me-5 rounded-2"}
+                                        className={
+                                          arr.length === 1
+                                            ? "copn-cde text-center dfswgfwqwgrtwewee p-2 mb-2 me-5 rounded-2"
+                                            : "copn-cde text-center p-2 mb-2 me-5 rounded-2"
+                                        }
                                       >
                                         <h5 className="mb-0">{coupon.trim()}</h5>
                                       </div>
-                                    );
-                                  })}
-                            </div>
+                                    ))}
+                                </div>
+                              )}
                           </div>
                         </div>
 

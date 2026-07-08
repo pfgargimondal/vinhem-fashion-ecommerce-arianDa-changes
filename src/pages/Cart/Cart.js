@@ -3399,11 +3399,13 @@ export const Cart = () => {
                     <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
                       {couponItemsVal.disable_reason}
                     </h4>
-                  ) : !couponItemsVal.is_matched ? (
+                  ) : 
+                  !couponItemsVal.is_matched ? (
                     <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
                       Below coupon is not valid for products in your cart
                     </h4>
-                  ) : null} 
+                  ) :
+                   null} 
 
                   <label
                     htmlFor={couponItemsVal.code}
