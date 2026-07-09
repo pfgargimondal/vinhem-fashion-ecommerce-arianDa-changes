@@ -195,6 +195,18 @@ export const Cart = () => {
     return ` ${day}${getDaySuffix(day)} ${month} ${year}`;
   };
 
+  const visibleCoupons = couponItems
+  ?.filter((coupon) => coupon.frontend_visible === "Visible")
+  ?.sort((a, b) => {
+    const aEnabled = a.is_applicable && a.is_matched ? 1 : 0;
+    const bEnabled = b.is_applicable && b.is_matched ? 1 : 0;
+    return bEnabled - aEnabled;
+  });
+
+const firstInvalidIndex = visibleCoupons.findIndex(
+  (coupon) => !coupon.is_applicable
+);
+
 
   const handleQuantitySelect = async (cartId, qty) => {
     if (qty > 5) {
@@ -2494,17 +2506,7 @@ export const Cart = () => {
                                         <p className="sdgaewrerer mb-1">Colour: {cartItemsVal.color}</p>
                                         {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
                                           <p className="sdgaewrerer mb-2">
-                                            {cartItemsVal.stitch_option === 'customFit' ?
-                                              (
-                                                <span>
-                                                  Stitching Option : Custom-Fit
-                                                </span>
-                                              ):(
-                                                <span>
-                                                  Stitching Option : {cartItemsVal.actual_stitch_option}
-                                                </span>
-                                              )
-                                            }
+                                            Stitching Option : {cartItemsVal.actual_stitch_option}
                                             {cartItemsVal.size === null && ` | Qty : ${cartItemsVal.quantity}`}
                                           </p>
                                         )} 
@@ -3342,17 +3344,7 @@ export const Cart = () => {
             <h5 className="mb-4 text-center">Offers Available To Apply</h5>
 
             <div className="deoiwjrewrwer">
-              {couponItems?.filter(
-                (coupon) => coupon.frontend_visible === "Visible"
-              )
-              ?.sort((a, b) => {
-                const aEnabled =
-                  a.is_applicable && a.is_matched ? 1 : 0;
-                const bEnabled =
-                  b.is_applicable && b.is_matched ? 1 : 0;
-                return bEnabled - aEnabled;
-              })
-              ?.map((couponItemsVal) => (
+              {visibleCoupons.map((couponItemsVal, index) => (
                 <div className={`jidnwenjrwerwer ${(couponApplied || !couponItemsVal.is_applicable || !couponItemsVal.is_matched) ? "mb-4" : "mb-2"}`}>
                   <input
                     id={couponItemsVal.code}
@@ -3406,16 +3398,24 @@ export const Cart = () => {
                   />
 
                   {!couponItemsVal.is_applicable ? (
-                    <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
-                      {couponItemsVal.disable_reason}
-                    </h4>
-                  ) : 
-                  !couponItemsVal.is_matched ? (
-                    <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
-                      Below coupon is not valid for products in your cart
-                    </h4>
-                  ) :
-                   null} 
+                      <>
+                        {index === firstInvalidIndex ? (
+                          <h4 className="oijiwuihfih-eiuheir mt-2 mb-2 text-center">
+                            Below coupon is not valid for products in your cart
+                          </h4>
+                        ) : (
+                          <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
+                            {couponItemsVal.disable_reason}
+                          </h4>
+                        )}
+
+                        
+                      </>
+                    ) : !couponItemsVal.is_matched ? (
+                      <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
+                        Below coupon is not valid for products in your cart
+                      </h4>
+                    ) : null} 
 
                   <label
                     htmlFor={couponItemsVal.code}
