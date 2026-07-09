@@ -3188,18 +3188,18 @@ for (let i = 0; i < filteredSpecs.length; i++) {
                                           <div className="doiewjkrniuwewer position-relative col-lg-4 overflow-hidden">
                                             <img
                                               src={optimizeImage(
-                                                matchingProduct?.encoded_image_url_2
+                                                matchingProduct?.encoded_image_url_1
                                               )}
                                               alt={matchingProduct.product_name}
                                             />
-
+{/* 
                                             <img
                                               className="first"
                                               src={optimizeImage(
                                                 matchingProduct?.encoded_image_url_1
                                               )}
                                               alt={matchingProduct.product_name}
-                                            />
+                                            /> */}
                                           </div>
 
                                           <div className="fdbdfgdfgdf col-lg-8">
