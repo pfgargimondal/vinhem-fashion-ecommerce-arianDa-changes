@@ -3344,7 +3344,9 @@ const firstInvalidIndex = visibleCoupons.findIndex(
             <h5 className="mb-4 text-center">Offers Available To Apply</h5>
 
             <div className="deoiwjrewrwer">
+
               {visibleCoupons.map((couponItemsVal, index) => (
+                <>
                 <div className={`jidnwenjrwerwer ${(couponApplied || !couponItemsVal.is_applicable || !couponItemsVal.is_matched) ? "mb-4" : "mb-2"}`}>
                   <input
                     id={couponItemsVal.code}
@@ -3397,25 +3399,15 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                     }}
                   />
 
-                  {!couponItemsVal.is_applicable ? (
-                      <>
-                        {index === firstInvalidIndex ? (
-                          <h4 className="oijiwuihfih-eiuheir mt-2 mb-2 text-center">
-                            Below coupon is not valid for products in your cart
-                          </h4>
-                        ) : (
-                          <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
-                            {couponItemsVal.disable_reason}
-                          </h4>
-                        )}
-
-                        
-                      </>
-                    ) : !couponItemsVal.is_matched ? (
-                      <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
-                        Below coupon is not valid for products in your cart
-                      </h4>
-                    ) : null} 
+                  {!couponItemsVal.is_applicable && (
+                    <>
+                      {index === firstInvalidIndex && (
+                        <h4 className="oijiwuihfih-eiuheir mt-2 mb-4 text-center">
+                          Below coupon is not valid for products in your cart
+                        </h4>
+                      )}
+                    </>
+                  )} 
 
                   <label
                     htmlFor={couponItemsVal.code}
@@ -3518,8 +3510,21 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                         ? <img src="./images/cissor.png" className="w-100 p-3 pb-2" alt="" />
                         : ""
                     }                    
+
                   </label>
                 </div>
+                <div>
+                  {!couponItemsVal.is_applicable ? (
+                      <h4 className="oijiwuihfih-eiuheir mt-1 mb-5 text-center">
+                        {couponItemsVal.disable_reason}
+                      </h4>
+                    ) : !couponItemsVal.is_matched ? (
+                      <h4 className="oijiwuihfih-eiuheir mt-1 mb-5 text-center">
+                        Below coupon is not valid for products in your cart
+                      </h4>
+                    ) : null} 
+                </div>
+                </>
               ))}
             </div>
           </div>
