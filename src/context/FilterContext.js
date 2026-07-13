@@ -441,7 +441,9 @@ export const FilterProvider = ({ children }) => {
         const newState = { ...state, minPrice: min, maxPrice: max };
         dispatch({ type: "PRICE", payload: { minPrice: min, maxPrice: max } });
         updateURLWithFilters(newState);
-    }
+    }  
+
+    
 
     function filterPrice(products) {
         return products.filter(product => {
