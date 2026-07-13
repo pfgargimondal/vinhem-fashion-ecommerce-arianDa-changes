@@ -213,6 +213,7 @@ export const Footer = ({ shouldHideFullHeaderFooterRoutes }) => {
   //sign up / log in end
 
   const [newsletteremail, setNewsletteremail] = useState("");
+    // eslint-disable-next-line
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -222,36 +223,34 @@ export const Footer = ({ shouldHideFullHeaderFooterRoutes }) => {
 
     try {
       setLoading(true);
+        // eslint-disable-next-line
       const res = await http.post("/store-newsletter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        newsletteremail: newsletteremail || '',
+        newsletteremail: newsletteremail,
       });
 
-      if (res.data.success) {
-      
-        toast.success("Thank you for subscribing!", {
-          style: {
-            background: "#2ecc71",
-            color: "#fff",
-          },
-        });
+      toast.success("Thank you for subscribing!", {
+        style: {
+          background: "#2ecc71",
+          color: "#fff",
+        },
+      });
 
-        setNewsletteremail("");
-      }else{
-        toast.error(res.data.message || "Something went wrong", {
-          style: {
-            background: "#e74c3c", // red for error
-            color: "#fff",
-          },
-        });
-        setNewsletteremail("");
-      }
+      setNewsletteremail("");
+
     } catch (err) {
-      setMessage("Server error. Try again later.");
+      const message =
+        err.response?.data?.errors?.newsletteremail?.[0] ||
+        err.response?.data?.message ||
+        "Server error. Try again later.";
+
+      toast.error(message, {
+        style: {
+          background: "#e74c3c",
+          color: "#fff",
+        },
+      });
+
+      setNewsletteremail("");
     } finally {
       setLoading(false);
     }
