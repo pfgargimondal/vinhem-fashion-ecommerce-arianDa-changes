@@ -2506,7 +2506,11 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                         <p className="sdgaewrerer mb-1">Colour: {cartItemsVal.color}</p>
                                         {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
                                           <p className="sdgaewrerer mb-2">
-                                            Stitching Option : {cartItemsVal.actual_stitch_option}
+                                            Stitching Option :{" "}
+                                              {cartItemsVal.stitch_option === "customFit"
+                                                ? "Custom-Fit"
+                                                : cartItemsVal.actual_stitch_option}
+                                            
                                             {cartItemsVal.size === null && ` | Qty : ${cartItemsVal.quantity}`}
                                           </p>
                                         )} 
