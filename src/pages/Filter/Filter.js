@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Css/Filter.css";
 import "./Css/FilterResponsive.css";
@@ -632,37 +632,46 @@ export const Filter = () => {
     }
   };
 
+  const previousCategory = useRef("");
+
   useEffect(() => {
-    const fetchFilterMapping = async () => {
-      setLoading(true);
-      try {
-        // Send to API
-        const response = await http.post("/fetch-filter-details", {
-          category,
-          subcategory,
-        });
+  const fetchFilterMapping = async () => {
+    setLoading(true);
 
-        setFilterCategories(response.data?.categoryData ?? []);
-        SetallFilterMappingdata(response.data?.data ?? []);
+    try {
+      const response = await http.post("/fetch-filter-details", {
+        category,
+        subcategory,
+      });
 
-        const newMin = response.data.productMinPrice ?? 0;
-        const newMax = response.data.productMaxPrice ?? 0;
+      setFilterCategories(response.data?.categoryData ?? []);
+      SetallFilterMappingdata(response.data?.data ?? []);
 
-        setProductMinPrice(newMin);
-        setProductMaxPrice(newMax);
+      const newMin = Number(response.data.productMinPrice ?? 0);
+      const newMax = Number(response.data.productMaxPrice ?? 0);
+
+      setProductMinPrice(newMin);
+      setProductMaxPrice(newMax);
+
+      // Reset only when category/subcategory changes
+      const currentKey = `${category}-${subcategory || ""}`;
+
+      if (previousCategory.current !== currentKey) {
+        previousCategory.current = currentKey;
 
         resetPrice(newMin, newMax);
-
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setFiltersLoaded(true); // important
       }
-    };
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setFiltersLoaded(true);
+    }
+  };
 
-    fetchFilterMapping();
-    // eslint-disable-next-line
-  }, [location.pathname, category, subcategory]);
+  fetchFilterMapping();
+
+  // eslint-disable-next-line
+}, [category, subcategory]);
 
 
 

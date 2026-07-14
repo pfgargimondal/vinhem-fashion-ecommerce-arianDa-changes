@@ -177,6 +177,9 @@ export const FilterProvider = ({ children }) => {
 
     function updateURLWithFilters(newState, options = {}) {
 
+        console.log("discount =", newState.discount);
+console.log("url before =", location.search);
+
         const {
             clearAll = false
         } = options;
@@ -218,8 +221,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.filterCategory)
             searchParams.set("filterpaths", newState.filterCategory);
-        else
-            searchParams.delete("filterpaths");
+        // else
+        //     searchParams.delete("filterpaths");
 
         // =========================
         // FILTER NAME
@@ -227,8 +230,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.filterCategoryName?.length)
             searchParams.set("filter", newState.filterCategoryName.join(","));
-        else
-            searchParams.delete("filter");
+        // else
+        //     searchParams.delete("filter");
 
         // =========================
         // COLOR
@@ -236,8 +239,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.color)
             searchParams.set("color", newState.color);
-        else
-            searchParams.delete("color");
+        // else
+        //     searchParams.delete("color");
 
         // =========================
         // MATERIAL
@@ -245,8 +248,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.material)
             searchParams.set("material", newState.material);
-        else
-            searchParams.delete("material");
+        // else
+        //     searchParams.delete("material");
 
         // =========================
         // DESIGNER
@@ -254,8 +257,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.designer)
             searchParams.set("designer", newState.designer);
-        else
-            searchParams.delete("designer");
+        // else
+        //     searchParams.delete("designer");
 
         // =========================
         // PLUS SIZE
@@ -263,8 +266,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.plusSize)
             searchParams.set("plusSize", newState.plusSize);
-        else
-            searchParams.delete("plusSize");
+        // else
+        //     searchParams.delete("plusSize");
 
         // =========================
         // OCCASION
@@ -272,8 +275,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.occasion)
             searchParams.set("occasion", newState.occasion);
-        else
-            searchParams.delete("occasion");
+        // else
+        //     searchParams.delete("occasion");
 
         // =========================
         // SIZE
@@ -281,8 +284,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.size)
             searchParams.set("size", newState.size);
-        else
-            searchParams.delete("size");
+        // else
+        //     searchParams.delete("size");
 
         // =========================
         // CELEBRITY
@@ -290,8 +293,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.celebrity)
             searchParams.set("celebrity", newState.celebrity);
-        else
-            searchParams.delete("celebrity");
+        // else
+        //     searchParams.delete("celebrity");
 
         // =========================
         // DISCOUNT
@@ -299,8 +302,8 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.discount)
             searchParams.set("discount", newState.discount);
-        else
-            searchParams.delete("discount");
+        // else
+        //     searchParams.delete("discount");
 
         // =========================
         // SHIPPING
@@ -308,33 +311,36 @@ export const FilterProvider = ({ children }) => {
 
         if (newState.shippingTime)
             searchParams.set("shippingTime", newState.shippingTime);
-        else
-            searchParams.delete("shippingTime");
+        // else
+        //     searchParams.delete("shippingTime");
 
         // =========================
         // PRICE
         // =========================
 
-        if (
-            newState.minPrice > 0 ||
-            newState.maxPrice < 1000000
-        ) {
-            searchParams.set(
-                "price",
-                `${newState.minPrice}-${newState.maxPrice}`
-            );
-        } else {
-            searchParams.delete("price");
-        }
+        if (!clearAll) {
 
+            if (
+                newState.minPrice !== state.minPrice ||
+                newState.maxPrice !== state.maxPrice
+            ) {
+                searchParams.set(
+                    "price",
+                    `${newState.minPrice}-${newState.maxPrice}`
+                );
+            } else {
+                // searchParams.delete("price");
+            }
+
+        }
         // =========================
         // PAGE
         // =========================
 
         if (newState.page > 1)
             searchParams.set("page", newState.page);
-        else
-            searchParams.delete("page");
+        // else
+        //     searchParams.delete("page");
 
         // =========================
         // KEEP SEARCH
@@ -358,6 +364,7 @@ export const FilterProvider = ({ children }) => {
 
 
     function restoreFiltersFromURL() {
+        
         const params = new URLSearchParams(location.search);
 
         // const plusSizeFromUrl = params.get("plusSize")
@@ -491,10 +498,10 @@ export const FilterProvider = ({ children }) => {
             payload: { mainCategory: value }
         });
 
-        // updateURLWithFilters(newState);
-        updateURLWithFilters(newState, {
-            clearAll: true
-        });
+        updateURLWithFilters(newState);
+        // updateURLWithFilters(newState, {
+        //     clearAll: true
+        // });
     }
     
 
@@ -552,22 +559,24 @@ export const FilterProvider = ({ children }) => {
                 ? null              // 🔥 UNCHECK
                 : subPath;
 
-        const newState = {
-            ...state,
-            subCategory: value,
-            filterCategory: null    // ✅ MUST be null
-        };
+            const newState = {
+                ...state,
+                subCategory: value,
+                filterCategory: null
+            };
 
-        dispatch({
-            type: "SUB_CATEGORY",
-            payload: { subPath: value }
-        });
+            dispatch({
+                type: "SUB_CATEGORY",
+                payload: {
+                    subPath: value
+                }
+            });
 
-        // updateURLWithFilters(newState);
+        updateURLWithFilters(newState);
 
-        updateURLWithFilters(newState, {
-            clearAll: true
-        });
+            // updateURLWithFilters(newState, {
+            //     clearAll: true
+            // });
     }
 
     function filterSubCategory(products) {
@@ -1424,13 +1433,21 @@ export const FilterProvider = ({ children }) => {
 
 
     function resetPrice(min, max) {
+        const newState = {
+            ...state,
+            minPrice: min,
+            maxPrice: max
+        };
+
         dispatch({
             type: "RESET_PRICE",
             payload: {
-            minPrice: min,
-            maxPrice: max,
-            },
+                minPrice: min,
+                maxPrice: max
+            }
         });
+
+        updateURLWithFilters(newState);
     }
 
 

@@ -41,14 +41,14 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   // );
 
 
-  const effectiveMinPrice =
-  minPrice === 0 ? productMinPrice : minPrice;
+ const effectiveMinPrice =
+  Math.max(productMinPrice, minPrice);
 
-  const effectiveMaxPrice =
-    maxPrice === 1000000 ? productMaxPrice : maxPrice;
+const effectiveMaxPrice =
+  Math.min(productMaxPrice, maxPrice);
 
-  const minDisplay = Math.floor(effectiveMinPrice / rate);
-  const maxDisplay = Math.floor(effectiveMaxPrice / rate);
+const minDisplay = Math.floor(effectiveMinPrice / rate);
+const maxDisplay = Math.floor(effectiveMaxPrice / rate);
   // console.log(filterCategories, 'filterCategories');
 
   // console.log(category);
@@ -214,29 +214,35 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   };
 
   // Handle min slider range change
-  const handleMinRange = (e) => {
-    const value = Number(e.target.value);
-    if (maxPrice - value >= priceGap) {
-      setPrice(value, maxPrice);
-    }
-  };
+const handleMinRange = (e) => {
+  const value = Number(e.target.value);
+
+  if (effectiveMaxPrice - value >= priceGap) {
+    setPrice(value, effectiveMaxPrice);
+  }
+};
 
   // Handle max slider range change
-  const handleMaxRange = (e) => {
-    const value = Number(e.target.value);
-    if (value - minPrice >= priceGap) {
-      setPrice(minPrice, value);
-    }
-  };
+const handleMaxRange = (e) => {
+  const value = Number(e.target.value);
+
+  if (value - effectiveMinPrice >= priceGap) {
+    setPrice(effectiveMinPrice, value);
+  }
+};
 
   // Enforce priceGap on blur or Enter
-  const handleMinBlur = () => {
-    let value = minPrice;
-    if (value < 0) value = 0;
-    if (value > maxPrice - priceGap) value = maxPrice - priceGap;
-    // setPrice(value, maxPrice);
-    applyPriceFilter(value, maxPrice);
-  };
+const handleMinBlur = () => {
+  let value = effectiveMinPrice;
+
+  if (value < productMinPrice) value = productMinPrice;
+
+  if (value > effectiveMaxPrice - priceGap) {
+    value = effectiveMaxPrice - priceGap;
+  }
+
+  applyPriceFilter(value, effectiveMaxPrice);
+};
 
   // const handleMaxBlur = () => {
   //   let value = Number(maxPrice);
@@ -247,17 +253,19 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
   //   applyPriceFilter(minPrice, value);
   // };
 
-  const handleMaxBlur = () => {
-    let value = Number(maxPrice);
+const handleMaxBlur = () => {
+  let value = Number(maxPrice);
 
-    if (isNaN(value)) value = productMaxPrice;
-    if (value > productMaxPrice) value = productMaxPrice;
-    if (value < minPrice + priceGap) {
-      value = minPrice + priceGap;
-    }
+  if (isNaN(value)) value = productMaxPrice;
 
-    applyPriceFilter(minPrice, value);
-  };
+  value = Math.min(value, productMaxPrice);
+
+  if (value < effectiveMinPrice + priceGap) {
+    value = effectiveMinPrice + priceGap;
+  }
+
+  applyPriceFilter(effectiveMinPrice, value);
+};
 
   // eslint-disable-next-line
   const handleMinEnter = (e) => {
@@ -344,44 +352,54 @@ export default function FilterSection({ setResFltrMenu, allFilterMappingdata, fi
                     </div>
                   </div>
 
-                  <div className="slider">
-                    <div
-                      className="progress"
-                      style={{
-                        left: `${((effectiveMinPrice - productMinPrice) / (productMaxPrice - productMinPrice)) * 100}%`,
-                        right: `${100 - ((effectiveMaxPrice - productMinPrice) / (productMaxPrice - productMinPrice)) * 100}%`,
-                      }}
-                    ></div>
-                  </div>
+                <div className="slider">
+  <div
+    className="progress"
+    style={{
+      left: `${
+        ((effectiveMinPrice - productMinPrice) /
+          (productMaxPrice - productMinPrice || 1)) *
+        100
+      }%`,
+      right: `${
+        100 -
+        ((effectiveMaxPrice - productMinPrice) /
+          (productMaxPrice - productMinPrice || 1)) *
+          100
+      }%`,
+    }}
+  />
+</div>
 
                   <div className="range-input">
-                     <input
-                        type="range"
-                        min={productMinPrice}
-                        max={maxRange}
-                        value={effectiveMinPrice}
-                        onChange={handleMinRange}
-                        onMouseUp={() =>
-                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
-                        }
-                        onTouchEnd={() =>
-                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
-                        }
-                      />
-                      <input
-                        type="range"
-                        min={productMinPrice}
-                        max={maxRange}
-                        value={effectiveMaxPrice}
-                        onChange={handleMaxRange}
-                        onMouseUp={() =>
-                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
-                        }
-                        onTouchEnd={() =>
-                          applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
-                        }
-                      />
-                  </div>
+  <input
+    type="range"
+    min={productMinPrice}
+    max={productMaxPrice}
+    value={effectiveMinPrice}
+    onChange={handleMinRange}
+    onMouseUp={() =>
+      applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+    }
+    onTouchEnd={() =>
+      applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+    }
+  />
+
+  <input
+    type="range"
+    min={productMinPrice}
+    max={productMaxPrice}
+    value={effectiveMaxPrice}
+    onChange={handleMaxRange}
+    onMouseUp={() =>
+      applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+    }
+    onTouchEnd={() =>
+      applyPriceFilter(effectiveMinPrice, effectiveMaxPrice)
+    }
+  />
+</div>
 
                   <div className="diwenjriwejrjhwer d-flex align-items-center justify-content-between mt-3">
                     <span>{currencySymbol}&nbsp;{Number(minDisplay).toLocaleString("en-IN")}</span>
