@@ -1180,10 +1180,13 @@ const firstInvalidIndex = visibleCoupons.findIndex(
 
     setLoading(false);
   };
+  // console.log(appliedDiscount, 'appliedDiscount');
 
   if (loading || wishlistLoading) {
     return <Loader/>;
   }
+
+
 
 
   const SearchableSelect = ({
@@ -2214,17 +2217,59 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                   )}
                                 </td>
                             </tr>
+                          ): appliedDiscount === 0 && freeShipping ? (
+                            <tr>
+                              {/* <td>Total Payable :</td> */}
+                              <td>After Discount :</td>
+                                <td style={{display: "flex", alignItems: "center", justifyContent: "end"}}>
+                                    {/* <span style={{ textDecoration: "line-through", color: "#999" }}>
+                                      {formatPrice(totalPrice.total_mrp_price, { showDecimals: true })}
+                                    </span>&nbsp; */}
+                                    {formatPrice(
+                                    freeShipping
+                                      ? (
+                                          appliedDiscount > 0 ?
+                                          Number(totalPrice.total_selling_price) -
+                                          appliedDiscount +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges)
+                                          :
+                                          Number(totalPrice.total_selling_price) +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges)
+                                        )
+                                      : (
+                                          appliedDiscount > 0 ?
+                                          Number(totalPrice.total_selling_price) -
+                                          appliedDiscount +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges) +
+                                          Number(shippingCharge)
+                                          :
+                                          Number(totalPrice.total_selling_price) +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges) +
+                                          Number(shippingCharge)
+                                        ),
+                                    { showDecimals: true }
+                                  )}
+                                </td>
+                            </tr>
                           ): 
 
-                          <tr>
-                            <td>Total Payable :</td>
-                            <td>{formatPrice(Number(totalPrice.total_selling_price) + 
-                                  Number(totalPrice.total_add_on_charges) + 
-                                  Number(totalPrice.custom_fit_charges) + 
-                                  Number(totalPrice.stiching_charges) + 
-                                  Number(shippingCharge), { showDecimals: true })}
-                            </td>
-                          </tr>
+                            <tr>
+                              <td>Total Payable :</td>
+                              <td>{formatPrice(Number(totalPrice.total_selling_price) + 
+                                    Number(totalPrice.total_add_on_charges) + 
+                                    Number(totalPrice.custom_fit_charges) + 
+                                    Number(totalPrice.stiching_charges) + 
+                                    Number(shippingCharge), { showDecimals: true })}
+                              </td>
+                            </tr>
                           }
                           
                         </tbody>
@@ -3011,7 +3056,49 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                   )}
                                 </td>
                             </tr>
-                          ): 
+                          ): appliedDiscount === 0 && freeShipping ? (
+                            <tr>
+                              {/* <td>Total Payable :</td> */}
+                              <td>After Discount :</td>
+                                <td style={{display: "flex", alignItems: "center", justifyContent: "end"}}>
+                                    {/* <span style={{ textDecoration: "line-through", color: "#999" }}>
+                                      {formatPrice(totalPrice.total_mrp_price, { showDecimals: true })}
+                                    </span>&nbsp; */}
+                                    {formatPrice(
+                                    freeShipping
+                                      ? (
+                                          appliedDiscount > 0 ?
+                                          Number(totalPrice.total_selling_price) -
+                                          appliedDiscount +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges)
+                                          :
+                                          Number(totalPrice.total_selling_price) +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges)
+                                        )
+                                      : (
+                                          appliedDiscount > 0 ?
+                                          Number(totalPrice.total_selling_price) -
+                                          appliedDiscount +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges) +
+                                          Number(shippingCharge)
+                                          :
+                                          Number(totalPrice.total_selling_price) +
+                                          Number(totalPrice.total_add_on_charges) +
+                                          Number(totalPrice.custom_fit_charges) +
+                                          Number(totalPrice.stiching_charges) +
+                                          Number(shippingCharge)
+                                        ),
+                                    { showDecimals: true }
+                                  )}
+                                </td>
+                            </tr>
+                          ):
 
                           <tr>
                             <td>Total Payable :</td>
