@@ -3143,7 +3143,7 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                     </div>
 
                     <div className="dweoihrwerwer aiksndjhugwerwerw d-flex align-items-center justify-content-between p-2">
-                      <div className="doewjirwerwer">
+                      <div className="doewjirwerwer sgdefsgsfsdf">
                         <input type="checkbox" id="gft" className="m-1" checked={isGift}
                             onChange={(e) => setIsGift(e.target.checked)}/>
 
