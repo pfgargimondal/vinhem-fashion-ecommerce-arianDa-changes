@@ -1180,14 +1180,11 @@ const firstInvalidIndex = visibleCoupons.findIndex(
 
     setLoading(false);
   };
-  // console.log(appliedDiscount, 'appliedDiscount');
+  console.log(currency_code, 'currency_code');
 
   if (loading || wishlistLoading) {
     return <Loader/>;
   }
-
-
-
 
   const SearchableSelect = ({
     name,
@@ -2772,27 +2769,28 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                     </div>
                                   </label>
                                 </div> */}
+                                {currency_code !== 'INR' && (
+                                  <div className="radio-wrapper-26 mb-3">
+                                    <label htmlFor="example-rerr">
+                                      <div className="inputAndLeftText sgsfasfeerr d-flex">
+                                        <input
+                                          id="example-rerr"
+                                          type="radio"
+                                          name="payment_method"
+                                          value="pay_pal"
+                                          checked={paymentMethod === "pay_pal"}
+                                          onChange={(e) => setPaymentMethod(e.target.value)}
+                                        />
 
-                                <div className="radio-wrapper-26 mb-3">
-                                  <label htmlFor="example-rerr">
-                                    <div className="inputAndLeftText sgsfasfeerr d-flex">
-                                      <input
-                                        id="example-rerr"
-                                        type="radio"
-                                        name="payment_method"
-                                        value="pay_pal"
-                                        checked={paymentMethod === "pay_pal"}
-                                        onChange={(e) => setPaymentMethod(e.target.value)}
-                                      />
-
-                                      <div className="ms-2">
-                                        <span className="title2">
-                                          {/* Pay Pal  */}
-                                        <img className="dienwihejwr ms-1" src="images/paypal.png" alt="" /></span>
+                                        <div className="ms-2">
+                                          <span className="title2">
+                                            {/* Pay Pal  */}
+                                          <img className="dienwihejwr ms-1" src="images/paypal.png" alt="" /></span>
+                                        </div>
                                       </div>
-                                    </div>
-                                  </label>
-                                </div>
+                                    </label>
+                                  </div>
+                                )}
 
                                 <div className="radio-wrapper-26 mb-3">
                                   <label htmlFor="example-rerrfdbv">
