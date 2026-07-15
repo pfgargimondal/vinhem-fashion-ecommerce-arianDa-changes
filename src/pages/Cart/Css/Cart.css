@@ -253,6 +253,8 @@
   transform: scale(1) !important;
 }
 
+.fdgdghhsfsdf
+
 .dewhrowerwer .doijerewr:last-child:hover i{
   color: red !important;
   transform: scale(1.2);
@@ -758,6 +760,10 @@ h6.sadcadaededee,
   font-weight: 500;
 }
 
+br.dijnsfdf{
+  display: none;
+}
+
 
 
 
@@ -824,6 +830,10 @@ h6.sadcadaededee,
 
   .dewtgtregtehfggefg .uiwdhiwerwerwer{
     display: none;
+  }
+
+  br.dijnsfdf{
+    display: block;
   }
 
   .uiwdhiwerwerwer.dojweirkwejirwer.fgzdvscxsffdf{
@@ -1133,6 +1143,15 @@ h6.sadcadaededee,
   .cart-wrapper .diwebjrwert_left p.sdgaewrerer {
     font-size: 0.8rem !important;
   }
+
+  .dweoihrwerwer .table-responsive{
+    overflow-x: initial !important;
+  }
+
+  .cart-wrapper .dweoihrwerwer table tr td{
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -1191,8 +1210,6 @@ h6.sadcadaededee,
 
 
 
-
-
 @media only screen and (max-width: 300px){
   .xdvgsfsadfaxcfgsf,
   .oikdjioerer,
@@ -1200,6 +1217,28 @@ h6.sadcadaededee,
     display: inline-block;
   }
 }
+
+
+
+
+
+@media only screen and (max-width: 329px){
+  .dweoihrwerwer.p-2{
+    padding: 5px !important;
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 325px){
+  .cart-wrapper .dweoihrwerwer table tr td {
+    font-size: 0.8rem;
+  }
+}
+
 
 
 

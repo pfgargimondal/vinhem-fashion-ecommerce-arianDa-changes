@@ -1460,7 +1460,7 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                       }
                                       {cartItemsVal.size === null && (
                                         <>
-                                          <span className="ms-3 me-2">| Qty :</span>
+                                          <span className="mx-2">| Qty :</span>
 
                                           <select
                                             value={cartItemsVal.quantity}
@@ -2108,7 +2108,7 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                        
                           <tr>
                             <td>
-                              Shipping & Duties :&nbsp;
+                              Shipping & Duties :&nbsp; <br className="dijnsfdf" />
                               {freeShipping && (
                                 <span className="sergvasdrg">(Coupon Applied)</span>
                               )}
@@ -2131,14 +2131,14 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                           </tr>
                           {appliedDiscount > 0 && !freeShipping ? (
                             <tr>
-                              <td className="">Coupon Discount :&nbsp;<span className="sergvasdrg">(Coupon Applied)</span></td>
+                              <td className="">Coupon Discount :&nbsp; <br className="dijnsfdf" /><span className="sergvasdrg">(Coupon Applied)</span></td>
                               <td className="sergvasdrg">
                                 (-) {formatPrice(appliedDiscount, { showDecimals: true })}
                               </td>
                             </tr>
                           ) : appliedDiscount > 0 && freeShipping ? (
                             <tr>
-                              <td className="">Coupon Discount :&nbsp;<span className="sergvasdrg">(Coupon Applied)</span></td>
+                              <td className="">Coupon Discount :&nbsp; <br className="dijnsfdf" /><span className="sergvasdrg">(Coupon Applied)</span></td>
                               <td className="sergvasdrg">
                                 (-) {formatPrice(appliedDiscount, { showDecimals: true })}
                               </td>

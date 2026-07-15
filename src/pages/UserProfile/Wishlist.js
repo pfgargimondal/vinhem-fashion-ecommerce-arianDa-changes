@@ -140,7 +140,7 @@ export const Wishlist = () => {
                                                                     {formatPrice(wishlistProduct.mrp_price)}
                                                                 </span>
 
-                                                                <span class={`${styles.ibjncm} fghfgg114 d-flex align-items-center ms-2`}>{wishlistProduct?.discount}%OFF</span>
+                                                                <span class={`${styles.ibjncm} fghfgg114 ${styles.fhbjsdifjsdf} d-flex align-items-center ms-2`}>{wishlistProduct?.discount}%OFF</span>
                                                             </div>
                                                         </div>
                                                     </div>

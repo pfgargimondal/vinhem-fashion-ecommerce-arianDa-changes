@@ -306,6 +306,10 @@ form input:global(.form-control){
   font-size: 1.4rem;
 }
 
+.fhbjsdifjsdf{
+  font-size: 1.3rem !important;
+}
+
 /*end  profile settings  css   */
 
 .doiewhrwerr > p{
@@ -395,6 +399,10 @@ form input:global(.form-control){
 
   :global(.fghfgg114).ibjncm {
     font-size: 0.8rem !important;
+  }
+
+  .fhbjsdifjsdf.ibjncm {
+    font-size: 1rem !important;
   }
 }
 
