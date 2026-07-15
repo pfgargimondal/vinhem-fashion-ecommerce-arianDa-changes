@@ -2505,7 +2505,7 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                         </div>
                                       </div>
                                       
-                                      <div className="dnweghbjewrwer mb-2">
+                                      <div className="dnweghbjewrwer sdfvdvsevgdf mb-2">
                                         <h5 className="mb-1">
                                           {cartItemsVal.belongsTo === 'filter_size' ? (
                                             <>
