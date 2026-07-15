@@ -469,6 +469,15 @@
 
 
 
+@media only screen and (max-width: 456px){
+  .cart-wrapper .dweoihrwerwer table tr td{
+    white-space: nowrap;
+  }
+}
+
+
+
+
 @media only screen and (max-width: 428px){
   .cart-wrapper .diwebjrwert_left .dweihriwerwerw p,
   .cart-wrapper .diwebjrwert_left .dweihriwerwerw ul li {
@@ -483,10 +492,6 @@
   .cart-wrapper .diwebjrwert_left .dweihriwerwerw p,
   .cart-wrapper .diwebjrwert_left .dweihriwerwerw ul li {
     font-size: 2.3vw;
-  }
-
-  .cart-wrapper .dweoihrwerwer table tr td{
-    white-space: nowrap;
   }
 }
 
