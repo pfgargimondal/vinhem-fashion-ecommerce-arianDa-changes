@@ -303,7 +303,8 @@
 
  .doiweuijrwerwer .radio-wrapper-26 label .inputAndLeftText div {
 	 color: #000;
-	 line-height: 1.50rem;
+	 /* line-height: 1.50rem; */
+   line-height: 1.3rem;
 	 display: flex;
 	 flex-direction: column;
 }
