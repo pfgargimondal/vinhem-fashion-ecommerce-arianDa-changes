@@ -722,6 +722,37 @@ export const Filter = () => {
       .replace(/\b\w/g, (char) => char.toUpperCase());
   };
 
+  const getHeading = () => {
+    const onlySubCategory = ["kids-wear", "jwellery", "accessories"];
+
+    // All Products
+    if (category === "all-products") {
+      return "All Products";
+    }
+
+    // Categories that should only show subcategory
+    if (onlySubCategory.includes(category) && subcategory) {
+      let text = subcategory;
+
+      // Special formatting for Kids Wear
+      if (category === "kids-wear") {
+        text = text
+          .replace("-boys", " for Boys")
+          .replace("-girls", " for Girls")
+          .replace(/-/g, " ");
+      }
+
+      return toTitleCase(text);
+    }
+
+    // Default
+    if (subcategory) {
+      return `${toTitleCase(subcategory)} For ${toTitleCase(category)}`;
+    }
+
+    return `All Products For ${toTitleCase(category)}`;
+  };
+
   // const isSpecialPage = 
   //   category === "all-products";
 
@@ -766,28 +797,31 @@ export const Filter = () => {
             </div>
 
             {window.innerWidth <= 991 && (
-                <div className="alosjdjkhrjfse jhvhvbjh">
-                  <h4 className="mb-0">
-                    {category === "all-products"
-                      ? "All Products"
-                      : subcategory
-                        ? `${toTitleCase(subcategory)}`
-                        // ? `${toTitleCase(subcategory)} For ${toTitleCase(category)}`
-                        : `All Products`}
-                        {/* : `All Products For ${toTitleCase(category)}`} */}
-                    <span> - Showing {products?.length ?? 0} Results</span>
-                  </h4>
-                </div>
-              )
-            }
-            {window.innerWidth > 991 && (
-              <div className="alosjdjkhrjfse">
+              <div className="alosjdjkhrjfse jhvhvbjh">
                 <h4 className="mb-0">
                   {category === "all-products"
                     ? "All Products"
                     : subcategory
-                      ? `${toTitleCase(subcategory)} For ${toTitleCase(category)}`
-                      : `All Products For ${toTitleCase(category)}`}
+                    ? `${
+                        category === "kids-wear"
+                          ? toTitleCase(
+                              subcategory
+                                .replace("-boys", " for boys")
+                                .replace("-girls", " for girls")
+                                .replace(/-/g, " ")
+                            )
+                          : toTitleCase(subcategory)
+                      }`
+                    : "All Products"}
+                  <span> - Showing {products?.length ?? 0} Results</span>
+                </h4>
+              </div>
+            )}
+            
+            {window.innerWidth > 991 && (
+              <div className="alosjdjkhrjfse">
+                <h4 className="mb-0">
+                  {getHeading()}
                   <span> - Showing {products?.length ?? 0} Results</span>
                 </h4>
               </div>

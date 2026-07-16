@@ -177,9 +177,6 @@ export const FilterProvider = ({ children }) => {
 
     function updateURLWithFilters(newState, options = {}) {
 
-        console.log("discount =", newState.discount);
-console.log("url before =", location.search);
-
         const {
             clearAll = false
         } = options;

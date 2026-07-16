@@ -23,6 +23,7 @@ import Loader from "../../Loader/Loader";
 
 import {BASE_URL} from "../../../http";
 import { optimizeImage } from "../../../utils/optimizeImage";
+import { useFilter } from "../../../context/FilterContext";
 
 export const Header = ({ shouldHideHeader, shouldHideFullHeaderFooterRoutes, shouldHideHeaderCategoryRoutes, footerBottomResNav }) => {
   const [resMenu, setResMenu] = useState(false);
@@ -38,6 +39,7 @@ export const Header = ({ shouldHideHeader, shouldHideFullHeaderFooterRoutes, sho
   const navigate = useNavigate();
   const searchRef = useRef(null);
   const searchRefRes = useRef(null);
+  const { resetFilter } = useFilter();
   const [resCtgyDrpdwn, setResCtgyDrpdwn] = useState(false);
   const [resSearchToggle, setResSearchToggle] = useState(false);
   // const [headerFixed, setHeaderFixed] = useState(false);
@@ -3438,11 +3440,11 @@ export const Header = ({ shouldHideHeader, shouldHideFullHeaderFooterRoutes, sho
                                                               headCat.headCategories_name === 'TRENDING NOW' || 
                                                               headCat.headCategories_name === 'FEATURED'
                                                             ) ? (
-                                                              <Link to={`${subCat.subCategories_url}`}>
+                                                              <Link to={`${subCat.subCategories_url}`} onClick={resetFilter}>
                                                                 {subCat.subCategories_name.replace(/\s*\(Boys\)|\s*\(Girls\)/gi, "")}
                                                               </Link>
                                                             ) : (
-                                                              <Link to={`/${category.mainCategory_slug}/${subCat.subCategories_slug}`}>
+                                                              <Link to={`/${category.mainCategory_slug}/${subCat.subCategories_slug}`} onClick={resetFilter}>
                                                                 {subCat.subCategories_name.replace(/\s*\(Boys\)|\s*\(Girls\)/gi, "")}
                                                               </Link>
                                                             )}
@@ -3754,11 +3756,11 @@ export const Header = ({ shouldHideHeader, shouldHideFullHeaderFooterRoutes, sho
                                               headCat.headCategories_name === 'TRENDING NOW' || 
                                               headCat.headCategories_name === 'FEATURED'
                                             ) ? (
-                                              <Link to={`${subCat.subCategories_url}`}>
+                                              <Link to={`${subCat.subCategories_url}`} onClick={resetFilter}>
                                                 {subCat.subCategories_name.replace(/\s*\(Boys\)|\s*\(Girls\)/gi, "")}
                                               </Link>
                                             ) : (
-                                              <Link to={`/${category.mainCategory_slug}/${subCat.subCategories_slug}`}>
+                                              <Link to={`/${category.mainCategory_slug}/${subCat.subCategories_slug}`} onClick={resetFilter}>
                                                 {subCat.subCategories_name.replace(/\s*\(Boys\)|\s*\(Girls\)/gi, "")}
                                               </Link>
                                             )}
