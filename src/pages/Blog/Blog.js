@@ -513,7 +513,84 @@ export const Blog = () => {
                 </div> */}
 
                 <div className="socl-meda-icons">
-                  <a href="/">
+                   {socialMediaLinks?.map((mediaLink, index) => {
+                      switch (mediaLink?.media_section) {
+                        case "Facebook":
+                          return (
+                            <a
+                              href={mediaLink?.media_link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i className="fa-brands fa-facebook-f" />
+                            </a>
+                          );
+
+                        case "Twitter":
+                          return (
+                              <a
+                                href={mediaLink?.media_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <i className="fa-brands fa-x" />
+                              </a>
+                          );
+
+                        case "Instagram":
+                          return (
+                            <a
+                              href={mediaLink?.media_link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i className="fa-brands fa-instagram" />
+                            </a>
+                          );
+
+                        case "Pinterest":
+                          return (
+                            <a
+                              href={mediaLink?.media_link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i className="fa-brands fa-pinterest-p"></i>
+                            </a>
+                          );
+
+                        
+
+                        case "Youtube":
+                          return (
+                            <a
+                              href={mediaLink?.media_link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i className="fa-brands fa-youtube" />
+                            </a>
+                          );
+
+                        // case "Linkedin":
+                        //   return (
+                        //     <li key={index}>
+                        //       <a
+                        //         href={mediaLink?.media_link}
+                        //         target="_blank"
+                        //         rel="noopener noreferrer"
+                        //         className="social linkedin"
+                        //       >
+                        //         <i className="bi bi-linkedin"></i>
+                        //       </a>
+                        //     </li>
+                        //   );
+
+                        default:
+                          return null;
+                      }
+                    })}
+                  {/* <a href="/">
                     <i className="fa-brands fa-facebook-f" />
                   </a>
 
@@ -531,7 +608,7 @@ export const Blog = () => {
 
                   <a href="/">
                     <i className="fa-brands fa-youtube" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
 

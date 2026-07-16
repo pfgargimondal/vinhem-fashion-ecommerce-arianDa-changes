@@ -687,12 +687,12 @@ ul.social-icons {
   background-image: linear-gradient(#fff 50%, #1877F2 50%);
 }
 
-.socl-meda-icons a:nth-child(2) {
+.socl-meda-icons a:nth-child(3) {
   color: #000000;
   background-image: linear-gradient(#fff 50%, #000000 50%);
 }
 
-.socl-meda-icons a:nth-child(3) {
+.socl-meda-icons a:nth-child(2) {
   color: #d62976;
   background-image: linear-gradient(#fff 50%, #d62976 50%);
 }
