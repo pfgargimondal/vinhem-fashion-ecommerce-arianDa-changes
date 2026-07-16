@@ -1444,7 +1444,7 @@ const firstInvalidIndex = visibleCoupons.findIndex(
 
                                 <div className="dnweghbjewrwer">
                                   <p className="mb-1">ITEM ID: {cartItemsVal.item_id}</p>
-                                  <p className="mb-1">Colour: {cartItemsVal.color}</p>
+                                  <p className="mb-1">Colour: {cartItemsVal.filter_color}</p>
                                   {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
                                     <p className="mb-1 gfxbdgsfeherh d-flex align-items-center flex-wrap">
                                       {cartItemsVal.stitch_option === 'customFit' ?
@@ -2545,7 +2545,7 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                         </h5>
 
                                         <p className="sdgaewrerer mb-1">ITEM ID: {cartItemsVal.item_id}</p>
-                                        <p className="sdgaewrerer mb-1">Colour: {cartItemsVal.color}</p>
+                                        <p className="sdgaewrerer mb-1">Colour: {cartItemsVal.filter_color}</p>
                                         {cartItemsVal.actual_stitch_option !== 'Ready To Wear' && (
                                           <p className="sdgaewrerer mb-2">
                                             Stitching Option :{" "}
@@ -2802,12 +2802,12 @@ const firstInvalidIndex = visibleCoupons.findIndex(
                                         value="cash_on_delivery"
                                         checked={paymentMethod === "cash_on_delivery"}
                                         onChange={(e) => setPaymentMethod(e.target.value)}
-                                        disabled={finalTotal > 2000}   // 🔥 Auto-disable
+                                        disabled={Number(totalPrice.total_selling_price) > 2000}   // 🔥 Auto-disable
                                       />
 
                                       <div className="ms-2">
                                         <span className="title">
-                                          {finalTotal > 2000
+                                          {Number(totalPrice.total_selling_price) > 2000
                                             ? "Cash On Delivery (COD Not Applicable On This Order)"
                                             : "Cash On Delivery"}
                                         </span>
